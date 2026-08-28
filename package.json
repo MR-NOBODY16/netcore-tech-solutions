@@ -1,0 +1,14 @@
+{
+  "name": "netcore-tech-zm",
+  "version": "1.0.0",
+  "description": "NetCore TECH ZM website and digital solutions platform",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch",
+    "build": "tailwindcss -i ./static/src/input.css -o ./static/css/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

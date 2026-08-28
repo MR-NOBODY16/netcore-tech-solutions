@@ -1,0 +1,1444 @@
+/* ==========================================================
+   NETCORE TECH SOLUTIONS
+   DJANGO ADMIN THEME
+   ========================================================== */
+
+
+/* ==========================================================
+   ROOT THEME VARIABLES
+   ========================================================== */
+
+:root {
+
+    --primary: #087BFF;
+    --secondary: #0057D9;
+
+    --accent: #087BFF;
+
+    --link-fg: #087BFF;
+    --link-selected-fg: #0057D9;
+
+    --header-color: #FFFFFF;
+
+    --body-fg: #1F2937;
+    --body-bg: #F5F7FB;
+
+    --darkened-bg: #EEF2F7;
+    --selected-bg: #E8F1FF;
+
+    --hairline-color: #DCE3EC;
+
+    --button-bg: #087BFF;
+    --button-hover-bg: #0057D9;
+
+    --default-button-bg: #087BFF;
+    --default-button-hover-bg: #0057D9;
+
+    --close-button-bg: #64748B;
+    --close-button-hover-bg: #475569;
+
+    --delete-button-bg: #DC2626;
+    --delete-button-hover-bg: #B91C1C;
+
+}
+
+
+/* ==========================================================
+   GLOBAL
+   ========================================================== */
+
+html,
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+}
+
+
+body {
+
+    background:
+        #F5F7FB;
+
+}
+
+
+a {
+
+    color:
+        #087BFF;
+
+}
+
+
+a:hover {
+
+    color:
+        #0057D9;
+
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+#header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #05070D 0%,
+            #08111F 55%,
+            #061A3A 100%
+        );
+
+    color:
+        #FFFFFF;
+
+    min-height:
+        64px;
+
+    padding:
+        0 24px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* ==========================================================
+   BRANDING
+   ========================================================== */
+
+#netcore-admin-brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    min-height:
+        64px;
+
+}
+
+
+#netcore-admin-brand-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        #FFFFFF;
+
+    text-decoration:
+        none;
+
+}
+
+
+#netcore-admin-brand-link:hover {
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.netcore-admin-brand-mark {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border-radius:
+        10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0057D9,
+            #087BFF
+        );
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -0.04em;
+
+    box-shadow:
+        0 6px 18px rgba(8, 123, 255, 0.30);
+
+}
+
+
+.netcore-admin-brand-text {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    line-height:
+        1.05;
+
+}
+
+
+.netcore-admin-brand-text strong {
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        17px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.02em;
+
+}
+
+
+.netcore-admin-brand-text span {
+
+    margin-top:
+        3px;
+
+    color:
+        #94A3B8;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.12em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ==========================================================
+   HEADER LINKS
+   ========================================================== */
+
+#user-tools {
+
+    color:
+        #CBD5E1;
+
+    font-size:
+        13px;
+
+}
+
+
+#user-tools a {
+
+    color:
+        #E2E8F0;
+
+}
+
+
+#user-tools a:hover {
+
+    color:
+        #FFFFFF;
+
+}
+
+
+/* ==========================================================
+   MAIN CONTENT
+   ========================================================== */
+
+#container {
+
+    background:
+        #F5F7FB;
+
+}
+
+
+#content {
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        32px;
+
+}
+
+
+#content-main {
+
+    width:
+        100%;
+
+}
+
+
+/* ==========================================================
+   BREADCRUMBS
+   ========================================================== */
+
+div.breadcrumbs {
+
+    background:
+        #FFFFFF;
+
+    border-bottom:
+        1px solid #E2E8F0;
+
+    color:
+        #64748B;
+
+    padding:
+        14px 32px;
+
+    font-size:
+        13px;
+
+}
+
+
+div.breadcrumbs a {
+
+    color:
+        #087BFF;
+
+}
+
+
+div.breadcrumbs a:hover {
+
+    color:
+        #0057D9;
+
+}
+
+
+/* ==========================================================
+   PAGE TITLES
+   ========================================================== */
+
+#content h1 {
+
+    color:
+        #0F172A;
+
+    font-size:
+        28px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.025em;
+
+    margin-bottom:
+        24px;
+
+}
+
+
+/* ==========================================================
+   MODULES / CARDS
+   ========================================================== */
+
+.module {
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid #E2E8F0;
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        0 4px 18px rgba(15, 23, 42, 0.04);
+
+    overflow:
+        hidden;
+
+    margin-bottom:
+        24px;
+
+}
+
+
+.module h2,
+.module caption {
+
+    background:
+        #F8FAFC;
+
+    color:
+        #0F172A;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.04em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.module h2 {
+
+    padding:
+        16px 20px;
+
+}
+
+
+.module caption {
+
+    padding:
+        16px 20px;
+
+}
+
+
+.module table {
+
+    border:
+        0;
+
+}
+
+
+/* ==========================================================
+   DASHBOARD APPLICATION LIST
+   ========================================================== */
+
+#content-main .module table {
+
+    width:
+        100%;
+
+}
+
+
+#content-main .module table th {
+
+    color:
+        #64748B;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+#content-main .module table td {
+
+    color:
+        #334155;
+
+    font-size:
+        13px;
+
+}
+
+
+#content-main .module table tr {
+
+    border-bottom:
+        1px solid #EEF2F7;
+
+}
+
+
+#content-main .module table tr:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+/* ==========================================================
+   LINKS INSIDE MODULES
+   ========================================================== */
+
+.module a {
+
+    font-weight:
+        600;
+
+}
+
+
+.module a:hover {
+
+    text-decoration:
+        none;
+
+}
+
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+
+    border-radius:
+        8px;
+
+    font-weight:
+        700;
+
+    padding:
+        10px 16px;
+
+    transition:
+        all 0.2s ease;
+
+}
+
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.submit-row input:hover,
+a.button:hover {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ==========================================================
+   FORM FIELDS
+   ========================================================== */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
+
+    border:
+        1px solid #CBD5E1;
+
+    border-radius:
+        8px;
+
+    background:
+        #FFFFFF;
+
+    color:
+        #0F172A;
+
+    padding:
+        9px 11px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+    border-color:
+        #087BFF;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 123, 255, 0.12);
+
+    outline:
+        none;
+
+}
+
+
+/* ==========================================================
+   FIELD LABELS
+   ========================================================== */
+
+.form-row label {
+
+    color:
+        #334155;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ==========================================================
+   HELP TEXT
+   ========================================================== */
+
+.help,
+.helptext {
+
+    color:
+        #64748B;
+
+    font-size:
+        12px;
+
+}
+
+
+/* ==========================================================
+   OBJECT TOOLS
+   ========================================================== */
+
+.object-tools a {
+
+    border-radius:
+        8px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ==========================================================
+   CHANGE LIST
+   ========================================================== */
+
+#changelist {
+
+    background:
+        transparent;
+
+}
+
+
+#changelist .actions {
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid #E2E8F0;
+
+    border-radius:
+        10px;
+
+    padding:
+        12px;
+
+    margin-bottom:
+        16px;
+
+}
+
+
+#changelist-filter {
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid #E2E8F0;
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        0 4px 18px rgba(15, 23, 42, 0.04);
+
+}
+
+
+#changelist-filter h2 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #05070D,
+            #08111F
+        );
+
+    color:
+        #FFFFFF;
+
+    border-radius:
+        12px 12px 0 0;
+
+}
+
+
+#changelist-filter h3 {
+
+    color:
+        #0F172A;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ==========================================================
+   TABLES
+   ========================================================== */
+
+#result_list {
+
+    border:
+        1px solid #E2E8F0;
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+    background:
+        #FFFFFF;
+
+}
+
+
+#result_list thead th {
+
+    background:
+        #F8FAFC;
+
+    color:
+        #475569;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+}
+
+
+#result_list tbody tr {
+
+    transition:
+        background 0.15s ease;
+
+}
+
+
+#result_list tbody tr:hover {
+
+    background:
+        #F8FBFF;
+
+}
+
+
+#result_list tbody td {
+
+    border-bottom:
+        1px solid #EEF2F7;
+
+}
+
+
+/* ==========================================================
+   CHECKBOXES
+   ========================================================== */
+
+input[type="checkbox"] {
+
+    accent-color:
+        #087BFF;
+
+}
+
+
+/* ==========================================================
+   FIELDSETS
+   ========================================================== */
+
+fieldset {
+
+    border:
+        0;
+
+}
+
+
+fieldset.module {
+
+    padding:
+        0;
+
+}
+
+
+fieldset.module h2 {
+
+    border-bottom:
+        1px solid #E2E8F0;
+
+}
+
+
+/* ==========================================================
+   COLLAPSED SECTIONS
+   ========================================================== */
+
+fieldset.collapse {
+
+    border-radius:
+        12px;
+
+}
+
+
+/* ==========================================================
+   MESSAGES
+   ========================================================== */
+
+ul.messagelist {
+
+    margin:
+        0 0 20px 0;
+
+}
+
+
+ul.messagelist li {
+
+    border-radius:
+        10px;
+
+    border:
+        1px solid #E2E8F0;
+
+    box-shadow:
+        0 3px 12px rgba(15, 23, 42, 0.04);
+
+}
+
+
+/* ==========================================================
+   ERRORLIST
+   ========================================================== */
+
+.errornote,
+ul.errorlist {
+
+    border-radius:
+        10px;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+#footer {
+
+    background:
+        #05070D;
+
+    color:
+        #64748B;
+
+    border-top:
+        1px solid #0F172A;
+
+    padding:
+        24px;
+
+    margin-top:
+        40px;
+
+}
+
+
+#footer a {
+
+    color:
+        #087BFF;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    #header {
+
+        padding:
+            0 14px;
+
+    }
+
+
+    #content {
+
+        padding:
+            20px 14px;
+
+    }
+
+
+    div.breadcrumbs {
+
+        padding:
+            12px 14px;
+
+    }
+
+
+    #content h1 {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .netcore-admin-brand-text span {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* ==========================================================
+   NETCORE DASHBOARD
+   ========================================================== */
+
+.netcore-dashboard {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   DASHBOARD HEADER
+   ========================================================== */
+
+.netcore-dashboard-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-bottom: 32px;
+    padding: 32px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF 0%,
+            #F8FBFF 100%
+        );
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+
+.netcore-dashboard-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #087BFF;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.netcore-dashboard-header h1 {
+    margin: 0;
+
+    color: #0F172A;
+
+    font-size: 30px;
+    font-weight: 850;
+
+    letter-spacing: -0.035em;
+}
+
+
+.netcore-dashboard-header p {
+    max-width: 680px;
+
+    margin: 10px 0 0;
+
+    color: #64748B;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   WEBSITE BUTTON
+   ========================================================== */
+
+.netcore-dashboard-site-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+
+    padding: 11px 17px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0057D9,
+            #087BFF
+        );
+
+    color: #FFFFFF !important;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 7px 20px rgba(8, 123, 255, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.netcore-dashboard-site-link:hover {
+    color: #FFFFFF !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 26px rgba(8, 123, 255, 0.28);
+}
+
+
+.netcore-dashboard-site-link svg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==========================================================
+   STATISTICS GRID
+   ========================================================== */
+
+.netcore-stat-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 42px;
+}
+
+
+.netcore-stat-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    min-height: 132px;
+
+    padding: 22px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.netcore-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #BFDBFE;
+
+    box-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.07);
+}
+
+
+.netcore-stat-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 11px;
+
+    background: #EAF3FF;
+
+    color: #087BFF;
+}
+
+
+.netcore-stat-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+
+.netcore-stat-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748B;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.netcore-stat-number {
+    display: block;
+
+    color: #0F172A;
+
+    font-size: 27px;
+    font-weight: 850;
+
+    line-height: 1.15;
+}
+
+
+.netcore-stat-description {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #94A3B8;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   SECTION HEADINGS
+   ========================================================== */
+
+.netcore-section-heading {
+    margin-bottom: 18px;
+}
+
+
+.netcore-section-heading h2 {
+    margin: 0;
+
+    color: #0F172A;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+}
+
+
+.netcore-default-heading {
+    margin-top: 42px;
+}
+
+
+/* ==========================================================
+   QUICK ACTIONS
+   ========================================================== */
+
+.netcore-action-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.netcore-action-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    min-height: 150px;
+
+    padding: 22px;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.netcore-action-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #BFDBFE;
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.07);
+}
+
+
+.netcore-action-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 11px;
+
+    background: #F0F6FF;
+
+    color: #087BFF;
+}
+
+
+.netcore-action-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+
+.netcore-action-card h3 {
+    margin: 1px 30px 6px 0;
+
+    color: #0F172A;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+.netcore-action-card p {
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.netcore-action-arrow {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    color: #94A3B8;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.netcore-action-card:hover .netcore-action-arrow {
+    color: #087BFF;
+
+    transform: translateX(3px);
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1200px) {
+
+    .netcore-stat-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .netcore-action-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .netcore-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 24px;
+    }
+
+
+    .netcore-dashboard-header h1 {
+        font-size: 25px;
+    }
+
+
+    .netcore-stat-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .netcore-action-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .netcore-stat-card,
+    .netcore-action-card {
+        padding: 18px;
+    }
+
+}

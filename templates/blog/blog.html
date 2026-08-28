@@ -1,0 +1,1712 @@
+{% extends "base.html" %}
+
+{% block title %}
+Blog | NetCore TECH Solutions
+{% endblock %}
+
+{% block meta_description %}
+Technology insights, IT tips, software development, networking,
+business technology and updates from NetCore TECH Solutions.
+{% endblock %}
+
+{% block content %}
+
+<!-- ==========================================================
+     BLOG HERO
+========================================================== -->
+
+<section class="nc-blog-hero">
+
+    <div class="nc-blog-grid"></div>
+
+    <div class="nc-blog-glow nc-blog-glow-left"></div>
+    <div class="nc-blog-glow nc-blog-glow-right"></div>
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-blog-hero-content">
+
+            <div class="nc-blog-eyebrow">
+
+                <span></span>
+
+                NETCORE INSIGHTS
+
+            </div>
+
+
+            <h1>
+
+                Technology,
+
+                <span>
+                    explained.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Practical technology insights, development knowledge,
+                IT guidance and business technology ideas from
+                NetCore TECH Solutions.
+
+            </p>
+
+
+            <div class="nc-blog-hero-line">
+
+                <span></span>
+
+                <small>
+                    KNOWLEDGE / TECHNOLOGY / BUSINESS
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     FEATURED POSTS
+========================================================== -->
+
+{% if featured_posts %}
+
+<section class="nc-blog-featured">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-blog-section-heading">
+
+            <div>
+
+                <div class="nc-blog-label">
+                    01 — FEATURED
+                </div>
+
+                <h2>
+                    Featured
+                    <span>
+                        insights.
+                    </span>
+                </h2>
+
+            </div>
+
+            <p>
+                Selected articles and technology insights from
+                NetCore TECH Solutions.
+            </p>
+
+        </div>
+
+
+        <div class="nc-featured-grid">
+
+            {% for post in featured_posts|slice:":3" %}
+
+            <article class="nc-featured-card">
+
+                <a href="{{ post.get_absolute_url }}">
+
+                    <div class="nc-featured-image">
+
+                        {% if post.featured_image %}
+
+                            <img
+                                src="{{ post.featured_image.url }}"
+                                alt="{{ post.title }}"
+                                loading="lazy"
+                            >
+
+                        {% else %}
+
+                            <div class="nc-blog-placeholder">
+
+                                <span>
+                                    NETCORE
+                                </span>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <div class="nc-image-overlay"></div>
+
+
+                        <div class="nc-featured-badge">
+                            FEATURED
+                        </div>
+
+                    </div>
+
+
+                    <div class="nc-featured-content">
+
+                        <div class="nc-post-category">
+                            {{ post.get_category_display }}
+                        </div>
+
+
+                        <h3>
+                            {{ post.title }}
+                        </h3>
+
+
+                        <p>
+                            {{ post.excerpt }}
+                        </p>
+
+
+                        <div class="nc-post-footer">
+
+                            <span>
+
+                                {% if post.published_at %}
+                                    {{ post.published_at|date:"M d, Y" }}
+                                {% else %}
+                                    {{ post.created_at|date:"M d, Y" }}
+                                {% endif %}
+
+                            </span>
+
+
+                            <strong>
+                                Read article →
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+
+<!-- ==========================================================
+     ALL POSTS
+========================================================== -->
+
+<section class="nc-blog-posts">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-blog-section-heading">
+
+            <div>
+
+                <div class="nc-blog-label">
+                    02 — LATEST
+                </div>
+
+                <h2>
+                    Latest
+                    <span>
+                        articles.
+                    </span>
+                </h2>
+
+            </div>
+
+            <p>
+                Explore our latest thoughts, tutorials and
+                practical technology knowledge.
+            </p>
+
+        </div>
+
+
+        {% if posts %}
+
+        <div class="nc-posts-grid">
+
+            {% for post in posts %}
+
+            <article class="nc-post-card">
+
+                <a href="{{ post.get_absolute_url }}">
+
+                    <div class="nc-post-image">
+
+                        {% if post.featured_image %}
+
+                            <img
+                                src="{{ post.featured_image.url }}"
+                                alt="{{ post.title }}"
+                                loading="lazy"
+                            >
+
+                        {% else %}
+
+                            <div class="nc-blog-placeholder">
+
+                                <span>
+                                    NETCORE
+                                </span>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <div class="nc-post-number">
+
+                            {{ forloop.counter|stringformat:"02d" }}
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="nc-post-content">
+
+                        <div class="nc-post-top">
+
+                            <span>
+                                {{ post.get_category_display }}
+                            </span>
+
+                            {% if post.featured %}
+
+                                <small>
+                                    FEATURED
+                                </small>
+
+                            {% endif %}
+
+                        </div>
+
+
+                        <h3>
+                            {{ post.title }}
+                        </h3>
+
+
+                        <p>
+                            {{ post.excerpt }}
+                        </p>
+
+
+                        <div class="nc-post-meta">
+
+                            <div>
+
+                                <span>
+                                    BY
+                                </span>
+
+                                <strong>
+                                    {{ post.author }}
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                {% if post.published_at %}
+
+                                    {{ post.published_at|date:"M d, Y" }}
+
+                                {% else %}
+
+                                    {{ post.created_at|date:"M d, Y" }}
+
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="nc-read-link">
+
+                            Read article
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+
+        {% else %}
+
+        <!-- EMPTY STATE -->
+
+        <div class="nc-blog-empty">
+
+            <div class="nc-empty-icon">
+                +
+            </div>
+
+            <div class="nc-blog-label">
+                COMING SOON
+            </div>
+
+            <h2>
+                We're preparing something useful.
+            </h2>
+
+            <p>
+                Technology insights, tutorials, company updates
+                and practical IT knowledge will appear here.
+            </p>
+
+            <a
+                href="{% url 'inquiries:contact' %}"
+            >
+                Contact NetCore
+                →
+            </a>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     BLOG CTA
+========================================================== -->
+
+<section class="nc-blog-cta">
+
+    <div class="nc-blog-cta-glow"></div>
+
+    <div class="mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8">
+
+        <div class="nc-blog-label">
+            HAVE A TECHNOLOGY QUESTION?
+        </div>
+
+
+        <h2>
+
+            Let's talk about
+
+            <span>
+                technology.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Whether you're planning a website, building a software
+            system or solving an IT challenge, we're ready to help.
+
+        </p>
+
+
+        <a
+            href="{% url 'inquiries:contact' %}"
+        >
+
+            Start a Conversation
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     BLOG CSS
+========================================================== -->
+
+<style>
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.nc-blog-hero {
+
+    position: relative;
+
+    min-height: 610px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #05070D;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+}
+
+
+.nc-blog-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .035;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+}
+
+
+.nc-blog-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    pointer-events: none;
+
+}
+
+
+.nc-blog-glow-left {
+
+    width: 500px;
+
+    height: 500px;
+
+    left: -300px;
+
+    top: 30px;
+
+    background:
+        rgba(0,87,217,.14);
+
+}
+
+
+.nc-blog-glow-right {
+
+    width: 450px;
+
+    height: 450px;
+
+    right: -250px;
+
+    bottom: -180px;
+
+    background:
+        rgba(8,123,255,.1);
+
+}
+
+
+.nc-blog-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding:
+        150px 0
+        100px;
+
+}
+
+
+.nc-blog-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #087BFF;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: .2em;
+
+}
+
+
+.nc-blog-eyebrow span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #087BFF;
+
+    box-shadow:
+        0 0 20px rgba(8,123,255,.8);
+
+}
+
+
+.nc-blog-hero h1 {
+
+    max-width: 950px;
+
+    margin-top: 24px;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        4rem,
+        9vw,
+        8rem
+    );
+
+    line-height: .86;
+
+    letter-spacing: -.08em;
+
+    font-weight: 950;
+
+}
+
+
+.nc-blog-hero h1 span {
+
+    color: #087BFF;
+
+}
+
+
+.nc-blog-hero p {
+
+    max-width: 680px;
+
+    margin-top: 35px;
+
+    color: #64748B;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+.nc-blog-hero-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+
+.nc-blog-hero-line span {
+
+    width: 60px;
+
+    height: 1px;
+
+    background: #087BFF;
+
+}
+
+
+.nc-blog-hero-line small {
+
+    color: #334155;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+}
+
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+.nc-blog-featured,
+.nc-blog-posts {
+
+    padding: 120px 0;
+
+}
+
+
+.nc-blog-featured {
+
+    background: #080B12;
+
+}
+
+
+.nc-blog-posts {
+
+    background: #05070D;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.nc-blog-section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+.nc-blog-label {
+
+    color: #087BFF;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .2em;
+
+}
+
+
+.nc-blog-section-heading h2 {
+
+    margin-top: 18px;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        2.7rem,
+        5vw,
+        4.5rem
+    );
+
+    line-height: .9;
+
+    letter-spacing: -.065em;
+
+    font-weight: 950;
+
+}
+
+
+.nc-blog-section-heading h2 span {
+
+    color: #087BFF;
+
+}
+
+
+.nc-blog-section-heading > p {
+
+    max-width: 370px;
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   FEATURED
+========================================================== */
+
+.nc-featured-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 55px;
+
+}
+
+
+.nc-featured-card {
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 17px;
+
+    background: #0A0E15;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+
+}
+
+
+.nc-featured-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(8,123,255,.3);
+
+}
+
+
+.nc-featured-image {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.nc-featured-image img {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.nc-featured-card:hover
+.nc-featured-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+.nc-image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5,7,13,.65),
+            transparent 60%
+        );
+
+}
+
+
+.nc-featured-badge {
+
+    position: absolute;
+
+    top: 17px;
+
+    left: 17px;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(8,123,255,.3);
+
+    border-radius: 5px;
+
+    background:
+        rgba(5,7,13,.72);
+
+    backdrop-filter: blur(10px);
+
+    color: #087BFF;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: .12em;
+
+}
+
+
+.nc-featured-content {
+
+    padding: 25px;
+
+}
+
+
+.nc-post-category {
+
+    color: #087BFF;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+}
+
+
+.nc-featured-content h3 {
+
+    margin-top: 12px;
+
+    color: #F8FAFC;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    letter-spacing: -.03em;
+
+    font-weight: 850;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.nc-featured-card:hover
+.nc-featured-content h3 {
+
+    color: #087BFF;
+
+}
+
+
+.nc-featured-content p {
+
+    margin-top: 12px;
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+.nc-post-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding-top: 17px;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+
+}
+
+
+.nc-post-footer span {
+
+    color: #475569;
+
+    font-size: 8px;
+
+}
+
+
+.nc-post-footer strong {
+
+    color: #087BFF;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+}
+
+
+/* ==========================================================
+   POSTS
+========================================================== */
+
+.nc-posts-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 55px;
+
+}
+
+
+.nc-post-card {
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 15px;
+
+    background: #080B12;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+
+}
+
+
+.nc-post-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(8,123,255,.28);
+
+}
+
+
+.nc-post-image {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.nc-post-image img {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    transition:
+        transform .6s ease;
+
+}
+
+
+.nc-post-card:hover
+.nc-post-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+.nc-post-number {
+
+    position: absolute;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 35px;
+
+    height: 35px;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    border-radius: 50%;
+
+    background:
+        rgba(5,7,13,.75);
+
+    backdrop-filter: blur(10px);
+
+    color: #087BFF;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+}
+
+
+.nc-post-content {
+
+    padding: 24px;
+
+}
+
+
+.nc-post-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+.nc-post-top > span {
+
+    color: #087BFF;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: .13em;
+
+    text-transform: uppercase;
+
+}
+
+
+.nc-post-top small {
+
+    color: #475569;
+
+    font-size: 6px;
+
+    font-weight: 900;
+
+    letter-spacing: .1em;
+
+}
+
+
+.nc-post-content h3 {
+
+    margin-top: 13px;
+
+    color: #F8FAFC;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    font-weight: 850;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.nc-post-card:hover
+.nc-post-content h3 {
+
+    color: #087BFF;
+
+}
+
+
+.nc-post-content p {
+
+    margin-top: 10px;
+
+    color: #64748B;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+
+.nc-post-meta {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+    color: #334155;
+
+    font-size: 7px;
+
+}
+
+
+.nc-post-meta div:first-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.nc-post-meta span {
+
+    color: #334155;
+
+    font-size: 6px;
+
+    font-weight: 900;
+
+}
+
+
+.nc-post-meta strong {
+
+    color: #64748B;
+
+    font-size: 8px;
+
+}
+
+
+.nc-read-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    color: #087BFF;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+}
+
+
+.nc-read-link span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 28px;
+
+    height: 28px;
+
+    border:
+        1px solid rgba(8,123,255,.2);
+
+    border-radius: 50%;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+.nc-post-card:hover
+.nc-read-link span {
+
+    background: #087BFF;
+
+    color: white;
+
+    transform: translateX(4px);
+
+}
+
+
+/* ==========================================================
+   PLACEHOLDER
+========================================================== */
+
+.nc-blog-placeholder {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    aspect-ratio: 16 / 10;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(8,123,255,.13),
+            transparent 60%
+        ),
+        #07111F;
+
+}
+
+
+.nc-blog-placeholder span {
+
+    color: rgba(8,123,255,.25);
+
+    font-size: 30px;
+
+    font-weight: 950;
+
+    letter-spacing: -.06em;
+
+}
+
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.nc-blog-empty {
+
+    max-width: 650px;
+
+    margin: 60px auto 0;
+
+    padding: 70px 35px;
+
+    text-align: center;
+
+    border:
+        1px dashed rgba(255,255,255,.1);
+
+    border-radius: 20px;
+
+    background: #080B12;
+
+}
+
+
+.nc-empty-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 25px;
+
+    border:
+        1px solid rgba(8,123,255,.25);
+
+    border-radius: 50%;
+
+    color: #087BFF;
+
+    font-size: 25px;
+
+}
+
+
+.nc-blog-empty h2 {
+
+    margin-top: 15px;
+
+    color: #F8FAFC;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+}
+
+
+.nc-blog-empty p {
+
+    max-width: 480px;
+
+    margin: 15px auto 0;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+.nc-blog-empty a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    background: #087BFF;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.nc-blog-cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 140px 0;
+
+    background: #080B12;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.nc-blog-cta-glow {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 500px;
+
+    height: 500px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(8,123,255,.06);
+
+    filter: blur(120px);
+
+}
+
+
+.nc-blog-cta h2 {
+
+    position: relative;
+
+    margin-top: 20px;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        3rem,
+        6vw,
+        5.5rem
+    );
+
+    line-height: .9;
+
+    letter-spacing: -.07em;
+
+    font-weight: 950;
+
+}
+
+
+.nc-blog-cta h2 span {
+
+    color: #087BFF;
+
+}
+
+
+.nc-blog-cta p {
+
+    position: relative;
+
+    max-width: 600px;
+
+    margin: 28px auto 0;
+
+    color: #64748B;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+.nc-blog-cta a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+    padding: 14px 22px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0057D9,
+            #087BFF
+        );
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 20px 50px rgba(8,123,255,.15);
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.nc-blog-cta a:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1000px) {
+
+    .nc-featured-grid,
+    .nc-posts-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nc-blog-hero {
+
+        min-height: 560px;
+
+    }
+
+
+    .nc-blog-hero-content {
+
+        padding:
+            130px 0
+            80px;
+
+    }
+
+
+    .nc-blog-hero h1 {
+
+        font-size:
+            3.8rem;
+
+    }
+
+
+    .nc-blog-section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .nc-featured-grid,
+    .nc-posts-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nc-blog-featured,
+    .nc-blog-posts {
+
+        padding: 90px 0;
+
+    }
+
+
+    .nc-blog-cta {
+
+        padding: 100px 0;
+
+    }
+
+
+    .nc-blog-cta h2 {
+
+        font-size:
+            3.3rem;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .nc-blog-hero h1 {
+
+        font-size:
+            3.25rem;
+
+    }
+
+
+    .nc-blog-hero p {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .nc-featured-content,
+    .nc-post-content {
+
+        padding: 20px;
+
+    }
+
+}
+
+</style>
+
+{% endblock %}

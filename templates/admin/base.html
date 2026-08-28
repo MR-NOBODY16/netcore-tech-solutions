@@ -1,0 +1,54 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    {{ title }} | NetCore TECH Solutions
+{% endblock %}
+
+
+{% block extrastyle %}
+    {{ block.super }}
+
+    <link
+        rel="stylesheet"
+        href="{% static 'admin/css/netcore_admin.css' %}"
+    >
+{% endblock %}
+
+
+{% block branding %}
+
+    <div id="netcore-admin-brand">
+
+        <a
+            href="{% url 'admin:index' %}"
+            id="netcore-admin-brand-link"
+        >
+
+            <span class="netcore-admin-brand-mark">
+                NT
+            </span>
+
+            <span class="netcore-admin-brand-text">
+
+                <strong>
+                    NetCore
+                </strong>
+
+                <span>
+                    TECH Solutions
+                </span>
+
+            </span>
+
+        </a>
+
+    </div>
+
+{% endblock %}
+
+
+{% block nav-global %}
+    {{ block.super }}
+{% endblock %}

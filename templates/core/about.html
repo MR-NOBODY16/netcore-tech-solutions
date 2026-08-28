@@ -1,0 +1,2118 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About Us | NetCore TECH Solutions
+{% endblock %}
+
+{% block meta_description %}
+    {% if about_profile and about_profile.short_intro %}
+        {{ about_profile.short_intro|truncatechars:155 }}
+    {% else %}
+        Learn about NetCore TECH Solutions, our story, people, mission, vision and approach to technology.
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ==========================================================
+     ABOUT HERO
+========================================================== -->
+
+<section class="nc-about-hero">
+
+    <div class="nc-hero-grid"></div>
+
+    <div class="nc-hero-orb nc-orb-one"></div>
+    <div class="nc-hero-orb nc-orb-two"></div>
+
+    <div class="nc-hero-line nc-line-one"></div>
+    <div class="nc-hero-line nc-line-two"></div>
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-hero-inner">
+
+            <div class="nc-reveal">
+
+                <div class="nc-eyebrow">
+                    <span class="nc-eyebrow-dot"></span>
+                    ABOUT NETCORE
+                </div>
+
+                <h1 class="nc-hero-title">
+
+                    Technology built around
+
+                    <span>
+                        real needs.
+                    </span>
+
+                </h1>
+
+                {% if about_profile and about_profile.short_intro %}
+
+                    <p class="nc-hero-description">
+                        {{ about_profile.short_intro }}
+                    </p>
+
+                {% else %}
+
+                    <p class="nc-hero-description">
+                        NetCore TECH Solutions provides practical digital,
+                        software and IT solutions designed around real-world
+                        business and organizational needs.
+                    </p>
+
+                {% endif %}
+
+
+                {% if about_profile and about_profile.founded_year %}
+
+                    <div class="nc-founded">
+
+                        <span class="nc-founded-line"></span>
+
+                        <span>
+                            EST. {{ about_profile.founded_year }}
+                        </span>
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="nc-scroll-indicator">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <div class="nc-scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     WHO WE ARE
+========================================================== -->
+
+<section class="nc-section nc-dark-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-two-column">
+
+            <div class="nc-reveal">
+
+                <div class="nc-section-label">
+                    01 — WHO WE ARE
+                </div>
+
+                <h2 class="nc-section-title">
+
+                    Technology should be
+
+                    <span>
+                        useful.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="nc-copy nc-reveal">
+
+                {% if about_profile and about_profile.who_we_are %}
+
+                    {{ about_profile.who_we_are|linebreaks }}
+
+                {% else %}
+
+                    <p>
+                        NetCore TECH Solutions is a technology-focused
+                        company dedicated to helping businesses and
+                        organizations use technology more effectively.
+                    </p>
+
+                {% endif %}
+
+
+                {% if about_profile and about_profile.what_we_do %}
+
+                    {{ about_profile.what_we_do|linebreaks }}
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     OUR STORY
+========================================================== -->
+
+<section class="nc-section nc-story-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-story-header nc-reveal">
+
+            <div>
+
+                <div class="nc-section-label">
+                    02 — OUR STORY
+                </div>
+
+                <h2 class="nc-section-title">
+
+                    Where the journey
+
+                    <span>
+                        began.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            {% if about_profile and about_profile.founded_year %}
+
+                <div class="nc-story-year">
+
+                    <strong>
+                        {{ about_profile.founded_year }}
+                    </strong>
+
+                    <span>
+                        Founded
+                    </span>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="nc-story-grid">
+
+            {% if about_profile %}
+
+                {% if about_profile.our_story %}
+
+                    <article class="nc-story-card nc-story-wide nc-reveal">
+
+                        <div class="nc-card-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Our Story
+                            </h3>
+
+                            <div class="nc-card-text">
+                                {{ about_profile.our_story|linebreaks }}
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                {% endif %}
+
+
+                {% if about_profile.why_we_started %}
+
+                    <article class="nc-story-card nc-reveal">
+
+                        <div class="nc-card-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Why We Started
+                        </h3>
+
+                        <div class="nc-card-text">
+                            {{ about_profile.why_we_started|linebreaks }}
+                        </div>
+
+                    </article>
+
+                {% endif %}
+
+
+                {% if about_profile.problem_we_wanted_to_solve %}
+
+                    <article class="nc-story-card nc-reveal">
+
+                        <div class="nc-card-number">
+                            03
+                        </div>
+
+                        <h3>
+                            The Problem
+                        </h3>
+
+                        <div class="nc-card-text">
+                            {{ about_profile.problem_we_wanted_to_solve|linebreaks }}
+                        </div>
+
+                    </article>
+
+                {% endif %}
+
+
+                {% if about_profile.how_we_started %}
+
+                    <article class="nc-story-card nc-reveal">
+
+                        <div class="nc-card-number">
+                            04
+                        </div>
+
+                        <h3>
+                            How We Started
+                        </h3>
+
+                        <div class="nc-card-text">
+                            {{ about_profile.how_we_started|linebreaks }}
+                        </div>
+
+                    </article>
+
+                {% endif %}
+
+
+                {% if about_profile.initial_services %}
+
+                    <article class="nc-story-card nc-reveal">
+
+                        <div class="nc-card-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Our First Services
+                        </h3>
+
+                        <div class="nc-card-text">
+                            {{ about_profile.initial_services|linebreaks }}
+                        </div>
+
+                    </article>
+
+                {% endif %}
+
+
+                {% if about_profile.how_we_have_grown %}
+
+                    <article class="nc-story-card nc-story-wide nc-reveal">
+
+                        <div class="nc-card-number">
+                            06
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                How We've Grown
+                            </h3>
+
+                            <div class="nc-card-text">
+                                {{ about_profile.how_we_have_grown|linebreaks }}
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                {% endif %}
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     MISSION + VISION
+========================================================== -->
+
+<section class="nc-section nc-mission-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-mission-intro nc-reveal">
+
+            <div class="nc-section-label">
+                03 — DIRECTION
+            </div>
+
+            <h2 class="nc-section-title">
+
+                What drives
+
+                <span>
+                    NetCore.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="nc-mission-grid">
+
+            <article class="nc-mission-card nc-reveal">
+
+                <div class="nc-mission-top">
+
+                    <span>
+                        OUR MISSION
+                    </span>
+
+                    <span class="nc-mission-index">
+                        M
+                    </span>
+
+                </div>
+
+
+                <div class="nc-mission-content">
+
+                    <h3>
+
+                        {% if about_profile and about_profile.mission %}
+
+                            {{ about_profile.mission }}
+
+                        {% else %}
+
+                            To provide practical and reliable technology
+                            solutions that help businesses and organizations
+                            work smarter, operate efficiently and grow.
+
+                        {% endif %}
+
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <article class="nc-mission-card nc-mission-blue nc-reveal">
+
+                <div class="nc-mission-top">
+
+                    <span>
+                        OUR VISION
+                    </span>
+
+                    <span class="nc-mission-index">
+                        V
+                    </span>
+
+                </div>
+
+
+                <div class="nc-mission-content">
+
+                    <h3>
+
+                        {% if about_profile and about_profile.vision %}
+
+                            {{ about_profile.vision }}
+
+                        {% else %}
+
+                            To build a stronger digital future by making
+                            useful technology more accessible to businesses
+                            and organizations.
+
+                        {% endif %}
+
+                    </h3>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     COMPANY VALUES
+========================================================== -->
+
+{% if company_values %}
+
+<section class="nc-section nc-values-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-values-header nc-reveal">
+
+            <div>
+
+                <div class="nc-section-label">
+                    04 — WHAT WE BELIEVE
+                </div>
+
+                <h2 class="nc-section-title">
+
+                    Principles behind
+
+                    <span>
+                        our work.
+                    </span>
+
+                </h2>
+
+            </div>
+
+            <p>
+                The principles that guide how we build,
+                communicate and serve.
+            </p>
+
+        </div>
+
+
+        <div class="nc-values-grid">
+
+            {% for value in company_values %}
+
+                <article class="nc-value-card nc-reveal">
+
+                    <div class="nc-value-top">
+
+                        <span>
+                            {{ forloop.counter|stringformat:"02d" }}
+                        </span>
+
+                        {% if value.icon %}
+
+                            <b>
+                                {{ value.icon }}
+                            </b>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <div class="nc-value-body">
+
+                        <h3>
+                            {{ value.title }}
+                        </h3>
+
+                        <p>
+                            {{ value.description }}
+                        </p>
+
+                    </div>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+
+<!-- ==========================================================
+     LEADERSHIP
+========================================================== -->
+
+{% if leadership %}
+
+<section class="nc-section nc-leadership-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-leadership-header nc-reveal">
+
+            <div>
+
+                <div class="nc-section-label">
+                    05 — LEADERSHIP
+                </div>
+
+                <h2 class="nc-section-title">
+
+                    The people behind
+
+                    <span>
+                        NetCore.
+                    </span>
+
+                </h2>
+
+            </div>
+
+            <p>
+                Meet the people helping shape our technology,
+                direction and professional standards.
+            </p>
+
+        </div>
+
+
+        <div class="nc-leadership-grid">
+
+            {% for person in leadership %}
+
+                <article class="nc-leader-card nc-reveal">
+
+                    <div class="nc-leader-photo">
+
+                        {% if person.photo %}
+
+                            <img
+                                src="{{ person.photo.url }}"
+                                alt="{{ person.full_name }}"
+                                loading="lazy"
+                            >
+
+                        {% else %}
+
+                            <div class="nc-leader-placeholder">
+
+                                <span>
+                                    {{ person.full_name|first|upper }}
+                                </span>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <div class="nc-photo-overlay"></div>
+
+                        <div class="nc-photo-number">
+                            {{ forloop.counter|stringformat:"02d" }}
+                        </div>
+
+                    </div>
+
+
+                    <div class="nc-leader-content">
+
+                        <div class="nc-leader-position">
+
+                            {{ person.position }}
+
+                        </div>
+
+
+                        <h3>
+                            {{ person.full_name }}
+                        </h3>
+
+
+                        {% if person.professional_title %}
+
+                            <p class="nc-leader-title">
+                                {{ person.professional_title }}
+                            </p>
+
+                        {% endif %}
+
+
+                        {% if person.short_bio %}
+
+                            <div class="nc-leader-block">
+
+                                <div class="nc-small-label">
+                                    PROFILE
+                                </div>
+
+                                <div class="nc-leader-text">
+                                    {{ person.short_bio|linebreaks }}
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        {% if person.professional_background %}
+
+                            <div class="nc-leader-block">
+
+                                <div class="nc-small-label">
+                                    PROFESSIONAL BACKGROUND
+                                </div>
+
+                                <div class="nc-leader-text">
+                                    {{ person.professional_background|linebreaks }}
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        {% if person.education %}
+
+                            <div class="nc-leader-block">
+
+                                <div class="nc-small-label">
+                                    EDUCATION
+                                </div>
+
+                                <div class="nc-leader-text">
+                                    {{ person.education|linebreaks }}
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        {% if person.professional_skills %}
+
+                            <div class="nc-leader-block">
+
+                                <div class="nc-small-label">
+                                    EXPERTISE
+                                </div>
+
+                                <div class="nc-leader-text">
+                                    {{ person.professional_skills }}
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <div class="nc-leader-links">
+
+                            {% if person.linkedin_url %}
+
+                                <a
+                                    href="{{ person.linkedin_url }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    LinkedIn
+                                    <span>↗</span>
+                                </a>
+
+                            {% endif %}
+
+
+                            {% if person.facebook_url %}
+
+                                <a
+                                    href="{{ person.facebook_url }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Facebook
+                                    <span>↗</span>
+                                </a>
+
+                            {% endif %}
+
+
+                            {% if person.email %}
+
+                                <a
+                                    href="mailto:{{ person.email }}"
+                                >
+                                    Email
+                                    <span>↗</span>
+                                </a>
+
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+
+<!-- ==========================================================
+     WHY NETCORE
+========================================================== -->
+
+<section class="nc-difference-section">
+
+    <div class="nc-difference-grid"></div>
+
+    <div class="mx-auto max-w-5xl px-5 text-center sm:px-6 lg:px-8">
+
+        <div class="nc-section-label nc-reveal">
+            06 — WHY NETCORE
+        </div>
+
+        <h2 class="nc-big-statement nc-reveal">
+
+            Technology should solve problems,
+
+            <span>
+                not create them.
+            </span>
+
+        </h2>
+
+
+        {% if about_profile and about_profile.what_makes_us_different %}
+
+            <p class="nc-difference-text nc-reveal">
+
+                {{ about_profile.what_makes_us_different }}
+
+            </p>
+
+        {% else %}
+
+            <p class="nc-difference-text nc-reveal">
+
+                We focus on understanding the problem first,
+                choosing the right technology and delivering
+                solutions that remain useful beyond launch.
+
+            </p>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     FUTURE
+========================================================== -->
+
+{% if about_profile and about_profile.future_goals %}
+
+<section class="nc-section nc-future-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-future-grid">
+
+            <div class="nc-reveal">
+
+                <div class="nc-section-label">
+                    07 — THE ROAD AHEAD
+                </div>
+
+                <h2 class="nc-section-title">
+
+                    Where we're
+
+                    <span>
+                        going.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="nc-future-copy nc-reveal">
+
+                {{ about_profile.future_goals|linebreaks }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+
+<!-- ==========================================================
+     FINAL CTA
+========================================================== -->
+
+<section class="nc-cta-section">
+
+    <div class="nc-cta-orb"></div>
+
+    <div class="mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8">
+
+        <div class="nc-section-label nc-reveal">
+            LET'S BUILD TOGETHER
+        </div>
+
+        <h2 class="nc-cta-title nc-reveal">
+
+            Have a technology
+
+            <span>
+                challenge?
+            </span>
+
+        </h2>
+
+        <p class="nc-cta-text nc-reveal">
+
+            Let's discuss how NetCore can help turn your
+            idea or challenge into a practical solution.
+
+        </p>
+
+
+        <a
+            href="{% url 'inquiries:contact' %}"
+            class="nc-cta-button nc-reveal"
+        >
+
+            <span>
+                Start a Conversation
+            </span>
+
+            <span class="nc-cta-arrow">
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     ABOUT PAGE STYLES
+========================================================== -->
+
+<style>
+
+/* ==========================================================
+   BASE
+========================================================== */
+
+.nc-about-hero,
+.nc-section,
+.nc-difference-section,
+.nc-cta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.nc-section {
+    padding: 125px 0;
+}
+
+.nc-dark-section {
+    background: #05070D;
+}
+
+.nc-story-section {
+    background: #080B12;
+    border-top: 1px solid rgba(255,255,255,.055);
+    border-bottom: 1px solid rgba(255,255,255,.055);
+}
+
+.nc-mission-section {
+    background: #05070D;
+}
+
+.nc-values-section {
+    background: #080B12;
+    border-top: 1px solid rgba(255,255,255,.055);
+}
+
+.nc-leadership-section {
+    background: #05070D;
+}
+
+.nc-eyebrow,
+.nc-section-label,
+.nc-small-label {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.nc-section-label {
+    color: #087BFF;
+    font-size: 9px;
+}
+
+.nc-section-title {
+    margin-top: 18px;
+    color: #F8FAFC;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: .96;
+    letter-spacing: -.055em;
+    font-weight: 900;
+}
+
+.nc-section-title span,
+.nc-big-statement span,
+.nc-cta-title span {
+    color: #087BFF;
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.nc-about-hero {
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    background: #05070D;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nc-hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .035;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.9) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.9) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 72px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+}
+
+.nc-hero-inner {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 155px 0 120px;
+}
+
+.nc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #087BFF;
+    font-size: 9px;
+}
+
+.nc-eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #087BFF;
+    box-shadow: 0 0 20px rgba(8,123,255,.8);
+    animation: nc-pulse 2s infinite;
+}
+
+.nc-hero-title {
+    margin-top: 25px;
+    color: #F8FAFC;
+    font-size: clamp(3.5rem, 8vw, 7.8rem);
+    line-height: .88;
+    letter-spacing: -.075em;
+    font-weight: 950;
+}
+
+.nc-hero-title span {
+    display: block;
+    color: #087BFF;
+}
+
+.nc-hero-description {
+    max-width: 680px;
+    margin-top: 35px;
+    color: #718096;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.nc-founded {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 35px;
+    color: #64748B;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .2em;
+}
+
+.nc-founded-line {
+    width: 40px;
+    height: 1px;
+    background: #087BFF;
+}
+
+.nc-hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+}
+
+.nc-orb-one {
+    width: 480px;
+    height: 480px;
+    left: -220px;
+    top: 50px;
+    background: rgba(0,87,217,.13);
+}
+
+.nc-orb-two {
+    width: 430px;
+    height: 430px;
+    right: -220px;
+    bottom: -100px;
+    background: rgba(8,123,255,.09);
+}
+
+.nc-hero-line {
+    position: absolute;
+    width: 1px;
+    height: 300px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(8,123,255,.3),
+        transparent
+    );
+    opacity: .6;
+}
+
+.nc-line-one {
+    left: 10%;
+    top: 25%;
+    transform: rotate(22deg);
+}
+
+.nc-line-two {
+    right: 15%;
+    bottom: 15%;
+    transform: rotate(-28deg);
+}
+
+.nc-scroll-indicator {
+    position: absolute;
+    right: 35px;
+    bottom: 45px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transform: rotate(90deg);
+    transform-origin: right center;
+}
+
+.nc-scroll-indicator span {
+    color: #334155;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .2em;
+}
+
+.nc-scroll-line {
+    width: 55px;
+    height: 1px;
+    background: #087BFF;
+}
+
+
+/* ==========================================================
+   WHO WE ARE
+========================================================== */
+
+.nc-two-column {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 100px;
+}
+
+.nc-copy {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.nc-copy p {
+    margin-bottom: 20px;
+}
+
+.nc-copy p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   STORY
+========================================================== */
+
+.nc-story-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.nc-story-year {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.nc-story-year strong {
+    color: #087BFF;
+    font-size: 54px;
+    line-height: .85;
+    font-weight: 950;
+    letter-spacing: -.06em;
+}
+
+.nc-story-year span {
+    margin-top: 9px;
+    color: #475569;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.nc-story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 65px;
+}
+
+.nc-story-card {
+    position: relative;
+    min-height: 250px;
+    padding: 32px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.065);
+    border-radius: 18px;
+    background: #0D1119;
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        background .4s ease;
+}
+
+.nc-story-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(8,123,255,.22);
+    background: #0F141D;
+}
+
+.nc-story-wide {
+    grid-column: span 2;
+    min-height: 230px;
+}
+
+.nc-card-number {
+    color: #087BFF;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.nc-story-card h3 {
+    margin-top: 20px;
+    color: #F8FAFC;
+    font-size: 21px;
+    font-weight: 850;
+    letter-spacing: -.025em;
+}
+
+.nc-card-text {
+    max-width: 850px;
+    margin-top: 14px;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.nc-card-text p {
+    margin-bottom: 11px;
+}
+
+.nc-card-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   MISSION + VISION
+========================================================== */
+
+.nc-mission-intro {
+    max-width: 700px;
+}
+
+.nc-mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 60px;
+}
+
+.nc-mission-card {
+    position: relative;
+    min-height: 350px;
+    padding: 40px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 20px;
+    background: #0A0E15;
+}
+
+.nc-mission-card::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -120px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(8,123,255,.04);
+    filter: blur(60px);
+}
+
+.nc-mission-blue {
+    border-color: rgba(8,123,255,.2);
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(8,123,255,.11),
+            transparent 40%
+        ),
+        #08111D;
+}
+
+.nc-mission-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #087BFF;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .2em;
+}
+
+.nc-mission-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(8,123,255,.2);
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.nc-mission-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 75px;
+}
+
+.nc-mission-content h3 {
+    color: #F8FAFC;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -.04em;
+    font-weight: 850;
+}
+
+
+/* ==========================================================
+   VALUES
+========================================================== */
+
+.nc-values-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.nc-values-header > p,
+.nc-leadership-header > p {
+    max-width: 350px;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.nc-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.nc-value-card {
+    min-height: 270px;
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 17px;
+    background: #0D1119;
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+.nc-value-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(8,123,255,.25);
+    box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+
+.nc-value-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nc-value-top > span {
+    color: #087BFF;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.nc-value-top b {
+    color: #475569;
+    font-size: 15px;
+}
+
+.nc-value-body {
+    margin-top: 70px;
+}
+
+.nc-value-body h3 {
+    color: #F8FAFC;
+    font-size: 19px;
+    font-weight: 850;
+}
+
+.nc-value-body p {
+    margin-top: 11px;
+    color: #64748B;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   LEADERSHIP
+========================================================== */
+
+.nc-leadership-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nc-leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.nc-leader-card {
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 20px;
+    background: #0A0E15;
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+}
+
+.nc-leader-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(8,123,255,.2);
+}
+
+.nc-leader-photo {
+    position: relative;
+    aspect-ratio: 1.15 / 1;
+    overflow: hidden;
+    background: #071522;
+}
+
+.nc-leader-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.nc-leader-card:hover .nc-leader-photo img {
+    transform: scale(1.045);
+}
+
+.nc-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(5,7,13,.75),
+            transparent 45%
+        );
+    pointer-events: none;
+}
+
+.nc-photo-number {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    color: rgba(255,255,255,.55);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .15em;
+}
+
+.nc-leader-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle,
+            rgba(8,123,255,.16),
+            transparent 60%
+        ),
+        #071522;
+}
+
+.nc-leader-placeholder span {
+    color: #087BFF;
+    font-size: 80px;
+    font-weight: 950;
+}
+
+.nc-leader-content {
+    padding: 32px;
+}
+
+.nc-leader-position {
+    color: #087BFF;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.nc-leader-content h3 {
+    margin-top: 9px;
+    color: #F8FAFC;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.04em;
+}
+
+.nc-leader-title {
+    margin-top: 7px;
+    color: #64748B;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.nc-leader-block {
+    margin-top: 25px;
+}
+
+.nc-small-label {
+    margin-bottom: 8px;
+    color: #CBD5E1;
+    font-size: 8px;
+}
+
+.nc-leader-text {
+    color: #64748B;
+    font-size: 11px;
+    line-height: 1.85;
+}
+
+.nc-leader-text p {
+    margin-bottom: 10px;
+}
+
+.nc-leader-text p:last-child {
+    margin-bottom: 0;
+}
+
+.nc-leader-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.nc-leader-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 7px;
+    color: #64748B;
+    font-size: 8px;
+    font-weight: 800;
+    transition:
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.nc-leader-links a:hover {
+    color: #087BFF;
+    border-color: rgba(8,123,255,.3);
+    transform: translateY(-2px);
+}
+
+.nc-leader-links a span {
+    color: #087BFF;
+}
+
+
+/* ==========================================================
+   DIFFERENCE
+========================================================== */
+
+.nc-difference-section {
+    padding: 155px 0;
+    background: #080B12;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.nc-difference-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .025;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 90px 90px;
+
+    mask-image: radial-gradient(
+        circle at center,
+        black,
+        transparent 70%
+    );
+}
+
+.nc-big-statement {
+    max-width: 900px;
+    margin: 18px auto 0;
+    color: #F8FAFC;
+    font-size: clamp(2.7rem, 6vw, 5.5rem);
+    line-height: .94;
+    letter-spacing: -.065em;
+    font-weight: 950;
+}
+
+.nc-difference-text {
+    max-width: 650px;
+    margin: 32px auto 0;
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   FUTURE
+========================================================== */
+
+.nc-future-section {
+    background: #05070D;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.nc-future-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+}
+
+.nc-future-copy {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.nc-cta-section {
+    padding: 150px 0;
+    background: #080B12;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.nc-cta-orb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 550px;
+    height: 550px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(8,123,255,.075);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.nc-cta-title {
+    position: relative;
+    margin-top: 18px;
+    color: #F8FAFC;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: .9;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.nc-cta-text {
+    position: relative;
+    max-width: 600px;
+    margin: 28px auto 0;
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.nc-cta-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 34px;
+    padding: 15px 20px;
+    border-radius: 9px;
+    background: #087BFF;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 850;
+    box-shadow: 0 20px 60px rgba(8,123,255,.16);
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.nc-cta-button:hover {
+    transform: translateY(-4px);
+    background: #006BE6;
+    box-shadow: 0 25px 70px rgba(8,123,255,.25);
+}
+
+.nc-cta-arrow {
+    transition: transform .3s ease;
+}
+
+.nc-cta-button:hover .nc-cta-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================
+   REVEAL ANIMATION
+========================================================== */
+
+.nc-reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.nc-reveal.nc-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   HERO ANIMATIONS
+========================================================== */
+
+@keyframes nc-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.45);
+        opacity: .55;
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .nc-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .nc-two-column,
+    .nc-future-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .nc-values-header,
+    .nc-leadership-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nc-leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .nc-section {
+        padding: 90px 0;
+    }
+
+    .nc-about-hero {
+        min-height: 680px;
+    }
+
+    .nc-hero-inner {
+        padding: 125px 0 100px;
+    }
+
+    .nc-hero-title {
+        font-size: clamp(3.2rem, 15vw, 5.5rem);
+    }
+
+    .nc-hero-description {
+        font-size: 14px;
+    }
+
+    .nc-scroll-indicator {
+        display: none;
+    }
+
+    .nc-story-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nc-story-year {
+        align-items: flex-start;
+    }
+
+    .nc-story-grid,
+    .nc-mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nc-story-wide {
+        grid-column: span 1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nc-section {
+        padding: 78px 0;
+    }
+
+    .nc-about-hero {
+        min-height: 620px;
+    }
+
+    .nc-hero-inner {
+        padding: 115px 0 80px;
+    }
+
+    .nc-hero-title {
+        font-size: 3.4rem;
+    }
+
+    .nc-hero-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .nc-hero-orb {
+        opacity: .6;
+    }
+
+    .nc-story-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .nc-mission-card {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .nc-mission-content {
+        margin-top: 55px;
+    }
+
+    .nc-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nc-value-card {
+        min-height: 220px;
+    }
+
+    .nc-value-body {
+        margin-top: 55px;
+    }
+
+    .nc-leader-content {
+        padding: 25px;
+    }
+
+    .nc-leader-content h3 {
+        font-size: 26px;
+    }
+
+    .nc-difference-section,
+    .nc-cta-section {
+        padding: 95px 0;
+    }
+
+    .nc-big-statement {
+        font-size: 2.8rem;
+    }
+
+    .nc-cta-title {
+        font-size: 3.4rem;
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .nc-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==========================================================
+     ABOUT PAGE JAVASCRIPT
+========================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*
+     * Scroll reveal animation.
+     *
+     * No external JavaScript library is required.
+     */
+
+    const revealElements =
+        document.querySelectorAll(".nc-reveal");
+
+
+    if (!("IntersectionObserver" in window)) {
+
+        revealElements.forEach(function (element) {
+
+            element.classList.add("nc-visible");
+
+        });
+
+        return;
+    }
+
+
+    const observer =
+        new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "nc-visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -40px 0px"
+            }
+        );
+
+
+    revealElements.forEach(function (element, index) {
+
+        /*
+         * Small stagger effect for cards.
+         */
+
+        if (
+            element.classList.contains("nc-story-card") ||
+            element.classList.contains("nc-value-card") ||
+            element.classList.contains("nc-leader-card") ||
+            element.classList.contains("nc-mission-card")
+        ) {
+
+            const delay =
+                Math.min(index * 60, 300);
+
+            element.style.transitionDelay =
+                delay + "ms";
+
+        }
+
+
+        observer.observe(element);
+
+    });
+
+});
+
+</script>
+
+
+{% endblock %}

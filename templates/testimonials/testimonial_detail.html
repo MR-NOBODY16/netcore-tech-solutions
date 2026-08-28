@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ testimonial.client_name }} | Client Testimonial | NetCore TECH Solutions
+{% endblock %}
+
+{% block meta_description %}
+Read the testimonial from {{ testimonial.client_name }}
+about their experience with NetCore TECH Solutions.
+{% endblock %}
+
+{% block content %}
+
+<section class="relative overflow-hidden border-b border-white/10 pt-32">
+
+    <div
+        class="absolute left-0 top-20 h-96 w-96 rounded-full bg-[#0057D9]/15 blur-[120px]"
+    ></div>
+
+    <div
+        class="relative mx-auto max-w-5xl px-5 py-20 text-center sm:px-6 lg:px-8"
+    >
+
+        <a
+            href="{% url 'testimonials:home' %}"
+            class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-[#087BFF]"
+        >
+            <span>←</span>
+            Back to Testimonials
+        </a>
+
+
+        <div
+            class="mx-auto mt-12 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full border-2 border-[#087BFF]/30 bg-[#0D1119]"
+        >
+
+            {% if testimonial.photo %}
+
+                <img
+                    src="{{ testimonial.photo.url }}"
+                    alt="{{ testimonial.client_name }}"
+                    class="h-full w-full object-cover"
+                >
+
+            {% else %}
+
+                <span
+                    class="text-3xl font-black text-[#087BFF]"
+                >
+                    {{ testimonial.client_name|first|upper }}
+                </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <p
+            class="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-[#087BFF]"
+        >
+            Client Testimonial
+        </p>
+
+
+        <h1
+            class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl"
+        >
+            {{ testimonial.client_name }}
+        </h1>
+
+
+        {% if testimonial.position or testimonial.company %}
+
+            <p
+                class="mt-4 text-slate-500"
+            >
+
+                {% if testimonial.position %}
+                    {{ testimonial.position }}
+                {% endif %}
+
+                {% if testimonial.position and testimonial.company %}
+                    ·
+                {% endif %}
+
+                {% if testimonial.company %}
+                    {{ testimonial.company }}
+                {% endif %}
+
+            </p>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+<section class="bg-[#05070D] py-24">
+
+    <div
+        class="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8"
+    >
+
+        <div
+            class="rounded-3xl border border-white/10 bg-[#0D1119] p-8 sm:p-12"
+        >
+
+            <div
+                class="flex items-center justify-center gap-1"
+            >
+
+                {% for number in "12345" %}
+
+                    {% if forloop.counter <= testimonial.rating %}
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="h-5 w-5 text-[#087BFF]"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.286l-4.117 3.44 1.257 5.273c.27 1.13-.994 2.033-1.993 1.425L12 18.354l-4.594 2.72c-.999.608-2.263-.296-1.993-1.425l1.257-5.273-4.117-3.44c-.887-.741-.415-2.193.749-2.286l5.404-.434 2.082-5.006Z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+
+            <blockquote
+                class="mt-10 text-center text-xl leading-9 text-slate-300 sm:text-2xl"
+            >
+                "{{ testimonial.testimonial }}"
+            </blockquote>
+
+
+            {% if testimonial.service %}
+
+                <div
+                    class="mt-10 text-center"
+                >
+
+                    <span
+                        class="inline-flex rounded-full border border-[#087BFF]/20 bg-[#087BFF]/10 px-4 py-2 text-xs font-bold text-[#087BFF]"
+                    >
+                        {{ testimonial.service }}
+                    </span>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="border-t border-white/10 bg-[#080B12] py-20">
+
+    <div
+        class="mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8"
+    >
+
+        <h2
+            class="text-3xl font-black text-white"
+        >
+            Want results like these?
+        </h2>
+
+        <p
+            class="mt-4 leading-8 text-slate-400"
+        >
+            Let's discuss how technology can improve your business
+            or organization.
+        </p>
+
+
+        <a
+            href="{% url 'inquiries:contact' %}"
+            class="mt-8 inline-flex rounded-xl bg-gradient-to-r from-[#0057D9] to-[#087BFF] px-8 py-3.5 text-sm font-bold text-white transition hover:-translate-y-1"
+        >
+            Start a Conversation
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

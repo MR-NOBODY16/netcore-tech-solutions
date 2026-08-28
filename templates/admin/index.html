@@ -1,0 +1,633 @@
+{% extends "admin/base_site.html" %}
+
+{% load static %}
+
+{% block title %}
+    NetCore Administration
+{% endblock %}
+
+
+{% block content %}
+
+<div class="netcore-dashboard">
+
+    <!-- =====================================================
+         DASHBOARD HEADER
+    ====================================================== -->
+
+    <div class="netcore-dashboard-header">
+
+        <div>
+
+            <span class="netcore-dashboard-eyebrow">
+                CONTROL CENTER
+            </span>
+
+            <h1>
+                Welcome to NetCore Administration
+            </h1>
+
+            <p>
+                Manage your website, services, portfolio,
+                blog and customer inquiries from one place.
+            </p>
+
+        </div>
+
+        <a
+            href="/"
+            class="netcore-dashboard-site-link"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12s3.75-7.5 9.75-7.5S21.75 12 21.75 12s-3.75 7.5-9.75 7.5S2.25 12 2.25 12Z"
+                />
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+                />
+            </svg>
+
+            Visit Website
+
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         STATISTICS
+    ====================================================== -->
+
+    <div class="netcore-stat-grid">
+
+
+        <!-- INQUIRIES -->
+
+        <div class="netcore-stat-card">
+
+            <div class="netcore-stat-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m3 5.25 7.015 5.26a3.25 3.25 0 0 0 3.97 0L21 5.25"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <span class="netcore-stat-label">
+                    Customer Inquiries
+                </span>
+
+                <strong class="netcore-stat-number">
+                    {{ netcore_stats.inquiries }}
+                </strong>
+
+                <span class="netcore-stat-description">
+                    Total project requests
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECTS -->
+
+        <div class="netcore-stat-card">
+
+            <div class="netcore-stat-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75A2.25 2.25 0 0 1 6 4.5h4.5l2.25 2.25H18A2.25 2.25 0 0 1 20.25 9v9.25A2.25 2.25 0 0 1 18 20.5H6a2.25 2.25 0 0 1-2.25-2.25V6.75Z"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <span class="netcore-stat-label">
+                    Portfolio Projects
+                </span>
+
+                <strong class="netcore-stat-number">
+                    {{ netcore_stats.projects }}
+                </strong>
+
+                <span class="netcore-stat-description">
+                    Projects in portfolio
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="netcore-stat-card">
+
+            <div class="netcore-stat-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M11.42 3.75h1.16a2.25 2.25 0 0 1 2.25 2.25v1.16a2.25 2.25 0 0 0 .659 1.591l.82.82a2.25 2.25 0 0 0 1.591.659h1.16a2.25 2.25 0 0 1 2.25 2.25v1.16a2.25 2.25 0 0 1-.659 1.591l-.82.82a2.25 2.25 0 0 0-.659 1.591v1.16a2.25 2.25 0 0 1-2.25 2.25h-1.16a2.25 2.25 0 0 0-1.591.659l-.82.82a2.25 2.25 0 0 1-1.591.659h-1.16a2.25 2.25 0 0 1-1.591-.659l-.82-.82a2.25 2.25 0 0 0-1.591-.659H5.75a2.25 2.25 0 0 1-2.25-2.25v-1.16a2.25 2.25 0 0 0-.659-1.591l-.82-.82a2.25 2.25 0 0 1-.659-1.591v-1.16a2.25 2.25 0 0 1 2.25-2.25h1.16a2.25 2.25 0 0 0 1.591-.659l.82-.82a2.25 2.25 0 0 0 .659-1.591V6a2.25 2.25 0 0 1 2.25-2.25Z"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m9 12 2 2 4-4"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <span class="netcore-stat-label">
+                    Services
+                </span>
+
+                <strong class="netcore-stat-number">
+                    {{ netcore_stats.services }}
+                </strong>
+
+                <span class="netcore-stat-description">
+                    Published services
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BLOG -->
+
+        <div class="netcore-stat-card">
+
+            <div class="netcore-stat-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 6.75A2.25 2.25 0 0 1 6.75 4.5h10.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25H6.75a2.25 2.25 0 0 1-2.25-2.25V6.75Z"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8.25 9h7.5M8.25 12h7.5M8.25 15h4.5"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <span class="netcore-stat-label">
+                    Blog Posts
+                </span>
+
+                <strong class="netcore-stat-number">
+                    {{ netcore_stats.posts }}
+                </strong>
+
+                <span class="netcore-stat-description">
+                    Published articles
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <div class="netcore-section-heading">
+
+        <div>
+
+            <span class="netcore-dashboard-eyebrow">
+                QUICK ACTIONS
+            </span>
+
+            <h2>
+                Manage your website
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="netcore-action-grid">
+
+
+        <!-- SITE SETTINGS -->
+
+        <a
+            href="{% url 'admin:core_sitesettings_changelist' %}"
+            class="netcore-action-card"
+        >
+
+            <div class="netcore-action-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9.594 3.94a1.5 1.5 0 0 1 2.812 0l.214.65a1.5 1.5 0 0 0 2.197.85l.59-.34a1.5 1.5 0 0 1 2.047.55l.812 1.406a1.5 1.5 0 0 1-.55 2.047l-.59.34a1.5 1.5 0 0 0 0 2.598l.59.34a1.5 1.5 0 0 1 .55 2.047l-.812 1.406a1.5 1.5 0 0 1-2.047.55l-.59-.34a1.5 1.5 0 0 0-2.197.85l-.214.65a1.5 1.5 0 0 1-2.812 0l-.214-.65a1.5 1.5 0 0 0-2.197-.85l-.59.34a1.5 1.5 0 0 1-2.047-.55l-.812-1.406a1.5 1.5 0 0 1 .55-2.047l.59-.34a1.5 1.5 0 0 0 0-2.598l-.59-.34a1.5 1.5 0 0 1-.55-2.047l.812-1.406a1.5 1.5 0 0 1 2.047-.55l.59.34a1.5 1.5 0 0 0 2.197-.85l.214-.65Z"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Site Settings
+                </h3>
+
+                <p>
+                    Manage company information, contact details
+                    and social media.
+                </p>
+
+            </div>
+
+            <span class="netcore-action-arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <!-- ABOUT -->
+
+        <a
+            href="{% url 'admin:core_aboutprofile_changelist' %}"
+            class="netcore-action-card"
+        >
+
+            <div class="netcore-action-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 19.5a7.5 7.5 0 0 1 15 0"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    About & Leadership
+                </h3>
+
+                <p>
+                    Manage your company story, leadership profiles
+                    and company values.
+                </p>
+
+            </div>
+
+            <span class="netcore-action-arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <!-- SERVICES -->
+
+        <a
+            href="{% url 'admin:services_service_changelist' %}"
+            class="netcore-action-card"
+        >
+
+            <div class="netcore-action-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 6v12M6 12h12"
+                    />
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="8.25"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Services
+                </h3>
+
+                <p>
+                    Add, edit and publish technology services
+                    offered by NetCore.
+                </p>
+
+            </div>
+
+            <span class="netcore-action-arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <!-- PORTFOLIO -->
+
+        <a
+            href="{% url 'admin:portfolio_portfolioproject_changelist' %}"
+            class="netcore-action-card"
+        >
+
+            <div class="netcore-action-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <rect
+                        x="3.75"
+                        y="4.5"
+                        width="16.5"
+                        height="15"
+                        rx="2"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m7.5 15 3-3 2.25 2.25 2.25-2.25 2.25 3"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Portfolio
+                </h3>
+
+                <p>
+                    Manage projects, screenshots, technologies
+                    and case studies.
+                </p>
+
+            </div>
+
+            <span class="netcore-action-arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <!-- BLOG -->
+
+        <a
+            href="{% url 'admin:blog_post_changelist' %}"
+            class="netcore-action-card"
+        >
+
+            <div class="netcore-action-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5.25 4.5h13.5A1.5 1.5 0 0 1 20.25 6v12a1.5 1.5 0 0 1-1.5 1.5H5.25A1.5 1.5 0 0 1 3.75 18V6a1.5 1.5 0 0 1 1.5-1.5Z"
+                    />
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.5 8.25h9M7.5 11.25h9M7.5 14.25h6"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Blog
+                </h3>
+
+                <p>
+                    Publish technology articles, tutorials
+                    and company updates.
+                </p>
+
+            </div>
+
+            <span class="netcore-action-arrow">
+                →
+            </span>
+
+        </a>
+
+
+        <!-- INQUIRIES -->
+
+        <a
+            href="{% url 'admin:inquiries_inquiry_changelist' %}"
+            class="netcore-action-card"
+        >
+
+            <div class="netcore-action-icon">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.7"
+                    stroke="currentColor"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 6.75A2.25 2.25 0 0 1 6.75 4.5h10.5a2.25 2.25 0 0 1 2.25 2.25v7.5a2.25 2.25 0 0 1-2.25 2.25H12l-4.5 3v-3H6.75A2.25 2.25 0 0 1 4.5 14.25v-7.5Z"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Customer Inquiries
+                </h3>
+
+                <p>
+                    Review customer requests, update status
+                    and manage project conversations.
+                </p>
+
+            </div>
+
+            <span class="netcore-action-arrow">
+                →
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         DEFAULT DJANGO APPLICATIONS
+    ====================================================== -->
+
+    <div class="netcore-section-heading netcore-default-heading">
+
+        <div>
+
+            <span class="netcore-dashboard-eyebrow">
+                SYSTEM
+            </span>
+
+            <h2>
+                Administration
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    {{ block.super }}
+
+
+</div>
+
+{% endblock %}

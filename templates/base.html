@@ -1,0 +1,1836 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <!-- ==========================================================
+         PWA
+    =========================================================== -->
+
+    <link
+        rel="manifest"
+        href="{% static 'manifest.json' %}"
+    >
+
+    <meta
+        name="theme-color"
+        content="#05070D"
+    >
+
+    <meta
+        name="mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="NetCore TECH"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="{% static 'images/pwa/icon-192.png' %}"
+    >
+
+
+    <!-- ==========================================================
+         BASIC META
+    =========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#05070D"
+    >
+
+
+    <!-- ==========================================================
+         TITLE
+    =========================================================== -->
+
+    <title>
+
+        {% block title %}
+
+            {{ site_settings.company_name|default:"NetCore TECH Solutions" }}
+
+        {% endblock %}
+
+    </title>
+
+
+    <!-- ==========================================================
+         DESCRIPTION
+    =========================================================== -->
+
+    <meta
+        name="description"
+        content="{% block meta_description %}{{ site_settings.tagline|default:'Technology solutions for modern businesses.' }}{% endblock %}"
+    >
+
+
+    <!-- ==========================================================
+         FAVICON
+    =========================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="{% static 'images/netcore_nav_logo.png' %}"
+    >
+
+
+    <!-- ==========================================================
+         MAIN STYLESHEET
+    =========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="{% static 'css/output.css' %}"
+    >
+
+
+    {% block extra_head %}
+    {% endblock %}
+
+</head>
+
+
+<body
+    class="min-h-screen bg-[#05070D] font-sans text-slate-200 antialiased"
+>
+
+
+<!-- ==========================================================
+     NAVIGATION
+=========================================================== -->
+
+<header
+    id="site-header"
+    class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8"
+>
+
+    <div
+        id="navbar"
+        class="mx-auto max-w-7xl"
+    >
+
+        <nav
+            class="relative flex h-[70px] items-center justify-between rounded-2xl border border-white/[0.08] bg-[#080B12]/90 px-4 shadow-[0_12px_40px_rgba(0,0,0,0.20)] backdrop-blur-xl transition-all duration-300 sm:px-5 lg:px-6"
+        >
+
+
+            <!-- ==================================================
+                 LOGO
+            =================================================== -->
+
+            <a
+                href="{% url 'core:home' %}"
+                class="group flex shrink-0 items-center"
+                aria-label="NetCore TECH Solutions home"
+            >
+
+                <img
+                    src="{% static 'images/netcore_nav_logo.png' %}"
+                    alt="{{ site_settings.company_name|default:'NetCore TECH Solutions' }}"
+                    class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] sm:h-11"
+                >
+
+            </a>
+
+
+
+            <!-- ==================================================
+                 DESKTOP NAVIGATION
+            =================================================== -->
+
+            <div
+                class="hidden items-center lg:flex"
+            >
+
+                <a
+                    href="{% url 'core:home' %}"
+                    class="nav-item {% if request.resolver_match.namespace == 'core' and request.resolver_match.url_name == 'home' %}nav-item-active{% endif %}"
+                >
+                    Home
+                </a>
+
+
+                <a
+                    href="{% url 'core:about' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'about' %}nav-item-active{% endif %}"
+                >
+                    About
+                </a>
+
+
+                <a
+                    href="{% url 'services:home' %}"
+                    class="nav-item {% if request.resolver_match.namespace == 'services' %}nav-item-active{% endif %}"
+                >
+                    Services
+                </a>
+
+
+                <a
+                    href="{% url 'portfolio:home' %}"
+                    class="nav-item {% if request.resolver_match.namespace == 'portfolio' %}nav-item-active{% endif %}"
+                >
+                    Portfolio
+                </a>
+
+
+                <a
+                    href="{% url 'testimonials:home' %}"
+                    class="nav-item {% if request.resolver_match.namespace == 'testimonials' %}nav-item-active{% endif %}"
+                >
+                    Testimonials
+                </a>
+
+
+                <a
+                    href="{% url 'blog:home' %}"
+                    class="nav-item {% if request.resolver_match.namespace == 'blog' %}nav-item-active{% endif %}"
+                >
+                    Blog
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 DESKTOP ACTIONS
+            =================================================== -->
+
+            <div
+                class="hidden items-center gap-2 lg:flex"
+            >
+
+                <!-- INSTALL APP BUTTON -->
+
+                <button
+                    id="install-app-button"
+                    type="button"
+                    aria-label="Install NetCore TECH application"
+                    class="hidden items-center gap-2 rounded-xl border border-[#087BFF]/40 bg-[#087BFF]/10 px-4 py-2.5 text-sm font-semibold text-[#60AFFF] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#087BFF] hover:bg-[#087BFF]/20 hover:text-white"
+                >
+
+                    <!-- Install icon -->
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.8"
+                        stroke="currentColor"
+                        class="h-4 w-4"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3v12m0 0 4-4m-4 4-4-4"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 17.5v1A2.5 2.5 0 0 0 7.5 21h9a2.5 2.5 0 0 0 2.5-2.5v-1"
+                        />
+
+                    </svg>
+
+
+                    <span>
+                        Install App
+                    </span>
+
+                </button>
+
+
+
+                <!-- LET'S TALK -->
+
+                <a
+                    href="{% url 'inquiries:contact' %}"
+                    class="group inline-flex items-center gap-2 rounded-xl bg-[#087BFF] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-950/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#006BE6] hover:shadow-blue-900/30"
+                >
+
+                    <span>
+                        Let's Talk
+                    </span>
+
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.8"
+                        stroke="currentColor"
+                        class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+
+                    </svg>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 MOBILE MENU BUTTON
+            =================================================== -->
+
+            <button
+                id="mobile-menu-button"
+                type="button"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-300 transition-all duration-200 hover:border-[#087BFF]/40 hover:bg-[#087BFF]/10 hover:text-white lg:hidden"
+            >
+
+                <!-- Hamburger -->
+
+                <svg
+                    id="menu-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6.75h16M4 12h16M4 17.25h16"
+                    />
+
+                </svg>
+
+
+                <!-- Close -->
+
+                <svg
+                    id="close-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="hidden h-5 w-5"
+                >
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 6l12 12M18 6 6 18"
+                    />
+
+                </svg>
+
+            </button>
+
+        </nav>
+
+
+
+        <!-- ======================================================
+             MOBILE NAVIGATION
+        ======================================================= -->
+
+        <div
+            id="mobile-menu"
+            class="mt-2 hidden overflow-hidden rounded-2xl border border-white/[0.08] bg-[#080B12]/95 shadow-2xl backdrop-blur-xl lg:hidden"
+        >
+
+            <div
+                class="p-2"
+            >
+
+                <a
+                    href="{% url 'core:home' %}"
+                    class="mobile-nav-item"
+                >
+                    Home
+                </a>
+
+
+                <a
+                    href="{% url 'core:about' %}"
+                    class="mobile-nav-item"
+                >
+                    About
+                </a>
+
+
+                <a
+                    href="{% url 'services:home' %}"
+                    class="mobile-nav-item"
+                >
+                    Services
+                </a>
+
+
+                <a
+                    href="{% url 'portfolio:home' %}"
+                    class="mobile-nav-item"
+                >
+                    Portfolio
+                </a>
+
+
+                <a
+                    href="{% url 'testimonials:home' %}"
+                    class="mobile-nav-item"
+                >
+                    Testimonials
+                </a>
+
+
+                <a
+                    href="{% url 'blog:home' %}"
+                    class="mobile-nav-item"
+                >
+                    Blog
+                </a>
+
+
+
+                <!-- ==================================================
+                     MOBILE INSTALL BUTTON
+                =================================================== -->
+
+                <button
+                    id="mobile-install-app-button"
+                    type="button"
+                    aria-label="Install NetCore TECH application"
+                    class="mt-2 hidden w-full items-center justify-center gap-2 rounded-xl border border-[#087BFF]/40 bg-[#087BFF]/10 px-4 py-3 text-sm font-semibold text-[#60AFFF] transition hover:border-[#087BFF] hover:bg-[#087BFF]/20 hover:text-white"
+                >
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.8"
+                        stroke="currentColor"
+                        class="h-5 w-5"
+                    >
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 3v12m0 0 4-4m-4 4-4-4"
+                        />
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 17.5v1A2.5 2.5 0 0 0 7.5 21h9a2.5 2.5 0 0 0 2.5-2.5v-1"
+                        />
+
+                    </svg>
+
+
+                    <span>
+                        Install NetCore App
+                    </span>
+
+                </button>
+
+
+
+                <!-- ==================================================
+                     MOBILE CONTACT
+                =================================================== -->
+
+                <div
+                    class="mt-2 border-t border-white/[0.07] pt-2"
+                >
+
+                    <a
+                        href="{% url 'inquiries:contact' %}"
+                        class="flex items-center justify-center rounded-xl bg-[#087BFF] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#006BE6]"
+                    >
+                        Let's Talk
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================================
+     MAIN CONTENT
+=========================================================== -->
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+
+<!-- ==========================================================
+     WHATSAPP BUTTON
+=========================================================== -->
+
+{% if site_settings.whatsapp %}
+
+<a
+    href="https://wa.me/{{ site_settings.whatsapp }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with NetCore on WhatsApp"
+    class="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+>
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="h-7 w-7"
+    >
+
+        <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.05-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982 1-3.648-.235-.374a9.86 9.86 0 1 1 8.372 4.632m8.368-18.78A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.89c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.684 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.524-8.413"
+        />
+
+    </svg>
+
+</a>
+
+{% endif %}
+
+
+
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer
+    class="border-t border-white/10 bg-[#080B12]"
+>
+
+    <div
+        class="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8"
+    >
+
+        <div
+            class="grid gap-12 md:grid-cols-2 lg:grid-cols-4"
+        >
+
+
+            <!-- COMPANY -->
+
+            <div
+                class="lg:col-span-2"
+            >
+
+                <a
+                    href="{% url 'core:home' %}"
+                    class="inline-flex items-center"
+                >
+
+                    <img
+                        src="{% static 'images/netcore_nav_logo.png' %}"
+                        alt="{{ site_settings.company_name|default:'NetCore TECH Solutions' }}"
+                        class="h-12 w-auto object-contain"
+                    >
+
+                </a>
+
+
+                <p
+                    class="mt-5 max-w-md text-sm leading-7 text-slate-500"
+                >
+
+                    {{ site_settings.footer_description|default:"Connecting technology, empowering businesses. We build practical digital solutions for modern organizations." }}
+
+                </p>
+
+
+                <div
+                    class="mt-7 flex flex-wrap gap-3"
+                >
+
+                    {% if site_settings.facebook_url %}
+
+                    <a
+                        href="{{ site_settings.facebook_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="Facebook"
+                    >
+                        f
+                    </a>
+
+                    {% endif %}
+
+
+                    {% if site_settings.linkedin_url %}
+
+                    <a
+                        href="{{ site_settings.linkedin_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="LinkedIn"
+                    >
+                        in
+                    </a>
+
+                    {% endif %}
+
+
+                    {% if site_settings.tiktok_url %}
+
+                    <a
+                        href="{{ site_settings.tiktok_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="TikTok"
+                    >
+                        ♪
+                    </a>
+
+                    {% endif %}
+
+
+                    {% if site_settings.instagram_url %}
+
+                    <a
+                        href="{{ site_settings.instagram_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="Instagram"
+                    >
+                        ◎
+                    </a>
+
+                    {% endif %}
+
+
+                    {% if site_settings.youtube_url %}
+
+                    <a
+                        href="{{ site_settings.youtube_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="YouTube"
+                    >
+                        ▶
+                    </a>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPANY LINKS -->
+
+            <div>
+
+                <h3
+                    class="text-sm font-bold uppercase tracking-wider text-white"
+                >
+                    Company
+                </h3>
+
+
+                <ul
+                    class="mt-5 space-y-3"
+                >
+
+                    <li>
+
+                        <a
+                            href="{% url 'core:about' %}"
+                            class="footer-link"
+                        >
+                            About Us
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="{% url 'services:home' %}"
+                            class="footer-link"
+                        >
+                            Services
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="{% url 'portfolio:home' %}"
+                            class="footer-link"
+                        >
+                            Portfolio
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="{% url 'testimonials:home' %}"
+                            class="footer-link"
+                        >
+                            Testimonials
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="{% url 'blog:home' %}"
+                            class="footer-link"
+                        >
+                            Blog
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h3
+                    class="text-sm font-bold uppercase tracking-wider text-white"
+                >
+                    Contact
+                </h3>
+
+
+                <ul
+                    class="mt-5 space-y-4"
+                >
+
+                    {% if site_settings.email %}
+
+                    <li>
+
+                        <a
+                            href="mailto:{{ site_settings.email }}"
+                            class="footer-link break-all"
+                        >
+                            {{ site_settings.email }}
+                        </a>
+
+                    </li>
+
+                    {% endif %}
+
+
+                    {% if site_settings.phone %}
+
+                    <li>
+
+                        <a
+                            href="tel:{{ site_settings.phone }}"
+                            class="footer-link"
+                        >
+                            {{ site_settings.phone }}
+                        </a>
+
+                    </li>
+
+                    {% endif %}
+
+
+                    {% if site_settings.address %}
+
+                    <li>
+
+                        <p
+                            class="text-sm leading-6 text-slate-500"
+                        >
+                            {{ site_settings.address }}
+                        </p>
+
+                    </li>
+
+                    {% endif %}
+
+                </ul>
+
+
+                <a
+                    href="{% url 'inquiries:contact' %}"
+                    class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#087BFF] transition hover:text-white"
+                >
+
+                    Start a Project
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div
+            class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between"
+        >
+
+            <p>
+
+                &copy;
+
+                {% now "Y" %}
+
+                {{ site_settings.company_name|default:"NetCore TECH Solutions" }}.
+
+                All rights reserved.
+
+            </p>
+
+
+            <p>
+                Built with technology. Driven by innovation.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==========================================================
+     BACK TO TOP
+=========================================================== -->
+
+<button
+    id="back-to-top"
+    type="button"
+    aria-label="Back to top"
+    class="pointer-events-none fixed bottom-6 left-6 z-40 flex h-11 w-11 translate-y-5 items-center justify-center rounded-xl border border-white/10 bg-[#0D1119]/95 text-slate-400 opacity-0 shadow-xl transition-all duration-300 hover:border-[#087BFF]/40 hover:text-[#087BFF]"
+>
+
+    ↑
+
+</button>
+
+
+
+<!-- ==========================================================
+     COMPONENT STYLES
+=========================================================== -->
+
+<style>
+
+    /* ========================================================
+       DESKTOP NAVIGATION
+    ======================================================== */
+
+    .nav-item {
+
+        position: relative;
+
+        display: flex;
+
+        height: 70px;
+
+        align-items: center;
+
+        padding: 0 0.95rem;
+
+        color: rgb(148 163 184);
+
+        font-size: 0.875rem;
+
+        font-weight: 600;
+
+        transition:
+            color 0.25s ease;
+
+    }
+
+
+    .nav-item:hover {
+
+        color: white;
+
+    }
+
+
+    .nav-item::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+
+        bottom: 15px;
+
+        width: 0;
+
+        height: 2px;
+
+        border-radius: 999px;
+
+        background: #087BFF;
+
+        transform: translateX(-50%);
+
+        transition:
+            width 0.25s ease;
+
+    }
+
+
+    .nav-item:hover::after {
+
+        width: 20px;
+
+    }
+
+
+    .nav-item-active {
+
+        color: white;
+
+    }
+
+
+    .nav-item-active::after {
+
+        width: 20px;
+
+    }
+
+
+
+    /* ========================================================
+       MOBILE NAVIGATION
+    ======================================================== */
+
+    .mobile-nav-item {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        border-radius: 0.75rem;
+
+        padding: 0.9rem 0.85rem;
+
+        color: rgb(203 213 225);
+
+        font-size: 0.9rem;
+
+        font-weight: 600;
+
+        transition:
+            color 0.2s ease,
+            background-color 0.2s ease;
+
+    }
+
+
+    .mobile-nav-item:hover {
+
+        color: white;
+
+        background:
+            rgba(
+                8,
+                123,
+                255,
+                0.07
+            );
+
+    }
+
+
+
+    /* ========================================================
+       FOOTER
+    ======================================================== */
+
+    .footer-link {
+
+        color: rgb(100 116 139);
+
+        font-size: 0.875rem;
+
+        transition:
+            color 0.2s ease;
+
+    }
+
+
+    .footer-link:hover {
+
+        color: #087BFF;
+
+    }
+
+
+
+    /* ========================================================
+       SOCIAL
+    ======================================================== */
+
+    .social-link {
+
+        display: flex;
+
+        height: 2.5rem;
+
+        width: 2.5rem;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border: 1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.1
+            );
+
+        border-radius: 0.75rem;
+
+        color: rgb(148 163 184);
+
+        font-size: 0.75rem;
+
+        font-weight: 700;
+
+        transition:
+            transform 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease,
+            background-color 0.2s ease;
+
+    }
+
+
+    .social-link:hover {
+
+        transform:
+            translateY(-2px);
+
+        border-color:
+            rgba(
+                8,
+                123,
+                255,
+                0.4
+            );
+
+        background:
+            rgba(
+                8,
+                123,
+                255,
+                0.08
+            );
+
+        color: #087BFF;
+
+    }
+
+
+
+    /* ========================================================
+       INSTALL BUTTON
+    ======================================================== */
+
+    #install-app-button,
+    #mobile-install-app-button {
+
+        cursor: pointer;
+
+    }
+
+
+    #install-app-button:not(.hidden),
+    #mobile-install-app-button:not(.hidden) {
+
+        display: inline-flex;
+
+    }
+
+</style>
+
+
+
+<!-- ==========================================================
+     JAVASCRIPT
+=========================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        const mobileButton =
+            document.getElementById(
+                "mobile-menu-button"
+            );
+
+
+        const mobileMenu =
+            document.getElementById(
+                "mobile-menu"
+            );
+
+
+        const menuIcon =
+            document.getElementById(
+                "menu-icon"
+            );
+
+
+        const closeIcon =
+            document.getElementById(
+                "close-icon"
+            );
+
+
+        function closeMobileMenu() {
+
+            if (!mobileMenu) {
+                return;
+            }
+
+
+            mobileMenu.classList.add(
+                "hidden"
+            );
+
+
+            if (menuIcon) {
+
+                menuIcon.classList.remove(
+                    "hidden"
+                );
+
+            }
+
+
+            if (closeIcon) {
+
+                closeIcon.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            if (mobileButton) {
+
+                mobileButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        function openMobileMenu() {
+
+            if (!mobileMenu) {
+                return;
+            }
+
+
+            mobileMenu.classList.remove(
+                "hidden"
+            );
+
+
+            if (menuIcon) {
+
+                menuIcon.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            if (closeIcon) {
+
+                closeIcon.classList.remove(
+                    "hidden"
+                );
+
+            }
+
+
+            if (mobileButton) {
+
+                mobileButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+        }
+
+
+        if (
+            mobileButton &&
+            mobileMenu
+        ) {
+
+            mobileButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+
+                    const isOpen =
+                        !mobileMenu.classList.contains(
+                            "hidden"
+                        );
+
+
+                    if (isOpen) {
+
+                        closeMobileMenu();
+
+                    } else {
+
+                        openMobileMenu();
+
+                    }
+
+                }
+            );
+
+
+            mobileMenu
+                .querySelectorAll("a")
+                .forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            closeMobileMenu
+                        );
+
+                    }
+                );
+
+        }
+
+
+
+        /* =====================================================
+           CLOSE MOBILE MENU OUTSIDE
+        ====================================================== */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    mobileMenu &&
+                    mobileButton &&
+                    !mobileMenu.contains(
+                        event.target
+                    ) &&
+                    !mobileButton.contains(
+                        event.target
+                    )
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           NAVBAR SCROLL EFFECT
+        ====================================================== */
+
+        const navbar =
+            document.getElementById(
+                "navbar"
+            );
+
+
+        function updateNavbar() {
+
+            if (!navbar) {
+                return;
+            }
+
+
+            if (
+                window.scrollY > 30
+            ) {
+
+                navbar.classList.add(
+                    "border-white/[0.12]"
+                );
+
+
+                navbar.classList.add(
+                    "bg-[#080B12]/95"
+                );
+
+
+                navbar.classList.add(
+                    "shadow-[0_16px_50px_rgba(0,0,0,0.30)]"
+                );
+
+            } else {
+
+                navbar.classList.remove(
+                    "border-white/[0.12]"
+                );
+
+
+                navbar.classList.remove(
+                    "bg-[#080B12]/95"
+                );
+
+
+                navbar.classList.remove(
+                    "shadow-[0_16px_50px_rgba(0,0,0,0.30)]"
+                );
+
+            }
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            updateNavbar,
+            {
+                passive: true
+            }
+        );
+
+
+        updateNavbar();
+
+
+
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+        const backToTop =
+            document.getElementById(
+                "back-to-top"
+            );
+
+
+        if (
+            backToTop
+        ) {
+
+            function updateBackToTop() {
+
+                if (
+                    window.scrollY > 500
+                ) {
+
+                    backToTop.classList.remove(
+                        "opacity-0",
+                        "translate-y-5",
+                        "pointer-events-none"
+                    );
+
+                } else {
+
+                    backToTop.classList.add(
+                        "opacity-0",
+                        "translate-y-5",
+                        "pointer-events-none"
+                    );
+
+                }
+
+            }
+
+
+            window.addEventListener(
+                "scroll",
+                updateBackToTop,
+                {
+                    passive: true
+                }
+            );
+
+
+            backToTop.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollTo(
+                        {
+                            top: 0,
+                            behavior: "smooth"
+                        }
+                    );
+
+                }
+            );
+
+
+            updateBackToTop();
+
+        }
+
+
+
+        /* =====================================================
+           PWA INSTALLATION
+        ====================================================== */
+
+        let deferredInstallPrompt = null;
+
+
+        const installButton =
+            document.getElementById(
+                "install-app-button"
+            );
+
+
+        const mobileInstallButton =
+            document.getElementById(
+                "mobile-install-app-button"
+            );
+
+
+
+        /*
+         * Hide install buttons by default.
+         *
+         * They will only appear when the browser
+         * tells us that NetCore can be installed.
+         */
+
+        function hideInstallButtons() {
+
+            if (installButton) {
+
+                installButton.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            if (mobileInstallButton) {
+
+                mobileInstallButton.classList.add(
+                    "hidden"
+                );
+
+            }
+
+        }
+
+
+
+        /*
+         * Show install buttons.
+         */
+
+        function showInstallButtons() {
+
+            if (installButton) {
+
+                installButton.classList.remove(
+                    "hidden"
+                );
+
+            }
+
+
+            if (mobileInstallButton) {
+
+                mobileInstallButton.classList.remove(
+                    "hidden"
+                );
+
+            }
+
+        }
+
+
+
+        /*
+         * Start with buttons hidden.
+         */
+
+        hideInstallButtons();
+
+
+
+        /*
+         * Browser has determined that the website
+         * is installable.
+         */
+
+        window.addEventListener(
+            "beforeinstallprompt",
+            function (event) {
+
+                /*
+                 * Prevent Chrome from showing
+                 * the default installation prompt.
+                 */
+
+                event.preventDefault();
+
+
+                /*
+                 * Save the event so our own
+                 * navbar button can trigger it.
+                 */
+
+                deferredInstallPrompt = event;
+
+
+                /*
+                 * Show our custom Install App buttons.
+                 */
+
+                showInstallButtons();
+
+            }
+        );
+
+
+
+        /*
+         * Function responsible for installing
+         * the NetCore PWA.
+         */
+
+        async function installNetCoreApp() {
+
+            if (
+                !deferredInstallPrompt
+            ) {
+
+                /*
+                 * Browser does not currently
+                 * provide an installation prompt.
+                 */
+
+                return;
+
+            }
+
+
+            /*
+             * Show the native browser installation
+             * dialog.
+             */
+
+            deferredInstallPrompt.prompt();
+
+
+            /*
+             * Wait for the user's response.
+             */
+
+            const choiceResult =
+                await deferredInstallPrompt.userChoice;
+
+
+            console.log(
+                "NetCore PWA installation result:",
+                choiceResult.outcome
+            );
+
+
+            /*
+             * The saved prompt can only be used once.
+             */
+
+            deferredInstallPrompt = null;
+
+
+            /*
+             * Hide buttons after the prompt
+             * has been used.
+             */
+
+            hideInstallButtons();
+
+        }
+
+
+
+        /*
+         * Desktop install button.
+         */
+
+        if (
+            installButton
+        ) {
+
+            installButton.addEventListener(
+                "click",
+                installNetCoreApp
+            );
+
+        }
+
+
+
+        /*
+         * Mobile install button.
+         */
+
+        if (
+            mobileInstallButton
+        ) {
+
+            mobileInstallButton.addEventListener(
+                "click",
+                function () {
+
+                    installNetCoreApp();
+
+                    closeMobileMenu();
+
+                }
+            );
+
+        }
+
+
+
+        /*
+         * Detect when the PWA has actually
+         * been installed.
+         */
+
+        window.addEventListener(
+            "appinstalled",
+            function () {
+
+                console.log(
+                    "NetCore TECH has been installed."
+                );
+
+
+                deferredInstallPrompt = null;
+
+
+                hideInstallButtons();
+
+            }
+        );
+
+
+
+        /*
+         * If the website is already running
+         * as an installed application,
+         * there is no reason to show the button.
+         */
+
+        if (
+            window.matchMedia(
+                "(display-mode: standalone)"
+            ).matches
+        ) {
+
+            hideInstallButtons();
+
+        }
+
+
+
+        /*
+         * iOS Safari does not support the
+         * beforeinstallprompt event.
+         *
+         * Therefore, the automatic native
+         * installation button will not appear
+         * there.
+         */
+
+        const isIOS =
+            /iphone|ipad|ipod/i.test(
+                window.navigator.userAgent
+            );
+
+
+        const isStandaloneIOS =
+            window.navigator.standalone === true;
+
+
+        if (
+            isIOS &&
+            !isStandaloneIOS
+        ) {
+
+            /*
+             * We intentionally do not display
+             * the automatic install button here.
+             *
+             * iOS users install through:
+             *
+             * Share → Add to Home Screen
+             */
+
+            console.log(
+                "iOS detected. Use Share → Add to Home Screen to install NetCore."
+            );
+
+        }
+
+    }
+
+);
+
+
+
+/* ==========================================================
+   SERVICE WORKER
+=========================================================== */
+
+if (
+    "serviceWorker" in navigator
+) {
+
+    window.addEventListener(
+        "load",
+        function () {
+
+            navigator.serviceWorker
+                .register(
+                    "{% static 'js/service-worker.js' %}"
+                )
+
+                .then(
+                    function (registration) {
+
+                        console.log(
+                            "NetCore PWA service worker registered:",
+                            registration.scope
+                        );
+
+                    }
+                )
+
+                .catch(
+                    function (error) {
+
+                        console.error(
+                            "NetCore PWA service worker registration failed:",
+                            error
+                        );
+
+                    }
+                );
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+{% block extra_scripts %}
+{% endblock %}
+
+
+</body>
+
+</html>

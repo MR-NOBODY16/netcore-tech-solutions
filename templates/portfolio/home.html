@@ -1,0 +1,3238 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Portfolio | NetCore TECH Solutions
+{% endblock %}
+
+{% block meta_description %}
+    Explore websites, software systems, digital platforms and technology solutions developed by NetCore TECH Solutions.
+{% endblock %}
+
+{% block content %}
+
+<!-- ==========================================================
+     PORTFOLIO HERO
+=========================================================== -->
+
+<section class="portfolio-hero">
+
+    <div class="portfolio-grid"></div>
+
+    <div class="portfolio-glow portfolio-glow-one"></div>
+    <div class="portfolio-glow portfolio-glow-two"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8 lg:py-32">
+
+        <div class="max-w-4xl">
+
+            <div class="portfolio-label">
+
+                <span class="portfolio-label-dot"></span>
+
+                NETCORE / PORTFOLIO
+
+            </div>
+
+
+            <h1 class="portfolio-title">
+
+                Technology we've built
+                <span>for real-world problems.</span>
+
+            </h1>
+
+
+            <p class="portfolio-intro">
+
+                Explore selected digital products, software systems,
+                websites and technology solutions developed by NetCore
+                TECH Solutions.
+
+            </p>
+
+
+            <div class="portfolio-stats">
+
+                <div class="portfolio-stat">
+
+                    <strong>
+                        {{ projects|length|stringformat:"02d" }}
+                    </strong>
+
+                    <span>
+                        Projects
+                    </span>
+
+                </div>
+
+
+                <div class="portfolio-stat-line"></div>
+
+
+                <div class="portfolio-stat">
+
+                    <strong>
+                        REAL
+                    </strong>
+
+                    <span>
+                        Solutions
+                    </span>
+
+                </div>
+
+
+                <div class="portfolio-stat-line"></div>
+
+
+                <div class="portfolio-stat">
+
+                    <strong>
+                        ZM
+                    </strong>
+
+                    <span>
+                        Zambia Based
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="portfolio-scroll-indicator">
+
+        <span></span>
+
+        <small>
+            EXPLORE WORK
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     FEATURED PROJECTS
+=========================================================== -->
+
+<section class="portfolio-featured">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="portfolio-section-heading">
+
+            <div>
+
+                <p class="portfolio-eyebrow">
+                    Featured Work
+                </p>
+
+                <h2>
+                    Projects we're proud of.
+                </h2>
+
+            </div>
+
+            <p>
+                A selection of projects that demonstrate our approach
+                to solving practical problems with technology.
+            </p>
+
+        </div>
+
+
+        {% if featured_projects %}
+
+        <div class="featured-project-list">
+
+            {% for project in featured_projects %}
+
+            <article class="featured-project-card">
+
+                <div class="featured-project-visual">
+
+                    {% if project.featured_image %}
+
+                        <img
+                            src="{{ project.featured_image.url }}"
+                            alt="{{ project.title }}"
+                        >
+
+                    {% else %}
+
+                        <div class="project-visual-placeholder">
+
+                            <div class="placeholder-orbit orbit-a"></div>
+                            <div class="placeholder-orbit orbit-b"></div>
+                            <div class="placeholder-orbit orbit-c"></div>
+
+                            <div class="placeholder-core">
+                                NC
+                            </div>
+
+                            <span>
+                                NETCORE
+                            </span>
+
+                        </div>
+
+                    {% endif %}
+
+
+                    <div class="project-overlay"></div>
+
+
+                    <div class="project-category-badge">
+
+                        {{ project.get_category_display }}
+
+                    </div>
+
+
+                    <div class="project-status-badge">
+
+                        <span></span>
+
+                        {{ project.get_status_display }}
+
+                    </div>
+
+                </div>
+
+
+                <div class="featured-project-content">
+
+                    <div>
+
+                        <span class="project-index">
+                            {{ forloop.counter|stringformat:"02d" }}
+                        </span>
+
+                        <h3>
+                            {{ project.title }}
+                        </h3>
+
+                        <p>
+                            {{ project.short_description }}
+                        </p>
+
+                    </div>
+
+
+                    {% if project.technologies %}
+
+                    <div class="technology-list">
+
+                        {% for technology in project.get_technologies %}
+
+                        <span>
+                            {{ technology }}
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <a
+                        href="{{ project.get_absolute_url }}"
+                        class="project-case-link"
+                    >
+
+                        View Case Study
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+        {% else %}
+
+        <div class="portfolio-empty">
+
+            <div class="empty-symbol">
+                +
+            </div>
+
+            <p class="portfolio-eyebrow">
+                Portfolio
+            </p>
+
+            <h3>
+                Our projects are being prepared.
+            </h3>
+
+            <p>
+                We're currently preparing our project showcase.
+                Real NetCore projects will appear here soon.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     ALL PROJECTS
+=========================================================== -->
+
+<section class="portfolio-all">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="portfolio-section-heading">
+
+            <div>
+
+                <p class="portfolio-eyebrow">
+                    Our Work
+                </p>
+
+                <h2>
+                    All projects.
+                </h2>
+
+            </div>
+
+            <p>
+                Browse our complete collection of technology projects.
+            </p>
+
+        </div>
+
+
+        {% if projects %}
+
+        <!-- ==================================================
+             FILTERS
+        =================================================== -->
+
+        <div class="portfolio-filters">
+
+            <button
+                type="button"
+                class="portfolio-filter active"
+                data-filter="all"
+            >
+                All Projects
+            </button>
+
+            <button
+                type="button"
+                class="portfolio-filter"
+                data-filter="web"
+            >
+                Web
+            </button>
+
+            <button
+                type="button"
+                class="portfolio-filter"
+                data-filter="software"
+            >
+                Software
+            </button>
+
+            <button
+                type="button"
+                class="portfolio-filter"
+                data-filter="education"
+            >
+                Education
+            </button>
+
+            <button
+                type="button"
+                class="portfolio-filter"
+                data-filter="business"
+            >
+                Business
+            </button>
+
+            <button
+                type="button"
+                class="portfolio-filter"
+                data-filter="networking"
+            >
+                Networking
+            </button>
+
+        </div>
+
+
+        <!-- ==================================================
+             PROJECT GRID
+        =================================================== -->
+
+        <div
+            id="portfolio-project-grid"
+            class="portfolio-project-grid"
+        >
+
+            {% for project in projects %}
+
+            <article
+                class="portfolio-project-card"
+                data-category="{{ project.category }}"
+            >
+
+                <a
+                    href="{{ project.get_absolute_url }}"
+                    class="portfolio-project-image"
+                >
+
+                    {% if project.featured_image %}
+
+                    <img
+                        src="{{ project.featured_image.url }}"
+                        alt="{{ project.title }}"
+                    >
+
+                    {% else %}
+
+                    <div class="project-card-placeholder">
+
+                        <div class="card-placeholder-lines">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <strong>
+                            NETCORE
+                        </strong>
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <div class="project-image-arrow">
+                        ↗
+                    </div>
+
+                </a>
+
+
+                <div class="portfolio-project-content">
+
+                    <div class="project-card-top">
+
+                        <span class="project-card-category">
+                            {{ project.get_category_display }}
+                        </span>
+
+                        {% if project.year %}
+
+                        <span class="project-card-year">
+                            {{ project.year }}
+                        </span>
+
+                        {% endif %}
+
+                    </div>
+
+
+                    <h3>
+
+                        <a href="{{ project.get_absolute_url }}">
+
+                            {{ project.title }}
+
+                        </a>
+
+                    </h3>
+
+
+                    <p>
+                        {{ project.short_description }}
+                    </p>
+
+
+                    {% if project.technologies %}
+
+                    <div class="project-card-technologies">
+
+                        {% for technology in project.get_technologies|slice:":3" %}
+
+                        <span>
+                            {{ technology }}
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+
+                    <a
+                        href="{{ project.get_absolute_url }}"
+                        class="project-card-link"
+                    >
+
+                        Explore Project
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+
+        <div
+            id="portfolio-no-results"
+            class="portfolio-no-results"
+        >
+
+            <div>
+                —
+            </div>
+
+            <p>
+                No projects found in this category.
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="portfolio-empty portfolio-empty-all">
+
+            <div class="empty-symbol">
+                +
+            </div>
+
+            <h3>
+                No projects yet.
+            </h3>
+
+            <p>
+                Projects added through the NetCore administration
+                dashboard will appear here automatically.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     PROCESS
+=========================================================== -->
+
+<section class="portfolio-process">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="process-heading">
+
+            <div>
+
+                <p class="portfolio-eyebrow">
+                    Our Approach
+                </p>
+
+                <h2>
+                    From idea to working solution.
+                </h2>
+
+            </div>
+
+            <p>
+                Every project starts with understanding the problem
+                before we decide what technology belongs in the solution.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-item">
+
+                <span class="process-number">
+                    01
+                </span>
+
+                <div class="process-line"></div>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    We understand your requirements, challenges,
+                    users and business objectives.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <span class="process-number">
+                    02
+                </span>
+
+                <div class="process-line"></div>
+
+                <h3>
+                    Design
+                </h3>
+
+                <p>
+                    We plan the architecture, user experience and
+                    technical direction of the solution.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <span class="process-number">
+                    03
+                </span>
+
+                <div class="process-line"></div>
+
+                <h3>
+                    Build
+                </h3>
+
+                <p>
+                    We develop the solution using appropriate modern
+                    technologies and development practices.
+                </p>
+
+            </div>
+
+
+            <div class="process-item">
+
+                <span class="process-number">
+                    04
+                </span>
+
+                <div class="process-line"></div>
+
+                <h3>
+                    Deliver
+                </h3>
+
+                <p>
+                    We test, deploy and support the finished solution
+                    so it can deliver real value.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     PORTFOLIO CTA
+=========================================================== -->
+
+<section class="portfolio-cta">
+
+    <div class="portfolio-cta-glow"></div>
+
+    <div class="relative z-10 mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8">
+
+        <span class="cta-symbol">
+            ✦
+        </span>
+
+        <p class="portfolio-eyebrow">
+            Have a project in mind?
+        </p>
+
+        <h2>
+            Let's build something useful.
+        </h2>
+
+        <p>
+            Tell us about your idea, challenge or business need.
+            We'll explore the right technology solution with you.
+        </p>
+
+
+        <a
+            href="{% url 'inquiries:contact' %}"
+            class="portfolio-cta-button"
+        >
+
+            Start a Project
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     PORTFOLIO CSS
+=========================================================== -->
+
+<style>
+
+/* ==========================================================
+   BASE
+=========================================================== */
+
+.portfolio-hero,
+.portfolio-featured,
+.portfolio-all,
+.portfolio-process,
+.portfolio-cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================
+   HERO
+=========================================================== */
+
+.portfolio-hero {
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        #05070D;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.portfolio-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .035;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+
+}
+
+
+.portfolio-glow {
+
+    position: absolute;
+
+    border-radius: 999px;
+
+    pointer-events: none;
+
+    filter: blur(120px);
+
+}
+
+
+.portfolio-glow-one {
+
+    width: 420px;
+
+    height: 420px;
+
+    right: 3%;
+
+    top: 10%;
+
+    background:
+        rgba(8,123,255,.09);
+
+}
+
+
+.portfolio-glow-two {
+
+    width: 320px;
+
+    height: 320px;
+
+    left: 12%;
+
+    bottom: -200px;
+
+    background:
+        rgba(0,87,217,.08);
+
+}
+
+
+.portfolio-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 14px;
+
+    border:
+        1px solid rgba(8,123,255,.18);
+
+    border-radius: 999px;
+
+    background:
+        rgba(8,123,255,.05);
+
+    color:
+        #65AFFF;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .22em;
+
+}
+
+
+.portfolio-label-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        #087BFF;
+
+    box-shadow:
+        0 0 14px #087BFF;
+
+    animation:
+        portfolioPulse 1.8s ease-in-out infinite;
+
+}
+
+
+@keyframes portfolioPulse {
+
+    0%,
+    100% {
+
+        transform: scale(.7);
+
+        opacity: .5;
+
+    }
+
+    50% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.portfolio-title {
+
+    max-width: 900px;
+
+    margin-top: 28px;
+
+    font-size: clamp(
+        3.2rem,
+        7vw,
+        6.4rem
+    );
+
+    font-weight: 950;
+
+    line-height: .93;
+
+    letter-spacing:
+        -.055em;
+
+    color:
+        #F8FAFC;
+
+}
+
+
+.portfolio-title span {
+
+    display: block;
+
+    color:
+        #087BFF;
+
+}
+
+
+.portfolio-intro {
+
+    max-width: 680px;
+
+    margin-top: 28px;
+
+    font-size:
+        17px;
+
+    line-height:
+        1.9;
+
+    color:
+        #64748B;
+
+}
+
+
+.portfolio-stats {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+    margin-top:
+        42px;
+
+}
+
+
+.portfolio-stat {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        4px;
+
+}
+
+
+.portfolio-stat strong {
+
+    font-size:
+        16px;
+
+    font-weight:
+        900;
+
+    color:
+        #E2E8F0;
+
+}
+
+
+.portfolio-stat span {
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .14em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #475569;
+
+}
+
+
+.portfolio-stat-line {
+
+    width:
+        1px;
+
+    height:
+        32px;
+
+    background:
+        rgba(255,255,255,.1);
+
+}
+
+
+.portfolio-scroll-indicator {
+
+    position:
+        absolute;
+
+    bottom:
+        28px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    color:
+        #334155;
+
+}
+
+
+.portfolio-scroll-indicator span {
+
+    width:
+        25px;
+
+    height:
+        1px;
+
+    background:
+        #087BFF;
+
+}
+
+
+.portfolio-scroll-indicator small {
+
+    font-size:
+        7px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .2em;
+
+}
+
+
+/* ==========================================================
+   SECTION HEADINGS
+=========================================================== */
+
+.portfolio-featured,
+.portfolio-all {
+
+    padding:
+        115px 0;
+
+}
+
+
+.portfolio-featured {
+
+    background:
+        #080B12;
+
+}
+
+
+.portfolio-all {
+
+    background:
+        #05070D;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.portfolio-section-heading,
+.process-heading {
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+
+}
+
+
+.portfolio-eyebrow {
+
+    margin:
+        0;
+
+    color:
+        #087BFF;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .24em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.portfolio-section-heading h2,
+.process-heading h2 {
+
+    margin-top:
+        13px;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.3rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -.04em;
+
+    color:
+        #F8FAFC;
+
+}
+
+
+.portfolio-section-heading > p,
+.process-heading > p {
+
+    max-width:
+        420px;
+
+    margin:
+        0;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    color:
+        #64748B;
+
+}
+
+
+/* ==========================================================
+   FEATURED PROJECT
+=========================================================== */
+
+.featured-project-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        25px;
+
+    margin-top:
+        55px;
+
+}
+
+
+.featured-project-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    overflow:
+        hidden;
+
+    min-height:
+        470px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius:
+        22px;
+
+    background:
+        #0D1119;
+
+    transition:
+        border-color .4s ease,
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.featured-project-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(8,123,255,.3);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.3);
+
+}
+
+
+.featured-project-visual {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        470px;
+
+    background:
+        #06101D;
+
+}
+
+
+.featured-project-visual img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform .8s ease;
+
+}
+
+
+.featured-project-card:hover
+.featured-project-visual img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.project-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(3,7,13,.7)
+        );
+
+}
+
+
+.project-category-badge {
+
+    position:
+        absolute;
+
+    top:
+        22px;
+
+    left:
+        22px;
+
+    padding:
+        8px 11px;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(5,10,18,.75);
+
+    backdrop-filter:
+        blur(12px);
+
+    color:
+        #CBD5E1;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .13em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.project-status-badge {
+
+    position:
+        absolute;
+
+    right:
+        22px;
+
+    bottom:
+        22px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        #94A3B8;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.project-status-badge span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        #087BFF;
+
+    box-shadow:
+        0 0 10px #087BFF;
+
+}
+
+
+.featured-project-content {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    padding:
+        48px;
+
+}
+
+
+.project-index {
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .2em;
+
+    color:
+        #087BFF;
+
+}
+
+
+.featured-project-content h3 {
+
+    margin-top:
+        18px;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.4rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -.045em;
+
+    color:
+        #F8FAFC;
+
+}
+
+
+.featured-project-content p {
+
+    max-width:
+        500px;
+
+    margin-top:
+        22px;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
+
+    color:
+        #64748B;
+
+}
+
+
+.technology-list {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.technology-list span,
+.project-card-technologies span {
+
+    padding:
+        7px 9px;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius:
+        6px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color:
+        #64748B;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+}
+
+
+.project-case-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    align-self:
+        flex-start;
+
+    margin-top:
+        35px;
+
+    padding:
+        12px 16px;
+
+    border:
+        1px solid rgba(8,123,255,.2);
+
+    border-radius:
+        9px;
+
+    color:
+        #087BFF;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.project-case-link span {
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.project-case-link:hover {
+
+    background:
+        #087BFF;
+
+    border-color:
+        #087BFF;
+
+    color:
+        #fff;
+
+}
+
+
+.project-case-link:hover span {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* ==========================================================
+   PLACEHOLDER VISUAL
+=========================================================== */
+
+.project-visual-placeholder {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(8,123,255,.13),
+            transparent 45%
+        ),
+        #06101D;
+
+}
+
+
+.placeholder-orbit {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    border:
+        1px solid rgba(8,123,255,.2);
+
+    border-radius:
+        50%;
+
+    transform:
+        translate(-50%,-50%);
+
+}
+
+
+.orbit-a {
+
+    width:
+        160px;
+
+    height:
+        160px;
+
+    border-top-color:
+        #087BFF;
+
+    animation:
+        placeholderRotate 7s linear infinite;
+
+}
+
+
+.orbit-b {
+
+    width:
+        270px;
+
+    height:
+        270px;
+
+    border-right-color:
+        rgba(8,123,255,.7);
+
+    animation:
+        placeholderRotateReverse 10s linear infinite;
+
+}
+
+
+.orbit-c {
+
+    width:
+        390px;
+
+    height:
+        390px;
+
+    border-bottom-color:
+        rgba(8,123,255,.3);
+
+    animation:
+        placeholderRotate 16s linear infinite;
+
+}
+
+
+.placeholder-core {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    width:
+        95px;
+
+    height:
+        95px;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(8,123,255,.4);
+
+    border-radius:
+        22px;
+
+    background:
+        #071522;
+
+    color:
+        #087BFF;
+
+    font-size:
+        24px;
+
+    font-weight:
+        900;
+
+    box-shadow:
+        0 0 50px rgba(8,123,255,.2);
+
+}
+
+
+.project-visual-placeholder > span {
+
+    position:
+        absolute;
+
+    bottom:
+        32px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        rgba(148,163,184,.35);
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .3em;
+
+}
+
+
+@keyframes placeholderRotate {
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes placeholderRotateReverse {
+
+    to {
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-360deg);
+
+    }
+
+}
+
+
+/* ==========================================================
+   FILTERS
+=========================================================== */
+
+.portfolio-filters {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        45px;
+
+    padding-bottom:
+        2px;
+
+}
+
+
+.portfolio-filter {
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius:
+        999px;
+
+    background:
+        transparent;
+
+    padding:
+        10px 15px;
+
+    color:
+        #64748B;
+
+    font-family:
+        inherit;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+
+}
+
+
+.portfolio-filter:hover {
+
+    color:
+        #CBD5E1;
+
+    border-color:
+        rgba(8,123,255,.25);
+
+}
+
+
+.portfolio-filter.active {
+
+    border-color:
+        #087BFF;
+
+    background:
+        #087BFF;
+
+    color:
+        #fff;
+
+}
+
+
+/* ==========================================================
+   PROJECT GRID
+=========================================================== */
+
+.portfolio-project-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        22px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.portfolio-project-card {
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius:
+        17px;
+
+    background:
+        #0A0E15;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.portfolio-project-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(8,123,255,.25);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.28);
+
+}
+
+
+.portfolio-project-image {
+
+    position:
+        relative;
+
+    display:
+        block;
+
+    aspect-ratio:
+        16 / 10;
+
+    overflow:
+        hidden;
+
+    background:
+        #06101D;
+
+}
+
+
+.portfolio-project-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform .7s ease;
+
+}
+
+
+.portfolio-project-card:hover
+.portfolio-project-image img {
+
+    transform:
+        scale(1.07);
+
+}
+
+
+.project-card-placeholder {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071A34,
+            #08111E 55%,
+            #0D1119
+        );
+
+}
+
+
+.project-card-placeholder strong {
+
+    color:
+        rgba(8,123,255,.28);
+
+    font-size:
+        18px;
+
+    font-style:
+        italic;
+
+    letter-spacing:
+        .15em;
+
+}
+
+
+.card-placeholder-lines {
+
+    position:
+        absolute;
+
+    left:
+        25px;
+
+    right:
+        25px;
+
+    bottom:
+        22px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+
+}
+
+
+.card-placeholder-lines span {
+
+    display:
+        block;
+
+    height:
+        2px;
+
+    border-radius:
+        99px;
+
+    background:
+        rgba(8,123,255,.15);
+
+}
+
+
+.card-placeholder-lines span:nth-child(1) {
+    width: 65%;
+}
+
+.card-placeholder-lines span:nth-child(2) {
+    width: 45%;
+}
+
+.card-placeholder-lines span:nth-child(3) {
+    width: 30%;
+}
+
+
+.project-image-arrow {
+
+    position:
+        absolute;
+
+    right:
+        15px;
+
+    top:
+        15px;
+
+    display:
+        flex;
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(5,10,18,.7);
+
+    backdrop-filter:
+        blur(10px);
+
+    color:
+        #fff;
+
+    font-size:
+        15px;
+
+    opacity:
+        0;
+
+    transform:
+        translateY(5px);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+
+}
+
+
+.portfolio-project-card:hover
+.project-image-arrow {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.portfolio-project-content {
+
+    padding:
+        24px;
+
+}
+
+
+.project-card-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+}
+
+
+.project-card-category {
+
+    color:
+        #087BFF;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .15em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.project-card-year {
+
+    color:
+        #475569;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+}
+
+
+.portfolio-project-content h3 {
+
+    margin-top:
+        13px;
+
+    font-size:
+        20px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        -.025em;
+
+    color:
+        #F8FAFC;
+
+}
+
+
+.portfolio-project-content h3 a {
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.portfolio-project-content h3 a:hover {
+
+    color:
+        #087BFF;
+
+}
+
+
+.portfolio-project-content > p {
+
+    margin-top:
+        10px;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        #64748B;
+
+}
+
+
+.project-card-technologies {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        5px;
+
+    margin-top:
+        17px;
+
+}
+
+
+.project-card-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        22px;
+
+    color:
+        #087BFF;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+.project-card-link span {
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.project-card-link:hover span {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* ==========================================================
+   NO RESULTS
+=========================================================== */
+
+.portfolio-no-results {
+
+    display:
+        none;
+
+    margin-top:
+        30px;
+
+    padding:
+        60px 20px;
+
+    text-align:
+        center;
+
+    border:
+        1px dashed rgba(255,255,255,.1);
+
+    border-radius:
+        16px;
+
+}
+
+
+.portfolio-no-results > div {
+
+    color:
+        #087BFF;
+
+    font-size:
+        28px;
+
+}
+
+
+.portfolio-no-results p {
+
+    margin-top:
+        10px;
+
+    color:
+        #64748B;
+
+    font-size:
+        13px;
+
+}
+
+
+/* ==========================================================
+   PROCESS
+=========================================================== */
+
+.portfolio-process {
+
+    padding:
+        115px 0;
+
+    background:
+        #080B12;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.process-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:
+        60px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.process-item {
+
+    position:
+        relative;
+
+    padding:
+        30px 25px 0 0;
+
+}
+
+
+.process-item:not(:last-child) {
+
+    margin-right:
+        25px;
+
+}
+
+
+.process-number {
+
+    display:
+        block;
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        #087BFF;
+
+}
+
+
+.process-line {
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    margin-top:
+        22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,123,255,.6),
+            transparent
+        );
+
+}
+
+
+.process-item h3 {
+
+    margin-top:
+        25px;
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+
+    color:
+        #F8FAFC;
+
+}
+
+
+.process-item p {
+
+    max-width:
+        240px;
+
+    margin-top:
+        10px;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        #64748B;
+
+}
+
+
+/* ==========================================================
+   CTA
+=========================================================== */
+
+.portfolio-cta {
+
+    padding:
+        130px 0;
+
+    background:
+        #05070D;
+
+    border-top:
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+.portfolio-cta-glow {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        500px;
+
+    height:
+        500px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(8,123,255,.07);
+
+    filter:
+        blur(120px);
+
+}
+
+
+.cta-symbol {
+
+    display:
+        flex;
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    margin:
+        0 auto 25px;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(8,123,255,.2);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(8,123,255,.08);
+
+    color:
+        #087BFF;
+
+    font-size:
+        18px;
+
+}
+
+
+.portfolio-cta h2 {
+
+    margin-top:
+        18px;
+
+    font-size:
+        clamp(
+            2.4rem,
+            5vw,
+            4.5rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        .95;
+
+    letter-spacing:
+        -.05em;
+
+    color:
+        #F8FAFC;
+
+}
+
+
+.portfolio-cta > div > p:not(.portfolio-eyebrow) {
+
+    max-width:
+        570px;
+
+    margin:
+        22px auto 0;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
+
+    color:
+        #64748B;
+
+}
+
+
+.portfolio-cta-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        32px;
+
+    padding:
+        15px 22px;
+
+    border-radius:
+        10px;
+
+    background:
+        #087BFF;
+
+    color:
+        #fff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 20px 50px rgba(8,123,255,.18);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+
+.portfolio-cta-button span {
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.portfolio-cta-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        #006BE6;
+
+}
+
+
+.portfolio-cta-button:hover span {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media (max-width: 1024px) {
+
+    .featured-project-card {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .featured-project-visual {
+
+        min-height:
+            420px;
+
+    }
+
+
+    .portfolio-project-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .process-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        row-gap:
+            40px;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .portfolio-hero {
+
+        min-height:
+            580px;
+
+    }
+
+
+    .portfolio-section-heading,
+    .process-heading {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .portfolio-section-heading > p,
+    .process-heading > p {
+
+        max-width:
+            600px;
+
+    }
+
+
+    .featured-project-content {
+
+        padding:
+            32px;
+
+    }
+
+
+    .portfolio-project-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .portfolio-stats {
+
+        gap:
+            15px;
+
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .portfolio-hero {
+
+        min-height:
+            560px;
+
+    }
+
+
+    .portfolio-title {
+
+        font-size:
+            3.25rem;
+
+    }
+
+
+    .portfolio-intro {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .portfolio-stats {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .portfolio-stat-line {
+
+        height:
+            25px;
+
+    }
+
+
+    .portfolio-scroll-indicator {
+
+        display:
+            none;
+
+    }
+
+
+    .featured-project-visual {
+
+        min-height:
+            300px;
+
+    }
+
+
+    .featured-project-content {
+
+        padding:
+            28px 24px;
+
+    }
+
+
+    .featured-project-content h3 {
+
+        font-size:
+            2.25rem;
+
+    }
+
+
+    .process-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .process-item {
+
+        padding-right:
+            0;
+
+    }
+
+
+    .process-item:not(:last-child) {
+
+        margin-right:
+            0;
+
+    }
+
+
+    .portfolio-filter {
+
+        font-size:
+            9px;
+
+        padding:
+            8px 12px;
+
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==========================================================
+     PORTFOLIO JAVASCRIPT
+=========================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ==================================================
+           PROJECT FILTER
+        =================================================== */
+
+        const filterButtons =
+            document.querySelectorAll(
+                ".portfolio-filter"
+            );
+
+
+        const projectCards =
+            document.querySelectorAll(
+                ".portfolio-project-card"
+            );
+
+
+        const noResults =
+            document.getElementById(
+                "portfolio-no-results"
+            );
+
+
+        filterButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const selectedFilter =
+                            this.dataset.filter;
+
+
+                        filterButtons.forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        let visibleCount =
+                            0;
+
+
+                        projectCards.forEach(
+                            function (card) {
+
+                                const category =
+                                    card.dataset.category;
+
+
+                                const shouldShow =
+                                    selectedFilter === "all" ||
+                                    category === selectedFilter;
+
+
+                                if (shouldShow) {
+
+                                    visibleCount++;
+
+
+                                    card.style.display =
+                                        "block";
+
+
+                                    requestAnimationFrame(
+                                        function () {
+
+                                            card.style.opacity =
+                                                "1";
+
+                                            card.style.transform =
+                                                "translateY(0)";
+
+                                        }
+                                    );
+
+                                }
+
+                                else {
+
+                                    card.style.opacity =
+                                        "0";
+
+                                    card.style.transform =
+                                        "translateY(10px)";
+
+                                    setTimeout(
+                                        function () {
+
+                                            card.style.display =
+                                                "none";
+
+                                        },
+                                        250
+                                    );
+
+                                }
+
+                            }
+                        );
+
+
+                        if (noResults) {
+
+                            noResults.style.display =
+                                visibleCount === 0
+                                    ? "block"
+                                    : "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ==================================================
+           PROJECT CARD OBSERVER
+        =================================================== */
+
+        const animatedCards =
+            document.querySelectorAll(
+                ".portfolio-project-card, .featured-project-card, .process-item"
+            );
+
+
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+            const observer =
+                new IntersectionObserver(
+                    function (entries) {
+
+                        entries.forEach(
+                            function (entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry.target.classList.add(
+                                        "portfolio-visible"
+                                    );
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
+
+
+            animatedCards.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "portfolio-hidden"
+                    );
+
+                    observer.observe(
+                        element
+                    );
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+
+<style>
+
+/* ==========================================================
+   SCROLL REVEAL
+=========================================================== */
+
+.portfolio-hidden {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(25px);
+
+}
+
+
+.portfolio-visible {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+</style>
+
+
+{% endblock %}

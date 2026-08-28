@@ -1,0 +1,1744 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Our Services | NetCore TECH Solutions
+{% endblock %}
+
+{% block meta_description %}
+    Explore technology services from NetCore TECH Solutions including
+    web development, software development, IT support, networking,
+    infrastructure and technology consulting.
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ==========================================================
+     SERVICES HERO
+========================================================== -->
+
+<section class="nc-services-hero">
+
+    <div class="nc-services-grid"></div>
+
+    <div class="nc-services-orb nc-services-orb-left"></div>
+    <div class="nc-services-orb nc-services-orb-right"></div>
+
+    <div class="nc-hero-decoration nc-decoration-one"></div>
+    <div class="nc-hero-decoration nc-decoration-two"></div>
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-services-hero-content nc-reveal">
+
+            <div class="nc-eyebrow">
+
+                <span class="nc-eyebrow-dot"></span>
+
+                WHAT WE DO
+
+            </div>
+
+
+            <h1>
+
+                Technology services
+
+                <span>
+                    built for real needs.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                From digital experiences and custom software to IT
+                infrastructure and technical support, we provide practical
+                technology services designed around how your organization
+                actually works.
+
+            </p>
+
+
+            <div class="nc-hero-actions">
+
+                <a
+                    href="#services"
+                    class="nc-primary-button"
+                >
+                    Explore Services
+
+                    <span>
+                        ↓
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="{% url 'inquiries:contact' %}"
+                    class="nc-secondary-button"
+                >
+                    Discuss a Project
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="nc-hero-bottom">
+
+        <span>
+            NETCORE TECH SOLUTIONS
+        </span>
+
+        <span>
+            DIGITAL • SOFTWARE • IT • NETWORKING
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     FEATURED SERVICES
+========================================================== -->
+
+{% if featured_services %}
+
+<section class="nc-section nc-featured-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-section-heading nc-reveal">
+
+            <div>
+
+                <div class="nc-section-label">
+                    01 — FEATURED SERVICES
+                </div>
+
+                <h2>
+                    What we do
+                    <span>
+                        best.
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <p>
+                A selection of our core technology capabilities,
+                delivered around your organization's needs.
+            </p>
+
+        </div>
+
+
+        <div class="nc-featured-grid">
+
+            {% for service in featured_services %}
+
+                <article class="nc-featured-card nc-reveal">
+
+                    <a
+                        href="{{ service.get_absolute_url }}"
+                        class="nc-featured-card-link"
+                    >
+
+                        <div class="nc-featured-image">
+
+                            {% if service.image %}
+
+                                <img
+                                    src="{{ service.image.url }}"
+                                    alt="{{ service.title }}"
+                                    loading="lazy"
+                                >
+
+                            {% else %}
+
+                                <div class="nc-service-image-placeholder">
+
+                                    <span>
+                                        {% if service.icon %}
+                                            {{ service.icon }}
+                                        {% else %}
+                                            {{ forloop.counter|stringformat:"02d" }}
+                                        {% endif %}
+                                    </span>
+
+                                </div>
+
+                            {% endif %}
+
+
+                            <div class="nc-image-overlay"></div>
+
+
+                            <div class="nc-featured-number">
+
+                                {{ forloop.counter|stringformat:"02d" }}
+
+                            </div>
+
+
+                            <div class="nc-featured-arrow">
+                                ↗
+                            </div>
+
+                        </div>
+
+
+                        <div class="nc-featured-content">
+
+                            <div class="nc-service-category">
+
+                                {{ service.get_category_display }}
+
+                            </div>
+
+
+                            <h3>
+                                {{ service.title }}
+                            </h3>
+
+
+                            <p>
+                                {{ service.short_description }}
+                            </p>
+
+
+                            <div class="nc-service-link">
+
+                                Explore Service
+
+                                <span>
+                                    →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+
+
+<!-- ==========================================================
+     ALL SERVICES
+========================================================== -->
+
+<section
+    id="services"
+    class="nc-section nc-all-services-section"
+>
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-section-heading nc-reveal">
+
+            <div>
+
+                <div class="nc-section-label">
+                    02 — ALL SERVICES
+                </div>
+
+                <h2>
+                    Technology for
+                    <span>
+                        every stage.
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <p>
+                Explore our complete range of technology services.
+                Select a service to view its full capabilities,
+                technologies and delivery process.
+            </p>
+
+        </div>
+
+
+        {% if services %}
+
+        <div class="nc-services-list">
+
+            {% for service in services %}
+
+                <article
+                    class="nc-service-row nc-reveal"
+                    data-category="{{ service.category }}"
+                >
+
+                    <a
+                        href="{{ service.get_absolute_url }}"
+                        class="nc-service-row-link"
+                    >
+
+                        <div class="nc-service-row-number">
+
+                            {{ forloop.counter|stringformat:"02d" }}
+
+                        </div>
+
+
+                        <div class="nc-service-row-main">
+
+                            <div class="nc-service-row-category">
+
+                                {{ service.get_category_display }}
+
+                            </div>
+
+
+                            <h3>
+                                {{ service.title }}
+                            </h3>
+
+
+                            <p>
+                                {{ service.short_description }}
+                            </p>
+
+
+                            {% if service.technologies %}
+
+                            <div class="nc-tech-list">
+
+                                {% for technology in service.get_technologies %}
+
+                                    <span>
+                                        {{ technology }}
+                                    </span>
+
+                                {% endfor %}
+
+                            </div>
+
+                            {% endif %}
+
+                        </div>
+
+
+                        <div class="nc-service-row-action">
+
+                            <span>
+                                View Service
+                            </span>
+
+                            <strong>
+                                →
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+            {% endfor %}
+
+        </div>
+
+
+        {% else %}
+
+        <!-- EMPTY STATE -->
+
+        <div class="nc-empty-services nc-reveal">
+
+            <div class="nc-empty-icon">
+                +
+            </div>
+
+            <h3>
+                Services are being prepared.
+            </h3>
+
+            <p>
+                Our service catalogue will be available shortly.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     HOW WE WORK
+========================================================== -->
+
+<section class="nc-section nc-process-section">
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-process-heading nc-reveal">
+
+            <div>
+
+                <div class="nc-section-label">
+                    03 — OUR APPROACH
+                </div>
+
+                <h2>
+                    We don't just build.
+                    <span>
+                        We understand.
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <p>
+                Good technology starts with understanding the problem.
+                Our process keeps the solution practical from the first
+                conversation to deployment and support.
+            </p>
+
+        </div>
+
+
+        <div class="nc-process-grid">
+
+            <article class="nc-process-card nc-reveal">
+
+                <span>
+                    01
+                </span>
+
+                <div>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+                        We learn about your goals, challenges,
+                        users and existing processes.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="nc-process-card nc-reveal">
+
+                <span>
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        Plan
+                    </h3>
+
+                    <p>
+                        We identify the right technology,
+                        features and implementation approach.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="nc-process-card nc-reveal">
+
+                <span>
+                    03
+                </span>
+
+                <div>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        We develop and configure the solution
+                        around the requirements we've established.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="nc-process-card nc-reveal">
+
+                <span>
+                    04
+                </span>
+
+                <div>
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <p>
+                        We help keep your technology reliable,
+                        useful and maintainable after deployment.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     WHY NETCORE
+========================================================== -->
+
+<section class="nc-why-section">
+
+    <div class="nc-why-grid"></div>
+
+    <div class="mx-auto max-w-5xl px-5 text-center sm:px-6 lg:px-8">
+
+        <div class="nc-section-label nc-reveal">
+            04 — WHY NETCORE
+        </div>
+
+
+        <h2 class="nc-why-title nc-reveal">
+
+            Technology should make
+            your work
+
+            <span>
+                better.
+            </span>
+
+        </h2>
+
+
+        <p class="nc-why-text nc-reveal">
+
+            We focus on practical solutions rather than technology
+            for technology's sake. Whether you need a website,
+            business system, network or technical support, our goal
+            is to make your technology work for you.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     CTA
+========================================================== -->
+
+<section class="nc-services-cta">
+
+    <div class="nc-cta-orb"></div>
+
+    <div class="mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8">
+
+        <div class="nc-section-label nc-reveal">
+            HAVE A TECHNOLOGY CHALLENGE?
+        </div>
+
+
+        <h2 class="nc-cta-title nc-reveal">
+
+            Let's build the right
+
+            <span>
+                solution.
+            </span>
+
+        </h2>
+
+
+        <p class="nc-cta-text nc-reveal">
+
+            Tell us what you're trying to achieve and we'll help
+            you explore a practical technology approach.
+
+        </p>
+
+
+        <div class="nc-cta-actions nc-reveal">
+
+            <a
+                href="{% url 'inquiries:contact' %}"
+                class="nc-primary-button"
+            >
+
+                Start a Conversation
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     SERVICES PAGE CSS
+========================================================== -->
+
+<style>
+
+/* ==========================================================
+   BASE
+========================================================== */
+
+.nc-services-hero,
+.nc-section,
+.nc-why-section,
+.nc-services-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.nc-section {
+    padding: 125px 0;
+}
+
+.nc-featured-section {
+    background: #05070D;
+}
+
+.nc-all-services-section {
+    background: #080B12;
+    border-top: 1px solid rgba(255,255,255,.055);
+}
+
+.nc-process-section {
+    background: #05070D;
+    border-top: 1px solid rgba(255,255,255,.055);
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.nc-services-hero {
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    background: #05070D;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nc-services-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .035;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 72px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+}
+
+.nc-services-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.nc-services-orb-left {
+    width: 480px;
+    height: 480px;
+    left: -250px;
+    top: 50px;
+    background: rgba(0,87,217,.13);
+}
+
+.nc-services-orb-right {
+    width: 420px;
+    height: 420px;
+    right: -220px;
+    bottom: -80px;
+    background: rgba(8,123,255,.09);
+}
+
+.nc-services-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 920px;
+    padding: 150px 0 125px;
+}
+
+.nc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #087BFF;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .22em;
+}
+
+.nc-eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #087BFF;
+    box-shadow: 0 0 22px rgba(8,123,255,.8);
+    animation: nc-services-pulse 2s infinite;
+}
+
+.nc-services-hero h1 {
+    max-width: 900px;
+    margin-top: 25px;
+    color: #F8FAFC;
+    font-size: clamp(3.5rem, 8vw, 7.7rem);
+    line-height: .87;
+    letter-spacing: -.075em;
+    font-weight: 950;
+}
+
+.nc-services-hero h1 span {
+    display: block;
+    color: #087BFF;
+}
+
+.nc-services-hero-content > p {
+    max-width: 680px;
+    margin-top: 35px;
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.nc-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.nc-primary-button,
+.nc-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 19px;
+    border-radius: 9px;
+    font-size: 9px;
+    font-weight: 900;
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.nc-primary-button {
+    background: #087BFF;
+    color: white;
+    box-shadow: 0 20px 55px rgba(8,123,255,.15);
+}
+
+.nc-primary-button:hover {
+    transform: translateY(-4px);
+    background: #006BE6;
+    box-shadow: 0 25px 65px rgba(8,123,255,.25);
+}
+
+.nc-secondary-button {
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.02);
+    color: #94A3B8;
+}
+
+.nc-secondary-button:hover {
+    transform: translateY(-4px);
+    border-color: rgba(8,123,255,.35);
+    color: #087BFF;
+}
+
+.nc-hero-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    z-index: 3;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    color: #334155;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .18em;
+}
+
+.nc-hero-decoration {
+    position: absolute;
+    width: 1px;
+    height: 280px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(8,123,255,.3),
+        transparent
+    );
+}
+
+.nc-decoration-one {
+    left: 12%;
+    top: 22%;
+    transform: rotate(25deg);
+}
+
+.nc-decoration-two {
+    right: 15%;
+    bottom: 10%;
+    transform: rotate(-25deg);
+}
+
+
+/* ==========================================================
+   SECTION HEADINGS
+========================================================== */
+
+.nc-section-label {
+    color: #087BFF;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .2em;
+}
+
+.nc-section-heading,
+.nc-process-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nc-section-heading h2,
+.nc-process-heading h2 {
+    margin-top: 17px;
+    color: #F8FAFC;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: .94;
+    letter-spacing: -.06em;
+    font-weight: 950;
+}
+
+.nc-section-heading h2 span,
+.nc-process-heading h2 span {
+    color: #087BFF;
+}
+
+.nc-section-heading > p,
+.nc-process-heading > p {
+    max-width: 380px;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   FEATURED SERVICES
+========================================================== */
+
+.nc-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    margin-top: 60px;
+}
+
+.nc-featured-card {
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 19px;
+    background: #0A0E15;
+    transition:
+        transform .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease;
+}
+
+.nc-featured-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(8,123,255,.28);
+    box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.nc-featured-card-link {
+    display: block;
+}
+
+.nc-featured-image {
+    position: relative;
+    aspect-ratio: 1.35 / 1;
+    overflow: hidden;
+    background: #071522;
+}
+
+.nc-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.nc-featured-card:hover .nc-featured-image img {
+    transform: scale(1.06);
+}
+
+.nc-service-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(8,123,255,.17),
+            transparent 58%
+        ),
+        #071522;
+}
+
+.nc-service-image-placeholder span {
+    color: rgba(8,123,255,.8);
+    font-size: 55px;
+    font-weight: 950;
+}
+
+.nc-image-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5,7,13,.75),
+            transparent 60%
+        );
+}
+
+.nc-featured-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgba(255,255,255,.55);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .15em;
+}
+
+.nc-featured-arrow {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+
+    color: white;
+    font-size: 13px;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.nc-featured-card:hover .nc-featured-arrow {
+    background: #087BFF;
+    border-color: #087BFF;
+    transform: rotate(45deg);
+}
+
+.nc-featured-content {
+    padding: 27px;
+}
+
+.nc-service-category {
+    color: #087BFF;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.nc-featured-content h3 {
+    margin-top: 10px;
+    color: #F8FAFC;
+    font-size: 23px;
+    line-height: 1.05;
+    letter-spacing: -.035em;
+    font-weight: 900;
+}
+
+.nc-featured-content p {
+    margin-top: 12px;
+    color: #64748B;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.nc-service-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 23px;
+    color: #CBD5E1;
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.nc-service-link span {
+    color: #087BFF;
+    transition: transform .3s ease;
+}
+
+.nc-featured-card:hover .nc-service-link span {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================
+   ALL SERVICES
+========================================================== */
+
+.nc-services-list {
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,.07);
+}
+
+.nc-service-row {
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nc-service-row-link {
+    display: grid;
+    grid-template-columns: 75px 1fr 160px;
+    align-items: center;
+    gap: 35px;
+    padding: 30px 0;
+    transition: padding .35s ease;
+}
+
+.nc-service-row:hover .nc-service-row-link {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nc-service-row-number {
+    color: #087BFF;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.nc-service-row-main {
+    min-width: 0;
+}
+
+.nc-service-row-category {
+    color: #475569;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+}
+
+.nc-service-row-main h3 {
+    margin-top: 7px;
+    color: #F8FAFC;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    line-height: 1.1;
+    font-weight: 850;
+    letter-spacing: -.035em;
+    transition: color .3s ease;
+}
+
+.nc-service-row:hover .nc-service-row-main h3 {
+    color: #087BFF;
+}
+
+.nc-service-row-main p {
+    max-width: 700px;
+    margin-top: 8px;
+    color: #64748B;
+    font-size: 11px;
+    line-height: 1.75;
+}
+
+.nc-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 13px;
+}
+
+.nc-tech-list span {
+    padding: 5px 8px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 5px;
+    color: #475569;
+    font-size: 7px;
+    font-weight: 800;
+}
+
+.nc-service-row-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 13px;
+    color: #475569;
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.nc-service-row-action strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+
+    color: #087BFF;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+.nc-service-row:hover .nc-service-row-action strong {
+    transform: translateX(5px);
+    background: #087BFF;
+    border-color: #087BFF;
+    color: white;
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.nc-empty-services {
+    margin-top: 60px;
+    padding: 80px 30px;
+    text-align: center;
+    border: 1px dashed rgba(255,255,255,.1);
+    border-radius: 18px;
+}
+
+.nc-empty-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+
+    border: 1px solid rgba(8,123,255,.25);
+    border-radius: 50%;
+
+    color: #087BFF;
+    font-size: 22px;
+}
+
+.nc-empty-services h3 {
+    margin-top: 20px;
+    color: #F8FAFC;
+    font-size: 20px;
+    font-weight: 850;
+}
+
+.nc-empty-services p {
+    margin-top: 8px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   PROCESS
+========================================================== */
+
+.nc-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.nc-process-card {
+    min-height: 260px;
+    padding: 27px;
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 17px;
+    background: #0A0E15;
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+}
+
+.nc-process-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(8,123,255,.25);
+}
+
+.nc-process-card > span {
+    color: #087BFF;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.nc-process-card h3 {
+    margin-top: 70px;
+    color: #F8FAFC;
+    font-size: 19px;
+    font-weight: 850;
+}
+
+.nc-process-card p {
+    margin-top: 10px;
+    color: #64748B;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   WHY NETCORE
+========================================================== */
+
+.nc-why-section {
+    padding: 155px 0;
+    background: #080B12;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.nc-why-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .025;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 90px 90px;
+
+    mask-image: radial-gradient(
+        circle at center,
+        black,
+        transparent 70%
+    );
+}
+
+.nc-why-title {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto 0;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        2.8rem,
+        6vw,
+        5.7rem
+    );
+
+    line-height: .93;
+    letter-spacing: -.065em;
+    font-weight: 950;
+}
+
+.nc-why-title span {
+    color: #087BFF;
+}
+
+.nc-why-text {
+    position: relative;
+    max-width: 670px;
+    margin: 30px auto 0;
+
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.nc-services-cta {
+    padding: 150px 0;
+    background: #05070D;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.nc-cta-orb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 550px;
+    height: 550px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: rgba(8,123,255,.075);
+
+    filter: blur(120px);
+
+    pointer-events: none;
+}
+
+.nc-cta-title {
+    position: relative;
+    margin-top: 18px;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        3rem,
+        7vw,
+        6rem
+    );
+
+    line-height: .9;
+    letter-spacing: -.07em;
+    font-weight: 950;
+}
+
+.nc-cta-title span {
+    color: #087BFF;
+}
+
+.nc-cta-text {
+    position: relative;
+    max-width: 600px;
+    margin: 28px auto 0;
+
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.nc-cta-actions {
+    position: relative;
+    margin-top: 34px;
+}
+
+
+/* ==========================================================
+   REVEAL ANIMATION
+========================================================== */
+
+.nc-reveal {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.nc-reveal.nc-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   HERO PULSE
+========================================================== */
+
+@keyframes nc-services-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.45);
+        opacity: .55;
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1050px) {
+
+    .nc-featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nc-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .nc-section-heading,
+    .nc-process-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nc-service-row-link {
+        grid-template-columns: 55px 1fr;
+    }
+
+    .nc-service-row-action {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nc-services-hero {
+        min-height: 680px;
+    }
+
+    .nc-services-hero-content {
+        padding: 125px 0 100px;
+    }
+
+    .nc-services-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .nc-services-hero-content > p {
+        font-size: 13px;
+    }
+
+    .nc-hero-bottom {
+        display: none;
+    }
+
+    .nc-featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nc-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nc-process-card {
+        min-height: 210px;
+    }
+
+    .nc-process-card h3 {
+        margin-top: 45px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .nc-section {
+        padding: 85px 0;
+    }
+
+    .nc-services-hero {
+        min-height: 620px;
+    }
+
+    .nc-services-hero-content {
+        padding: 110px 0 80px;
+    }
+
+    .nc-services-hero h1 {
+        font-size: 3.15rem;
+    }
+
+    .nc-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nc-primary-button,
+    .nc-secondary-button {
+        justify-content: center;
+    }
+
+    .nc-featured-content {
+        padding: 24px;
+    }
+
+    .nc-service-row-link {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+        padding: 25px 0;
+    }
+
+    .nc-service-row-main h3 {
+        font-size: 1.3rem;
+    }
+
+    .nc-service-row-main p {
+        font-size: 10px;
+    }
+
+    .nc-tech-list {
+        display: none;
+    }
+
+    .nc-why-section,
+    .nc-services-cta {
+        padding: 100px 0;
+    }
+
+    .nc-why-title {
+        font-size: 2.9rem;
+    }
+
+    .nc-cta-title {
+        font-size: 3.3rem;
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    .nc-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+</style>
+
+
+
+<!-- ==========================================================
+     SERVICES JAVASCRIPT
+========================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const elements =
+            document.querySelectorAll(".nc-reveal");
+
+
+        if (!("IntersectionObserver" in window)) {
+
+            elements.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "nc-visible"
+                    );
+
+                }
+            );
+
+            return;
+
+        }
+
+
+        const observer =
+            new IntersectionObserver(
+                function (entries, observer) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "nc-visible"
+                                );
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -40px 0px"
+                }
+            );
+
+
+        elements.forEach(
+            function (element, index) {
+
+                /*
+                 * Small stagger effect for
+                 * service cards.
+                 */
+
+                const card =
+                    element.classList.contains(
+                        "nc-featured-card"
+                    ) ||
+                    element.classList.contains(
+                        "nc-service-row"
+                    ) ||
+                    element.classList.contains(
+                        "nc-process-card"
+                    );
+
+
+                if (card) {
+
+                    element.style.transitionDelay =
+                        Math.min(index * 50, 250) + "ms";
+
+                }
+
+
+                observer.observe(element);
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+{% endblock %}

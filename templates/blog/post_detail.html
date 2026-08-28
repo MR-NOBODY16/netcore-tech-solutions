@@ -1,0 +1,1097 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ post.title }} | NetCore TECH Solutions
+{% endblock %}
+
+{% block meta_description %}
+{{ post.excerpt }}
+{% endblock %}
+
+{% block content %}
+
+<!-- ==========================================================
+     ARTICLE HERO
+========================================================== -->
+
+<section class="nc-article-hero">
+
+    <div class="nc-article-grid"></div>
+
+    <div class="nc-article-glow"></div>
+
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+
+        <div class="nc-article-header">
+
+            <a
+                href="{% url 'blog:home' %}"
+                class="nc-back-blog"
+            >
+                <span>←</span>
+                Back to Blog
+            </a>
+
+
+            <div class="nc-article-category">
+
+                <span></span>
+
+                {{ post.get_category_display }}
+
+            </div>
+
+
+            <h1>
+                {{ post.title }}
+            </h1>
+
+
+            <p class="nc-article-excerpt">
+                {{ post.excerpt }}
+            </p>
+
+
+            <div class="nc-article-meta">
+
+                <div>
+
+                    <small>
+                        WRITTEN BY
+                    </small>
+
+                    <strong>
+                        {{ post.author }}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        PUBLISHED
+                    </small>
+
+                    <strong>
+
+                        {% if post.published_at %}
+
+                            {{ post.published_at|date:"F d, Y" }}
+
+                        {% else %}
+
+                            {{ post.created_at|date:"F d, Y" }}
+
+                        {% endif %}
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        CATEGORY
+                    </small>
+
+                    <strong>
+                        {{ post.get_category_display }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     ARTICLE CONTENT
+========================================================== -->
+
+<section class="nc-article-section">
+
+    <div class="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
+
+        {% if post.featured_image %}
+
+        <div class="nc-article-image">
+
+            <img
+                src="{{ post.featured_image.url }}"
+                alt="{{ post.title }}"
+            >
+
+        </div>
+
+        {% endif %}
+
+
+        <div class="nc-article-layout">
+
+
+            <!-- ARTICLE -->
+
+            <article class="nc-article-content">
+
+                <div class="nc-article-intro">
+
+                    {{ post.excerpt }}
+
+                </div>
+
+
+                <div class="nc-article-body">
+
+                    {{ post.content|linebreaks }}
+
+                </div>
+
+
+                <div class="nc-article-end">
+
+                    <span></span>
+
+                    <strong>
+                        NETCORE TECH SOLUTIONS
+                    </strong>
+
+                    <span></span>
+
+                </div>
+
+            </article>
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="nc-article-sidebar">
+
+                <div class="nc-sidebar-box">
+
+                    <div class="nc-sidebar-label">
+                        ARTICLE
+                    </div>
+
+                    <strong>
+                        {{ post.get_category_display }}
+                    </strong>
+
+                </div>
+
+
+                <div class="nc-sidebar-box">
+
+                    <div class="nc-sidebar-label">
+                        AUTHOR
+                    </div>
+
+                    <strong>
+                        {{ post.author }}
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="{% url 'inquiries:contact' %}"
+                    class="nc-sidebar-cta"
+                >
+
+                    <span>
+                        Need technology help?
+                    </span>
+
+                    Contact NetCore →
+
+                </a>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     ARTICLE CTA
+========================================================== -->
+
+<section class="nc-article-cta">
+
+    <div class="nc-article-cta-glow"></div>
+
+    <div class="mx-auto max-w-4xl px-5 text-center sm:px-6 lg:px-8">
+
+        <div class="nc-blog-label">
+            HAVE A PROJECT IN MIND?
+        </div>
+
+
+        <h2>
+
+            Turn your idea into
+
+            <span>
+                technology.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            If this article inspired an idea or you have a technology
+            challenge of your own, let's talk.
+
+        </p>
+
+
+        <div class="nc-article-cta-actions">
+
+            <a
+                href="{% url 'inquiries:contact' %}"
+            >
+                Start a Conversation
+                →
+            </a>
+
+
+            <a
+                href="{% url 'blog:home' %}"
+                class="nc-article-secondary"
+            >
+                More Articles
+                ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     CSS
+========================================================== -->
+
+<style>
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.nc-article-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #05070D;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.07);
+
+}
+
+
+.nc-article-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .025;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+}
+
+
+.nc-article-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    left: 50%;
+
+    top: 25%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(8,123,255,.07);
+
+    filter: blur(130px);
+
+}
+
+
+.nc-article-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding:
+        140px 0
+        100px;
+
+    text-align: center;
+
+}
+
+
+.nc-back-blog {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #475569;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: .08em;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.nc-back-blog:hover {
+
+    color: #087BFF;
+
+}
+
+
+.nc-article-category {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 40px;
+
+    color: #087BFF;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+
+}
+
+
+.nc-article-category span {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #087BFF;
+
+    box-shadow:
+        0 0 18px rgba(8,123,255,.8);
+
+}
+
+
+.nc-article-header h1 {
+
+    max-width: 1050px;
+
+    margin: 20px auto 0;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        3.3rem,
+        7vw,
+        6.8rem
+    );
+
+    line-height: .9;
+
+    letter-spacing: -.075em;
+
+    font-weight: 950;
+
+}
+
+
+.nc-article-excerpt {
+
+    max-width: 700px;
+
+    margin: 30px auto 0;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+.nc-article-meta {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    margin-top: 45px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+
+}
+
+
+.nc-article-meta div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.nc-article-meta small {
+
+    color: #334155;
+
+    font-size: 6px;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+}
+
+
+.nc-article-meta strong {
+
+    color: #94A3B8;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.nc-article-section {
+
+    padding:
+        100px 0
+        130px;
+
+    background: #05070D;
+
+}
+
+
+.nc-article-image {
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 20px;
+
+    margin-bottom: 80px;
+
+}
+
+
+.nc-article-image img {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+}
+
+
+.nc-article-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        230px;
+
+    gap: 80px;
+
+}
+
+
+.nc-article-content {
+
+    min-width: 0;
+
+}
+
+
+.nc-article-intro {
+
+    padding:
+        25px 28px;
+
+    border-left:
+        3px solid #087BFF;
+
+    border-radius: 0 10px 10px 0;
+
+    background:
+        rgba(8,123,255,.035);
+
+    color: #CBD5E1;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+
+.nc-article-body {
+
+    margin-top: 45px;
+
+    color: #718096;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+}
+
+
+.nc-article-body p {
+
+    margin-bottom: 24px;
+
+}
+
+
+.nc-article-end {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 70px;
+
+}
+
+
+.nc-article-end span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.07);
+
+}
+
+
+.nc-article-end strong {
+
+    color: #334155;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+}
+
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+.nc-article-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.nc-sidebar-box {
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    border-radius: 10px;
+
+    background: #080B12;
+
+}
+
+
+.nc-sidebar-label {
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 6px;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+}
+
+
+.nc-sidebar-box strong {
+
+    color: #94A3B8;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+}
+
+
+.nc-sidebar-cta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    border:
+        1px solid rgba(8,123,255,.18);
+
+    border-radius: 10px;
+
+    background:
+        rgba(8,123,255,.04);
+
+    color: #087BFF;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    line-height: 1.6;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.nc-sidebar-cta:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(8,123,255,.4);
+
+}
+
+
+.nc-sidebar-cta span {
+
+    color: #64748B;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.nc-article-cta {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        140px 0;
+
+    background: #080B12;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
+
+}
+
+
+.nc-article-cta-glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(8,123,255,.06);
+
+    filter: blur(120px);
+
+}
+
+
+.nc-article-cta h2 {
+
+    position: relative;
+
+    margin-top: 18px;
+
+    color: #F8FAFC;
+
+    font-size: clamp(
+        3rem,
+        6vw,
+        5.5rem
+    );
+
+    line-height: .9;
+
+    letter-spacing: -.07em;
+
+    font-weight: 950;
+
+}
+
+
+.nc-article-cta h2 span {
+
+    color: #087BFF;
+
+}
+
+
+.nc-article-cta p {
+
+    position: relative;
+
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: #64748B;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+.nc-article-cta-actions {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 32px;
+
+}
+
+
+.nc-article-cta-actions a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 21px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0057D9,
+            #087BFF
+        );
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.nc-article-cta-actions a:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+.nc-article-cta-actions
+.nc-article-secondary {
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    background:
+        transparent;
+
+    color: #64748B;
+
+}
+
+
+.nc-article-cta-actions
+.nc-article-secondary:hover {
+
+    color: #087BFF;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .nc-article-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .nc-article-sidebar {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .nc-article-header {
+
+        padding:
+            120px 0
+            80px;
+
+    }
+
+
+    .nc-article-header h1 {
+
+        font-size:
+            3.2rem;
+
+    }
+
+
+    .nc-article-excerpt {
+
+        font-size: 13px;
+
+    }
+
+
+    .nc-article-meta {
+
+        justify-content:
+            flex-start;
+
+        gap: 22px;
+
+        text-align: left;
+
+    }
+
+
+    .nc-article-section {
+
+        padding:
+            70px 0
+            90px;
+
+    }
+
+
+    .nc-article-image {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .nc-article-intro {
+
+        font-size: 14px;
+
+    }
+
+
+    .nc-article-body {
+
+        font-size: 14px;
+
+        line-height: 1.9;
+
+    }
+
+
+    .nc-article-sidebar {
+
+        display: flex;
+
+    }
+
+
+    .nc-article-cta {
+
+        padding:
+            100px 0;
+
+    }
+
+
+    .nc-article-cta h2 {
+
+        font-size:
+            3.2rem;
+
+    }
+
+
+    .nc-article-cta-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .nc-article-cta-actions a {
+
+        justify-content: center;
+
+    }
+
+}
+
+</style>
+
+{% endblock %}
