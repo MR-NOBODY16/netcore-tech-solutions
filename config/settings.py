@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import os
 
 from dotenv import load_dotenv
@@ -28,6 +27,7 @@ SECRET_KEY = os.environ.get(
     "django-insecure-change-this-before-production",
 )
 
+
 DEBUG = os.environ.get(
     "DJANGO_DEBUG",
     "True",
@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.environ.get(
         "DJANGO_ALLOWED_HOSTS",
-        "127.0.0.1,localhost",
+        "127.0.0.1,localhost,netcore-tech-solutions.onrender.com",
     ).split(",")
     if host.strip()
 ]
@@ -184,7 +184,6 @@ if DATABASE_URL:
                 conn_health_checks=True,
                 ssl_require=True,
             ),
-
     }
 
 else:
@@ -198,9 +197,7 @@ else:
 
             "NAME":
                 BASE_DIR / "db.sqlite3",
-
         }
-
     }
 
 
@@ -269,6 +266,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
 STATICFILES_STORAGE = (
     "whitenoise.storage.CompressedManifestStaticFilesStorage"
 )
@@ -287,7 +285,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 # DEFAULT PRIMARY KEY
 # ============================================================
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+DEFAULT_AUTO_FIELD = (
+    "django.db.models.BigAutoField"
+)
 
 
 # ============================================================
@@ -304,17 +304,21 @@ EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
+
 EMAIL_HOST_USER = os.environ.get(
     "EMAIL_HOST_USER",
     "netcoretechzm@gmail.com",
 )
+
 
 EMAIL_HOST_PASSWORD = os.environ.get(
     "EMAIL_HOST_PASSWORD",
     "",
 )
 
+
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 NETCORE_ADMIN_EMAIL = os.environ.get(
     "NETCORE_ADMIN_EMAIL",
@@ -332,7 +336,9 @@ CSRF_TRUSTED_ORIGINS = [
 
     for origin in os.environ.get(
         "DJANGO_CSRF_TRUSTED_ORIGINS",
-        "",
+        (
+            "https://netcore-tech-solutions.onrender.com"
+        ),
     ).split(",")
 
     if origin.strip()
@@ -362,10 +368,6 @@ CSRF_COOKIE_HTTPONLY = False
 # ============================================================
 # HTTPS SECURITY
 # ============================================================
-
-# These values remain disabled during local HTTP development.
-# They will automatically become enabled when the
-# DJANGO_SECURE_MODE environment variable is set to True.
 
 SECURE_MODE = os.environ.get(
     "DJANGO_SECURE_MODE",
@@ -416,4 +418,6 @@ SECURE_PROXY_SSL_HEADER = (
 # REFERRER POLICY
 # ============================================================
 
-SECURE_REFERRER_POLICY = "same-origin"
+SECURE_REFERRER_POLICY = (
+    "same-origin"
+)
