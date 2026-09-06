@@ -19,16 +19,10 @@ def home(request):
     """
     Main NetCore TECH Solutions homepage.
 
-    The homepage pulls published content dynamically from
-    the existing Services, Portfolio and Blog applications.
-
-    Featured services and featured projects are controlled
-    from the Django admin panel.
+    The homepage pulls live published content from the
+    Services, Portfolio and Blog applications.
     """
 
-    # ------------------------------------------------------
-    # FEATURED SERVICES
-    # ------------------------------------------------------
     featured_services = (
         Service.objects
         .filter(
@@ -38,12 +32,9 @@ def home(request):
         .order_by(
             "order",
             "-created_at",
-        )
+        )[:6]
     )
 
-    # ------------------------------------------------------
-    # FEATURED PORTFOLIO PROJECTS
-    # ------------------------------------------------------
     featured_projects = (
         PortfolioProject.objects
         .filter(
@@ -52,12 +43,9 @@ def home(request):
         )
         .order_by(
             "-created_at",
-        )
+        )[:3]
     )
 
-    # ------------------------------------------------------
-    # LATEST BLOG POSTS
-    # ------------------------------------------------------
     latest_posts = (
         Post.objects
         .filter(
@@ -70,13 +58,28 @@ def home(request):
         )[:3]
     )
 
-    # ------------------------------------------------------
-    # HOMEPAGE CONTEXT
-    # ------------------------------------------------------
     context = {
         "featured_services": featured_services,
         "featured_projects": featured_projects,
         "latest_posts": latest_posts,
+
+        "published_service_count": (
+            Service.objects
+            .filter(is_published=True)
+            .count()
+        ),
+
+        "published_project_count": (
+            PortfolioProject.objects
+            .filter(is_published=True)
+            .count()
+        ),
+
+        "published_post_count": (
+            Post.objects
+            .filter(is_published=True)
+            .count()
+        ),
     }
 
     return render(
@@ -91,12 +94,6 @@ def home(request):
 # ==========================================================
 
 def about(request):
-    """
-    About page.
-
-    Content is managed dynamically through the Django admin.
-    """
-
     about_profile = (
         AboutProfile.objects
         .filter(
@@ -145,10 +142,6 @@ def about(request):
 # ==========================================================
 
 def services(request):
-    """
-    Services landing page.
-    """
-
     return render(
         request,
         "core/services.html",
@@ -160,10 +153,6 @@ def services(request):
 # ==========================================================
 
 def privacy(request):
-    """
-    Privacy policy page.
-    """
-
     return render(
         request,
         "core/privacy.html",
@@ -175,10 +164,6 @@ def privacy(request):
 # ==========================================================
 
 def terms(request):
-    """
-    Terms of service page.
-    """
-
     return render(
         request,
         "core/terms.html",

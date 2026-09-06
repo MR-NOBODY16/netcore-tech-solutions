@@ -1,0 +1,1928 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "portfolio",
+    "model": "project"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "blog",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "inquiries",
+    "model": "inquiry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "sitesettings"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "services",
+    "model": "service"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "portfolio",
+    "model": "portfolioproject"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "portfolio",
+    "model": "projectscreenshot"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "portfolio",
+    "model": "projecttechnology"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "aboutprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "companyvalue"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "leadershipprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "testimonials",
+    "model": "testimonial"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "testimonial"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0fpjswtlsq3bbpaeec2lk65lpvrc1g1r",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQAP-FsyHs8mj16L3fQBZYpGpoUtqT8d-VpAe9zkzmJTztW_F749XPSVwEiNMvCxQfXLtId6q3RcalbuscZE_kYZuclsTP69H-DQq10rdGEdnM7FBnDE7pUQOfM8cIQwZLimEERKucQgPGfJG16BgGCjqAeH8Az_k24w:1wyRhH:jRHeSKj_9M4SLjE5Z8eEQHOrf4mSZuMHmF3Qk-fav30",
+    "expire_date": "2026-09-07T10:14:31.364Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2t1ub47rbuaefzml3uy876k7csy360ey",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQAP-FsyHs8mj16L3fQBZYpGpoUtqT8d-VpAe9zkzmJTztW_F749XPSVwEiNMvCxQfXLtId6q3RcalbuscZE_kYZuclsTP69H-DQq10rdGEdnM7FBnDE7pUQOfM8cIQwZLimEERKucQgPGfJG16BgGCjqAeH8Az_k24w:1wzFoP:6gSPe_fYF2pxTo9pTfwgpeBRCsiPZCjXyjpSQnDW690",
+    "expire_date": "2026-09-09T15:45:13.335Z"
+  }
+},
+{
+  "model": "core.sitesettings",
+  "pk": 1,
+  "fields": {
+    "company_name": "NetCore TECH Solutions",
+    "tagline": "Technology Solutions. Business Growth. Digital Innovation.",
+    "hero_title": "Technology that moves your business forward.",
+    "hero_description": "NetCore TECH Solutions is a technology solutions company focused on helping businesses, organizations and individuals solve real-world problems through reliable, practical and innovative technology.",
+    "phone": "+260975937012",
+    "email": "netcoretechzm@gmail.com",
+    "address": "Lusaka, Zambia",
+    "whatsapp": "https://wa.me/260762171297",
+    "facebook_url": "https://www.facebook.com/share/1C5mxiALPY/",
+    "linkedin_url": "https://www.linkedin.com/in/daniel-ngongo-175162398?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "tiktok_url": "https://www.tiktok.com/@netcore.tech.zm",
+    "instagram_url": "https://www.instagram.com/netcoretechzm/",
+    "youtube_url": "https://www.youtube.com/@NetCoreTechZM",
+    "footer_description": "NetCore TECH Solutions provides reliable technology solutions that help businesses, organizations and individuals work smarter, operate efficiently and grow through technology.",
+    "updated_at": "2026-08-24T10:33:19.409Z"
+  }
+},
+{
+  "model": "core.aboutprofile",
+  "pk": 1,
+  "fields": {
+    "company_name": "NetCore TECH Solutions",
+    "short_intro": "NetCore TECH Solutions is a technology-focused company providing practical digital and IT solutions for modern businesses and organizations.",
+    "founded_year": 2026,
+    "our_story": "NetCore TECH ZM was born from a passion for technology and a vision to make reliable IT solutions accessible to individuals, startups, and businesses in Zambia.\r\n\r\nWe recognized that many people and businesses struggle with computer problems, unreliable networks, outdated systems, and the challenges of establishing a strong digital presence. NetCore TECH ZM was created to bridge that gap by providing practical, affordable, and professional technology solutions.\r\n\r\nWhat started as a passion for IT has grown into a technology-focused brand offering website development, computer repair and maintenance, IT support, networking solutions, and digital services. Our approach is simple: understand the problem, provide the right solution, and ensure our clients can confidently use technology to achieve their goals.\r\n\r\nToday, NetCore TECH ZM continues to grow with a commitment to innovation, reliability, professionalism, and customer satisfaction. We believe technology should not be complicated, it should empower people, improve businesses, and create opportunities.\r\n\r\nOur journey is still being written, and our goal is to become a trusted technology partner for businesses and individuals across Zambia and beyond.",
+    "why_we_started": "NetCore TECH ZM was created from a simple belief: technology should work for people, not become a problem for them.\r\n\r\nWe saw individuals, startups, and businesses struggling with everyday technology challenges—from computer faults and network problems to building professional websites and establishing a strong digital presence. Many needed reliable IT support but found it difficult to access affordable, professional, and trustworthy services.\r\n\r\nThat is why we started NetCore TECH ZM: to provide practical technology solutions that solve real problems.\r\n\r\nOur mission is to help businesses and individuals use technology with confidence, whether they need a website, computer support, networking, maintenance, or other IT solutions.\r\n\r\nWe started small, but our vision has always been bigger: to build a trusted Zambian technology brand that helps people and businesses connect, grow, and succeed through technology.",
+    "problem_we_wanted_to_solve": "NetCore TECH ZM was created to address the growing gap between people and businesses that need technology and the reliable IT support they can actually access.\r\n\r\nMany small businesses and individuals face challenges such as computer failures, network issues, lack of technical support, poor website presence, outdated systems, and limited access to affordable IT services. For many, technology becomes an obstacle rather than a tool for growth.\r\n\r\nWe wanted to change that.\r\n\r\nNetCore TECH ZM aims to make professional, reliable, and affordable IT solutions more accessible. Instead of simply fixing a problem and leaving, we focus on understanding our clients' needs and providing solutions that are practical, sustainable, and easy to use.\r\n\r\nOur goal is to help bridge the technology gap by giving individuals and businesses the tools, support, and digital solutions they need to work smarter, operate efficiently, and grow with confidence.",
+    "how_we_started": "NetCore TECH ZM started with a passion for technology, problem-solving, and the desire to use IT to make a real difference in people’s lives and businesses.\r\n\r\nWhat began as a vision to provide reliable technical support and digital solutions gradually developed into a growing technology brand. We started by helping individuals and small businesses with everyday IT challenges such as computer repairs, software issues, networking, system maintenance, and technical support.\r\n\r\nAs we gained experience and understood the needs of our clients, we expanded our services to include website development, digital solutions, business technology support, and other IT services.\r\n\r\nOur journey has been built step by step—through learning, solving real-world problems, working with clients, and continuously improving our skills and services.\r\n\r\nToday, NetCore TECH ZM continues to grow with the same foundation we started with: a passion for technology, commitment to solving problems, and a vision to help Zambian individuals and businesses make better use of technology.",
+    "initial_services": "When NetCore TECH ZM first started, our focus was on providing practical and reliable IT support to individuals, entrepreneurs, and small businesses.\r\n\r\nOur initial services included:\r\n\r\n1. Computer Repair & Troubleshooting — Diagnosing and fixing hardware and software problems.\r\n2.  Computer Maintenance — System cleanup, optimization, software installation, and general maintenance.\r\n3.  Networking Solutions — Basic network setup, configuration, troubleshooting, and connectivity support.\r\n4.  IT Technical Support — Helping clients resolve everyday technology problems and providing guidance on using their systems effectively.\r\n5.  Software & System Setup — Operating system installation, software configuration, updates, and system setup.\r\n\r\nThese services formed the foundation of NetCore TECH ZM and allowed us to build practical experience, understand our clients' needs, and establish the trust that continues to drive our growth today.",
+    "how_we_have_grown": "Since its beginning, NetCore TECH ZM has grown from a small IT-focused initiative into a broader technology solutions brand with a vision of serving individuals, startups, and established businesses.\r\n\r\nOur growth has been driven by continuous learning, real-world experience, and a commitment to understanding the changing needs of our clients. What initially focused on computer repair, maintenance, networking, and technical support has expanded into areas such as website development, digital solutions, business IT support, and technology consulting.\r\n\r\nWe have also grown beyond simply providing technical services. We are building a brand that uses technology to help businesses establish their online presence, improve their operations, solve technical challenges, and embrace digital transformation.\r\n\r\nAs our skills, services, and online presence continue to develop, our vision remains the same: to become a trusted technology partner in Zambia and eventually extend our reach beyond Zambia.\r\n\r\nOur journey is still in its early stages, but every client, project, challenge, and lesson has contributed to where NetCore TECH ZM is today, and where we are heading next.",
+    "who_we_are": "NetCore TECH ZM is a Zambian technology solutions company dedicated to helping individuals, startups, and businesses solve technology challenges and make better use of digital tools.\r\n\r\nWe provide a range of IT and digital services, including website development, computer repair and maintenance, networking solutions, technical support, and business technology solutions.\r\n\r\nWe combine technical expertise, creativity, problem-solving, and a customer-focused approach to deliver solutions that are practical, reliable, and tailored to our clients' needs.\r\n\r\nAt NetCore TECH ZM, we believe technology is more than just computers and software, it is a powerful tool for connecting people, improving businesses, creating opportunities, and driving growth.\r\n\r\nOur goal is to become a trusted technology partner for businesses and individuals by delivering quality solutions, building lasting relationships, and continuously evolving with technology.\r\n\r\nNetCore TECH ZM — Connecting Technology, Empowering Businesses.",
+    "what_we_do": "At NetCore TECH ZM, we provide practical technology solutions that help individuals, startups, and businesses solve IT challenges, improve their operations, and build a stronger digital presence.\r\n\r\nOur services include:\r\n\r\n. Website Development — Designing and developing modern, responsive, and professional websites for businesses, organizations, and individuals.\r\n. Computer Repair & Maintenance — Diagnosing hardware and software problems, system optimization, upgrades, installations, and preventive maintenance.\r\n. Networking Solutions — Setting up, configuring, securing, and troubleshooting computer networks and connectivity infrastructure.\r\n. IT Technical Support — Providing reliable assistance with everyday technology problems, system configuration, troubleshooting, and user support.\r\n. Business IT Solutions — Helping businesses identify and implement technology solutions that improve productivity, efficiency, and service delivery.\r\n. System & Software Solutions — Developing and configuring digital systems that help organizations manage their operations and workflows more effectively.\r\n. Digital Solutions & Support — Helping clients adopt and make better use of digital technologies to grow and stay competitive.\r\n\r\nWe don't just provide technology, we solve problems with technology.\r\n\r\nOur approach is centered on understanding each client's needs and delivering solutions that are reliable, affordable, scalable, and built for real-world use.",
+    "what_makes_us_different": "At NetCore TECH ZM, we believe technology services should be more than just fixing a problem or delivering a product. We focus on understanding the problem, creating the right solution, and building long-term value for our clients.\r\n\r\nWhat sets us apart is:\r\n\r\n. Client-Focused Approach — We take time to understand our clients' needs before recommending a solution.\r\n. Practical Solutions — We focus on solutions that solve real problems and are appropriate for the client's budget, environment, and goals.\r\n. Technical & Creative Thinking — We combine technical skills with creativity to develop solutions that are both functional and user-friendly.\r\n. Personal Support — We believe in building relationships with our clients, not simply completing transactions.\r\n. Growth-Oriented — We design solutions with the future in mind, allowing businesses to improve and scale as they grow.\r\n🇿🇲 Local Understanding — As a Zambian technology brand, we understand the unique challenges faced by local individuals and businesses.\r\n. Continuous Learning — Technology constantly changes, and we continuously improve our skills and services to stay relevant.\r\n. Value for Money — We aim to make quality technology solutions accessible without compromising professionalism.\r\n\r\nOur difference is simple: we don't just provide technology, we understand it, apply it, and use it to create meaningful solutions for our clients.",
+    "future_goals": "At NetCore TECH ZM, we are building for the future. Our goal is not only to grow as a technology company, but to become a trusted technology partner that contributes to the digital transformation of businesses and communities in Zambia and beyond.\r\n\r\nOur future goals include:\r\n\r\n. Expand Our Services — Continue developing our IT, web development, networking, technical support, and digital solutions to meet changing client needs.\r\n. Expand Our Reach — Grow from serving local clients to working with businesses and organizations across Zambia and eventually internationally.\r\n. Build Innovative Systems — Develop modern software and digital platforms that solve real-world business and community problems.\r\n. Support Business Growth — Help more startups, SMEs, and established organizations use technology to improve productivity and competitiveness.\r\n. Build a Strong Team — Create opportunities for talented IT professionals and young people to learn, grow, and contribute to the technology industry.\r\n. Embrace Emerging Technology — Explore areas such as artificial intelligence, cloud computing, cybersecurity, automation, and modern digital infrastructure.\r\n. Build a Trusted Brand — Establish NetCore TECH ZM as a recognized and respected technology brand known for quality, professionalism, and reliability.\r\n🇿🇲 Contribute to Zambia's Digital Future, Play a meaningful role in helping individuals, businesses, and organizations adopt technology and participate in the digital economy.\r\n\r\nOur ultimate goal is to grow NetCore TECH ZM from a technology service provider into a technology company that creates solutions, creates opportunities, and makes a lasting impact.",
+    "mission": "To provide reliable, innovative, and accessible technology solutions that empower individuals and businesses to solve problems, improve efficiency, and achieve sustainable growth.\r\n\r\nAt NetCore TECH ZM, our mission is to combine technical expertise, creativity, and customer-focused service to deliver practical IT and digital solutions that create real value for our clients.\r\n\r\nWe are committed to making technology simple, useful, affordable, and accessible, while continuously improving our services to meet the evolving needs of the digital world.",
+    "vision": "To become a trusted and leading technology solutions company in Zambia and beyond, empowering individuals and businesses through innovative, reliable, and accessible technology.\r\n\r\nWe envision a future where businesses of every size can confidently use technology to connect, operate smarter, grow faster, and create new opportunities.\r\n\r\nOur ambition is to build NetCore TECH ZM into a recognized technology brand known for innovation, professionalism, reliability, and meaningful impact.",
+    "is_active": true,
+    "updated_at": "2026-08-25T19:28:28.243Z"
+  }
+},
+{
+  "model": "core.leadershipprofile",
+  "pk": 1,
+  "fields": {
+    "full_name": "Daniel Ngongo Dimandja",
+    "position": "Founder & Managing Director",
+    "professional_title": "IT Specialist | Software Developer | Network & Technical Support Specialist",
+    "photo": "leadership/ChatGPT_Image_Aug_25_2026_11_54_27_AM.png",
+    "short_bio": "Daniel Ngongo Dimandja is the Founder and Managing Director of NetCore TECH ZM, a Zambian technology solutions company focused on providing reliable IT, software, networking, and digital solutions to individuals and businesses.",
+    "professional_background": "Daniel has a background in Information Technology with practical experience in software development, web development, computer troubleshooting and maintenance, networking, database systems, and technical support. Through NetCore TECH ZM, he focuses on transforming technology challenges into practical solutions that help individuals and businesses work more efficiently and grow digitally.",
+    "education": "Diploma in Information Technology\r\n\r\nAdditional professional training includes networking, software development, web technologies, IT customer support, and modern AI technologies.",
+    "professional_skills": ". Web Development\r\n. Software Development\r\n. Python & Django\r\n. Database Management\r\n. Networking & Troubleshooting\r\n. Computer Repair & Maintenance\r\n. IT Technical Support\r\n. System Administration\r\n. HTML, CSS & JavaScript\r\n. Digital Solutions\r\n. Problem Solving\r\n. Technical Project Development",
+    "linkedin_url": "https://www.linkedin.com/in/daniel-ngongo-175162398?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "facebook_url": "https://www.facebook.com/share/1C5mxiALPY/",
+    "email": "ngongodaniel1607@gmail.com",
+    "display_order": 1,
+    "is_active": true,
+    "created_at": "2026-08-25T18:54:57.491Z",
+    "updated_at": "2026-08-25T18:54:57.491Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 1,
+  "fields": {
+    "title": "Web Development",
+    "slug": "web-development",
+    "short_description": "Professional websites and web applications designed to give businesses and organizations a strong, modern digital presence.",
+    "description": "We design and develop modern, responsive websites and web applications that help businesses establish their digital presence, communicate with customers and deliver services online.\r\n\r\nOur approach combines clean user interfaces, reliable technology and practical functionality to create websites that are easy to use, maintain and grow.",
+    "category": "software",
+    "icon": "",
+    "image": "services/81b82e80-d5f4-11eb-9df8-1720cd025c75.png",
+    "technologies": "HTML, CSS, JavaScript, Tailwind CSS, Python, Django, React",
+    "features": "Responsive business websites\r\nCustom web applications\r\nModern UI/UX\r\nMobile-friendly design\r\nContent management\r\nWebsite maintenance\r\nPerformance optimization",
+    "process": "Requirements discovery\r\nUI/UX planning\r\nDevelopment\r\nTesting\r\nDeployment\r\nMaintenance and support",
+    "price_from": null,
+    "featured": true,
+    "is_published": true,
+    "order": 1,
+    "created_at": "2026-08-26T15:55:22.591Z",
+    "updated_at": "2026-08-26T15:55:22.591Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 2,
+  "fields": {
+    "title": "Custom Software Development",
+    "slug": "custom-software-development",
+    "short_description": "Custom software systems built around your organization's processes, requirements and operational goals.",
+    "description": "We develop custom software systems that help organizations digitize operations, manage information and reduce repetitive manual work.\r\n\r\nEach system is designed around the specific requirements of the organization rather than forcing the business to adapt to an unsuitable solution.",
+    "category": "software",
+    "icon": "",
+    "image": "services/1649140977382.png",
+    "technologies": "Python, Django, Flask, React, REST API, SQLite, MySQL, PostgreSQL",
+    "features": "Custom business systems\r\nDatabase-driven applications\r\nUser authentication\r\nRole-based access\r\nDashboards and reporting\r\nREST APIs\r\nSystem integrations",
+    "process": "Requirements analysis\r\nSystem architecture\r\nUI/UX design\r\nDevelopment\r\nTesting\r\nDeployment\r\nOngoing support",
+    "price_from": null,
+    "featured": true,
+    "is_published": true,
+    "order": 2,
+    "created_at": "2026-08-26T16:04:23.629Z",
+    "updated_at": "2026-08-26T16:04:23.629Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 3,
+  "fields": {
+    "title": "IT Support & Technical Services",
+    "slug": "it-support-technical-services",
+    "short_description": "Reliable technical support to keep computers, software and business technology working efficiently.",
+    "description": "We provide practical IT support for businesses and organizations experiencing computer, software and technology-related challenges.\r\n\r\nOur support focuses on diagnosing problems, resolving technical issues and helping users maintain reliable working environments.",
+    "category": "infrastructure",
+    "icon": "",
+    "image": "services/images_1.jpg",
+    "technologies": "Windows, Microsoft Office, Hardware Diagnostics, Remote Support, System Administration",
+    "features": "Computer troubleshooting\r\nSoftware installation\r\nSystem configuration\r\nUser support\r\nOperating system troubleshooting\r\nPerformance optimization\r\nTechnical diagnostics",
+    "process": "Problem identification\r\nTechnical diagnosis\r\nSolution planning\r\nIssue resolution\r\nTesting\r\nUser guidance",
+    "price_from": null,
+    "featured": true,
+    "is_published": true,
+    "order": 3,
+    "created_at": "2026-08-26T16:13:31.646Z",
+    "updated_at": "2026-08-26T16:13:31.646Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 4,
+  "fields": {
+    "title": "Computer Repair & Maintenance",
+    "slug": "computer-repair-maintenance",
+    "short_description": "Professional computer diagnostics, repair, upgrades and preventative maintenance for reliable devices.",
+    "description": "We provide computer repair and maintenance services for individuals, businesses and organizations.\r\n\r\nFrom slow computers and operating system problems to hardware upgrades and preventative maintenance, we help extend the useful life of your equipment.",
+    "category": "infrastructure",
+    "icon": "",
+    "image": "services/06-scaled-560x440.jpeg",
+    "technologies": "Windows, Hardware Diagnostics, SSD, RAM, System Optimization",
+    "features": "Computer diagnostics\r\nHardware troubleshooting\r\nOperating system installation\r\nRAM upgrades\r\nSSD upgrades\r\nSystem optimization\r\nPreventative maintenance",
+    "process": "Device assessment\r\nFault diagnosis\r\nRepair recommendation\r\nRepair or upgrade\r\nTesting\r\nFinal inspection",
+    "price_from": null,
+    "featured": true,
+    "is_published": true,
+    "order": 4,
+    "created_at": "2026-08-26T16:20:22.868Z",
+    "updated_at": "2026-08-26T16:20:22.868Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 5,
+  "fields": {
+    "title": "Network Installation & Support",
+    "slug": "network-installation-support",
+    "short_description": "Reliable network infrastructure designed to keep your people, devices and systems connected.",
+    "description": "We design, configure and troubleshoot computer networks for homes, businesses and organizations.\r\n\r\nOur networking services focus on reliable connectivity, structured configuration and practical solutions that support everyday operations.",
+    "category": "digital",
+    "icon": "",
+    "image": "services/images_2.jpg",
+    "technologies": "Cisco, TCP/IP, LAN, Wi-Fi, Routers, Switches, Network Security",
+    "features": "LAN installation\r\nWi-Fi configuration\r\nRouter configuration\r\nSwitch configuration\r\nNetwork troubleshooting\r\nNetwork maintenance\r\nConnectivity diagnostics",
+    "process": "Site assessment\r\nNetwork planning\r\nInstallation\r\nConfiguration\r\nTesting\r\nDocumentation\r\nSupport",
+    "price_from": null,
+    "featured": true,
+    "is_published": true,
+    "order": 5,
+    "created_at": "2026-08-26T16:25:24.630Z",
+    "updated_at": "2026-08-26T16:25:24.630Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 6,
+  "fields": {
+    "title": "Business Management Systems",
+    "slug": "business-management-systems",
+    "short_description": "Digital management systems that centralize business operations, records, workflows and reporting.",
+    "description": "We build business management systems that help organizations move away from fragmented manual processes and manage their operations through a centralized digital platform.\r\n\r\nSystems can be tailored to the organization's workflow, users, records and reporting requirements.",
+    "category": "digital",
+    "icon": "",
+    "image": "services/6643e72c4395dabf78723345_Management_Operating_System_for_Small_Businesses.webp",
+    "technologies": "Python, Django, Flask, MySQL, PostgreSQL, JavaScript, REST API",
+    "features": "User management\r\nStaff management\r\nRecords management\r\nDashboards\r\nReports\r\nWorkflow management\r\nRole-based permissions",
+    "process": "Business process analysis\r\nRequirements definition\r\nSystem design\r\nDevelopment\r\nTesting\r\nDeployment\r\nTraining and support",
+    "price_from": null,
+    "featured": true,
+    "is_published": true,
+    "order": 6,
+    "created_at": "2026-08-26T16:31:37.602Z",
+    "updated_at": "2026-08-26T16:41:02.596Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 7,
+  "fields": {
+    "title": "Technology Consulting",
+    "slug": "technology-consulting",
+    "short_description": "Practical technology guidance to help organizations choose, plan and implement the right solutions.",
+    "description": "We help businesses and organizations make informed technology decisions based on their operational requirements, available resources and future goals.\r\n\r\nOur consulting approach focuses on practical recommendations that can create measurable improvements.",
+    "category": "consulting",
+    "icon": "",
+    "image": "services/dallas-it-consulting.jpg",
+    "technologies": "IT Infrastructure, Cloud Technology, Networking, Software Systems, Digital Strategy",
+    "features": "Technology assessment\r\nIT planning\r\nInfrastructure recommendations\r\nSoftware recommendations\r\nDigital strategy\r\nTechnology roadmaps\r\nImplementation guidance",
+    "process": "Initial consultation\r\nTechnology assessment\r\nRequirements analysis\r\nRecommendations\r\nImplementation planning\r\nFollow-up support",
+    "price_from": null,
+    "featured": false,
+    "is_published": true,
+    "order": 7,
+    "created_at": "2026-08-26T16:48:00.235Z",
+    "updated_at": "2026-08-26T16:48:00.235Z"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 8,
+  "fields": {
+    "title": "Digital Transformation Solutions",
+    "slug": "digital-transformation-solutions",
+    "short_description": "Practical digital solutions that help organizations modernize processes, improve efficiency and work smarter.",
+    "description": "We help organizations identify opportunities to replace inefficient manual processes with practical digital workflows and systems.\r\n\r\nFrom online platforms to automated processes and centralized information systems, we help turn operational challenges into technology opportunities.",
+    "category": "digital",
+    "icon": "",
+    "image": "services/1686175855946.png",
+    "technologies": "Python, Django, React, JavaScript, REST API, Databases, Cloud Platforms",
+    "features": "Process digitization\r\nDigital workflows\r\nOnline platforms\r\nData centralization\r\nAutomation\r\nSystem integration\r\nDigital strategy",
+    "process": "Current process assessment\r\nDigital opportunity analysis\r\nSolution design\r\nDevelopment\r\nTesting\r\nDeployment\r\nContinuous improvement",
+    "price_from": null,
+    "featured": false,
+    "is_published": true,
+    "order": 8,
+    "created_at": "2026-08-26T16:53:03.878Z",
+    "updated_at": "2026-08-26T16:53:03.878Z"
+  }
+},
+{
+  "model": "portfolio.portfolioproject",
+  "pk": 1,
+  "fields": {
+    "title": "EHCOITA Resource Portal",
+    "slug": "ehcoita-resource-portal",
+    "category": "education",
+    "short_description": "A digital resource platform that gives students centralized access to academic materials, tutorials, announcements and other educational resources.",
+    "description": "EHCOITA Resource Portal is a digital learning and resource platform developed to provide students with easier access to academic materials and important educational information through a centralized online platform.\r\n\r\nThe platform brings together learning resources, tutorials, announcements and other student-focused content in one accessible digital environment.",
+    "client": "Evelyn Hone College",
+    "year": 2026,
+    "status": "completed",
+    "featured_image": "portfolio/projects/ChatGPT_Image_Aug_24_2026_09_24_04_AM.png",
+    "challenge": "Students needed a more convenient way to access academic resources and important information without depending on scattered physical or digital sources.\r\n\r\nThe challenge was to create a centralized platform that could organize learning materials and make them easier for students to access.",
+    "solution": "NetCore developed a centralized web-based resource portal where students can access academic materials, tutorials and announcements from one platform.\r\n\r\nThe system also provides administrative tools for managing resources and publishing information for users.",
+    "results": "The platform provides a centralized digital environment for sharing educational resources and information, making it easier for students to discover and access learning materials online.",
+    "technologies": "The platform provides a centralized digital environment for sharing educational resources and information, making it easier for students to discover and access learning materials online.",
+    "features": "Student accounts, Digital resource library, PDF materials, Tutorial resources, Announcements, Comments and reactions, Authentication, Administrative management, Advertisement management, Responsive interface",
+    "live_url": "https://Ehcoita.site",
+    "github_url": "https://github.com/MR-NOBODY16/ehcoita_portal1.git",
+    "is_featured": true,
+    "is_published": true,
+    "created_at": "2026-08-24T18:49:37.784Z",
+    "updated_at": "2026-08-24T18:49:37.784Z"
+  }
+},
+{
+  "model": "portfolio.projectscreenshot",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "image": "portfolio/screenshots/Screenshot_36.png",
+    "title": "EHCOITA Portal Dashboard",
+    "description": "Main dashboard providing students with access to available resources and platform information.",
+    "display_order": 0,
+    "created_at": "2026-08-24T19:35:20.241Z"
+  }
+},
+{
+  "model": "portfolio.projectscreenshot",
+  "pk": 2,
+  "fields": {
+    "project": 1,
+    "image": "portfolio/screenshots/Screenshot_34.png",
+    "title": "Learning Resources",
+    "description": "Digital resource section where students can browse available academic materials.",
+    "display_order": 0,
+    "created_at": "2026-08-24T19:36:09.854Z"
+  }
+},
+{
+  "model": "portfolio.projectscreenshot",
+  "pk": 3,
+  "fields": {
+    "project": 1,
+    "image": "portfolio/screenshots/commissioner_dashboard.png",
+    "title": "Announcements",
+    "description": "Platform announcements and important information published for students.",
+    "display_order": 0,
+    "created_at": "2026-08-24T19:37:53.641Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Why Every Business Needs a Strong Digital Presence in 2026",
+    "slug": "why-every-business-needs-a-strong-digital-presence-in-2026",
+    "excerpt": "A professional digital presence is no longer optional for modern businesses. From credibility and customer engagement to online visibility and growth, technology has become an essential part of how businesses compete and serve their customers.",
+    "content": "Content\r\n\r\nA customer looking for a business today will often search online before making a decision.\r\n\r\nWhether they are looking for a technology company, restaurant, consultancy, shop, school or professional service, the internet has become one of the first places people go to discover and evaluate businesses.\r\n\r\nThis is why having a strong digital presence is no longer simply an advantage. For many businesses, it has become an essential part of building credibility, reaching customers and staying competitive.\r\n\r\nWhat Is a Digital Presence?\r\n\r\nA digital presence is the way a business exists and presents itself online.\r\n\r\nIt can include:\r\n\r\nA professional website\r\nSocial media profiles\r\nBusiness listings\r\nOnline communication channels\r\nDigital products and services\r\nOnline customer support\r\nSearch engine visibility\r\nBusiness applications and platforms\r\n\r\nA website may be the foundation of this presence, but a strong digital strategy goes beyond simply having a website.\r\n\r\n1. Your Website Builds Credibility\r\n\r\nImagine two businesses offering similar services.\r\n\r\nOne has a professional website explaining its services, displaying previous work, providing contact information and answering common customer questions.\r\n\r\nThe other has no website and only relies on word-of-mouth.\r\n\r\nWhich business appears more established?\r\n\r\nA professional website gives potential customers a place where they can learn about your business and understand what you offer.\r\n\r\nIt also allows you to control how your brand is presented instead of depending entirely on third-party platforms.\r\n\r\n2. Customers Can Find You More Easily\r\n\r\nPeople are increasingly using search engines to find products, services and solutions.\r\n\r\nIf your business has little or no online presence, potential customers may never discover you.\r\n\r\nA properly structured website can improve your visibility and provide useful information when people search for the services you offer.\r\n\r\nYour website becomes available beyond normal business hours, allowing people to discover your business even when your physical office is closed.\r\n\r\n3. Technology Can Improve Customer Experience\r\n\r\nA modern business website should not simply display a phone number.\r\n\r\nIt can provide customers with useful functionality.\r\n\r\nDepending on the business, this could include:\r\n\r\nOnline bookings\r\nContact forms\r\nCustomer portals\r\nOnline payments\r\nProduct catalogues\r\nService requests\r\nFrequently asked questions\r\nDownloadable resources\r\nLive communication\r\n\r\nThe goal is simple: make it easier for customers to interact with your business.\r\n\r\n4. Digital Systems Can Improve Internal Operations\r\n\r\nDigital transformation isn't only about customers.\r\n\r\nTechnology can also improve what happens behind the scenes.\r\n\r\nBusinesses can use software systems to manage:\r\n\r\nEmployees\r\nCustomers\r\nInventory\r\nAppointments\r\nFinancial records\r\nDocuments\r\nReports\r\nBusiness processes\r\n\r\nInstead of relying entirely on spreadsheets, notebooks and disconnected files, organizations can centralize important information in structured systems.\r\n\r\nThis can save time and make information easier to access.\r\n\r\n5. Your Digital Presence Works Around the Clock\r\n\r\nA physical office has operating hours.\r\n\r\nThe internet doesn't.\r\n\r\nYour website can provide information to customers 24 hours a day, seven days a week.\r\n\r\nSomeone can discover your company at 2:00 AM, read about your services, view your portfolio and submit an inquiry without waiting for your office to open.\r\n\r\nThat creates opportunities that traditional business operations may not provide.\r\n\r\n6. Your Business Can Grow Beyond Its Immediate Location\r\n\r\nA physical business may primarily serve customers within a particular area.\r\n\r\nA digital presence can extend your reach.\r\n\r\nA well-designed website allows people from different locations to discover your services, understand your capabilities and contact you.\r\n\r\nFor businesses offering digital services, consulting, software development and other remote services, this can be especially valuable.\r\n\r\nDigital Transformation Doesn't Have to Start Big\r\n\r\nOne common misconception is that digital transformation requires a huge budget and complicated technology.\r\n\r\nIt doesn't.\r\n\r\nA business can start with something simple:\r\n\r\nBuild a professional website.\r\nEstablish a consistent online identity.\r\nCreate clear communication channels.\r\nDigitize important business processes.\r\nIntroduce systems where manual processes are slowing the business down.\r\nImprove the technology as the business grows.\r\n\r\nThe important thing is to solve real problems rather than adopting technology simply because it is popular.\r\n\r\nTechnology Should Serve the Business\r\n\r\nThe best technology isn't necessarily the most complicated technology.\r\n\r\nIt is technology that solves the right problem.\r\n\r\nBefore developing a system, a business should ask:\r\n\r\nWhat problem are we trying to solve?\r\n\r\nOnce that question is answered, the appropriate technology can be identified.\r\n\r\nAt NetCore TECH Solutions, our approach is centered around understanding the business problem first and then designing practical technology solutions around it.\r\n\r\nWhether you need a professional website, custom software, IT support or networking services, technology should ultimately help your organization work smarter.\r\n\r\nFinal Thoughts\r\n\r\nThe digital world is continuing to change how businesses operate and communicate with customers.\r\n\r\nHaving a strong digital presence gives businesses an opportunity to build credibility, improve customer experience, increase visibility and create new opportunities for growth.\r\n\r\nThe question is no longer whether businesses should embrace technology.\r\n\r\nThe question is:\r\n\r\nHow effectively are they using it?",
+    "category": "business",
+    "featured_image": "blog/0ueAkdiyOZ7Oc9Z5QOI8.webp",
+    "author": "NetCore TECH Solutions",
+    "featured": false,
+    "is_published": true,
+    "published_at": "2026-08-23T23:58:21Z",
+    "created_at": "2026-08-23T23:58:31.327Z",
+    "updated_at": "2026-08-23T23:58:31.327Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "5 Ways Technology Can Improve Business Operations",
+    "slug": "5-ways-technology-can-improve-business-operations",
+    "excerpt": "Technology can do more than give a business an online presence. When implemented correctly, it can reduce repetitive work, improve communication, organize information and help teams make better decisions.",
+    "content": "Running a business involves many moving parts.\r\n\r\nEmployees need to communicate. Customers need to be served. Records need to be maintained. Stock needs to be tracked. Appointments need to be managed. Reports need to be prepared.\r\n\r\nWhen these processes are handled entirely manually, businesses can spend significant amounts of time performing repetitive tasks.\r\n\r\nTechnology can change that.\r\n\r\nThe right technology can help businesses simplify operations, reduce unnecessary work and make important information easier to manage.\r\n\r\nHere are five ways technology can improve business operations.\r\n\r\n1. Automating Repetitive Tasks\r\n\r\nMany businesses spend hours performing tasks that could potentially be automated.\r\n\r\nExamples include:\r\n\r\nGenerating reports\r\nSending notifications\r\nRecording transactions\r\nCreating invoices\r\nScheduling appointments\r\nUpdating records\r\nProcessing forms\r\n\r\nAutomation allows employees to spend less time performing repetitive administrative work and more time focusing on tasks that require human judgment and creativity.\r\n\r\n2. Centralizing Information\r\n\r\nImagine a business where customer information is stored in notebooks, spreadsheets, emails and different computers.\r\n\r\nFinding information can become difficult.\r\n\r\nA centralized business management system can bring important information together.\r\n\r\nFor example, a customer management system could allow authorized employees to access customer records from one platform.\r\n\r\nThis can make information easier to find and reduce duplication.\r\n\r\n3. Improving Communication\r\n\r\nCommunication is an important part of every organization.\r\n\r\nTechnology can provide businesses with better ways to communicate internally and externally.\r\n\r\nThis can include:\r\n\r\nEmail systems\r\nMessaging platforms\r\nCustomer portals\r\nNotification systems\r\nShared documents\r\nInternal dashboards\r\n\r\nBetter communication can help teams respond faster and keep everyone working with the same information.\r\n\r\n4. Making Better Decisions\r\n\r\nBusiness decisions are stronger when they are supported by accurate information.\r\n\r\nDigital systems can collect and organize operational data and turn it into useful reports.\r\n\r\nManagement can then monitor things such as:\r\n\r\nSales\r\nCustomer activity\r\nInventory\r\nExpenses\r\nStaff performance\r\nService requests\r\n\r\nInstead of relying entirely on assumptions, decision-makers can use available data to understand what is actually happening within the organization.\r\n\r\n5. Improving Customer Service\r\n\r\nCustomers expect businesses to be accessible and responsive.\r\n\r\nTechnology can help businesses provide better service through:\r\n\r\nOnline inquiries\r\nAppointment booking\r\nCustomer portals\r\nAutomated notifications\r\nOnline support\r\nDigital payments\r\n\r\nFor example, instead of calling a business to ask whether an appointment is available, a customer could potentially view available times and make a booking online.\r\n\r\nThat saves time for both the customer and the business.\r\n\r\nStart With the Problem\r\n\r\nOne important principle should guide technology adoption:\r\n\r\nDon't implement technology just because it is available.\r\n\r\nStart with the problem.\r\n\r\nAsk:\r\n\r\nWhat is taking too much time?\r\nWhere are mistakes happening?\r\nWhat information is difficult to find?\r\nWhat processes are repetitive?\r\nWhat are customers complaining about?\r\nWhat could be made easier?\r\n\r\nOnce these questions are answered, technology can be introduced where it provides genuine value.\r\n\r\nFinal Thoughts\r\n\r\nTechnology isn't meant to replace good business practices.\r\n\r\nIt should strengthen them.\r\n\r\nThe right system can help an organization become more efficient, organized and responsive.\r\n\r\nAt NetCore TECH Solutions, we believe technology should be practical.\r\n\r\nWe work with businesses and organizations to understand their challenges and develop solutions that fit their actual operations.",
+    "category": "business",
+    "featured_image": "blog/images.jpg",
+    "author": "NetCore TECH Solutions",
+    "featured": true,
+    "is_published": true,
+    "published_at": "2026-08-24T00:05:36Z",
+    "created_at": "2026-08-24T00:05:39.226Z",
+    "updated_at": "2026-08-24T00:05:39.226Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Why Your Business Website Should Be More Than Just a Digital Brochure",
+    "slug": "why-your-business-website-should-be-more-than-just-a-digital-brochure",
+    "excerpt": "A business website should do more than display your company name and contact details. With the right design and functionality, it can become a powerful tool for customer engagement, lead generation and business growth.",
+    "content": "For many businesses, the website is the first point of contact between the company and a potential customer.\r\n\r\nUnfortunately, some businesses treat their website as nothing more than an online brochure.\r\n\r\nA few paragraphs about the company, a list of services, a phone number and perhaps a few pictures.\r\n\r\nWhile that information is useful, a modern business website can do much more.\r\n\r\nYour Website Should Have a Purpose\r\n\r\nBefore developing a website, businesses should ask:\r\n\r\nWhat do we want the website to achieve?\r\n\r\nThe answer could be:\r\n\r\nGenerate leads\r\nReceive customer inquiries\r\nSell products\r\nAccept bookings\r\nProvide customer support\r\nShowcase previous projects\r\nProvide information\r\nManage customer accounts\r\nPromote services\r\n\r\nOnce the purpose is clear, the website can be designed around achieving that objective.\r\n\r\nTurn Visitors Into Customers\r\n\r\nA website should guide visitors toward taking meaningful action.\r\n\r\nDepending on the business, that action might be:\r\n\r\nRequest a quote\r\n\r\nBook an appointment\r\n\r\nCall the business\r\n\r\nSend an inquiry\r\n\r\nPurchase a product\r\n\r\nCreate an account\r\n\r\nClear calls-to-action make it easier for visitors to understand what they should do next.\r\n\r\nYour Website Can Become a Business Tool\r\n\r\nModern websites can connect with other systems.\r\n\r\nFor example, a website could connect to:\r\n\r\nCustomer databases\r\nBooking systems\r\nPayment platforms\r\nInventory systems\r\nEmail services\r\nNotification systems\r\nAnalytics platforms\r\nBusiness management software\r\n\r\nThis transforms the website from a simple information page into an actual business tool.\r\n\r\nMobile Experience Matters\r\n\r\nMany people access websites through smartphones.\r\n\r\nThat means a website should work properly on:\r\n\r\nSmartphones\r\nTablets\r\nLaptops\r\nDesktop computers\r\n\r\nA website that looks great on a large monitor but is difficult to use on a phone can create a poor customer experience.\r\n\r\nResponsive design should therefore be considered from the beginning of development.\r\n\r\nSpeed Matters\r\n\r\nA beautiful website isn't enough if it takes too long to load.\r\n\r\nVisitors expect websites to respond quickly.\r\n\r\nSlow websites can frustrate users and make it more likely that they leave before interacting with the business.\r\n\r\nGood development practices should therefore consider:\r\n\r\nImage optimization\r\nEfficient code\r\nProper caching\r\nClean page structure\r\nReliable hosting\r\nPerformance monitoring\r\nSecurity Should Not Be an Afterthought\r\n\r\nA website can collect valuable information.\r\n\r\nContact forms may receive names, email addresses and phone numbers. E-commerce platforms may handle customer transactions. Business portals may contain sensitive information.\r\n\r\nSecurity should therefore be considered during development rather than added as an afterthought.\r\n\r\nThis includes:\r\n\r\nSecure authentication\r\nStrong passwords\r\nSoftware updates\r\nHTTPS\r\nAccess controls\r\nRegular backups\r\nSecure data handling\r\nA Website Should Grow With the Business\r\n\r\nYour business will probably change.\r\n\r\nYou may introduce new services, expand into new markets or develop new products.\r\n\r\nYour website should be capable of growing with you.\r\n\r\nA properly designed platform can allow new functionality to be introduced over time instead of requiring the entire website to be rebuilt.\r\n\r\nFinal Thoughts\r\n\r\nYour website should represent more than your company online.\r\n\r\nIt should actively support the business.\r\n\r\nWhen designed properly, it can help attract customers, generate leads, automate processes, improve communication and provide valuable information.\r\n\r\nAt NetCore TECH Solutions, we don't believe in building websites simply for the sake of having a website.\r\n\r\nWe build digital solutions around real business needs.",
+    "category": "web",
+    "featured_image": "blog/1754059062249-7acluwmiyys.png",
+    "author": "NetCore TECH Solutions",
+    "featured": true,
+    "is_published": true,
+    "published_at": "2026-08-24T00:09:54Z",
+    "created_at": "2026-08-24T00:09:57.156Z",
+    "updated_at": "2026-08-24T00:09:57.156Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 1,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "web-development",
+    "budget": "under-5000",
+    "message": "loan system",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-24T00:19:13.964Z",
+    "updated_at": "2026-08-24T00:19:13.964Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 2,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "web-development",
+    "budget": "50000-plus",
+    "message": "This is a test inquiry from the NetCore website.",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-26T19:44:21.445Z",
+    "updated_at": "2026-08-26T19:44:21.445Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 3,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "web-development",
+    "budget": "50000-plus",
+    "message": "This is a test inquiry from the NetCore website.",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-26T19:44:26.438Z",
+    "updated_at": "2026-08-26T19:44:26.438Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 4,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "web-development",
+    "budget": "50000-plus",
+    "message": "This is a test inquiry from the NetCore website.",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-26T19:44:28.064Z",
+    "updated_at": "2026-08-26T19:44:28.064Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 5,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "web-development",
+    "budget": "50000-plus",
+    "message": "This is a test inquiry from the NetCore website.",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-26T19:44:28.374Z",
+    "updated_at": "2026-08-26T19:44:28.374Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 6,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "software-development",
+    "budget": "10000-25000",
+    "message": "testing 1,2",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-27T18:59:11.423Z",
+    "updated_at": "2026-08-27T18:59:11.423Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 7,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "consulting",
+    "budget": "under-5000",
+    "message": "testing 1, 2",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-27T19:05:41.205Z",
+    "updated_at": "2026-08-27T19:05:41.205Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 8,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "business-solutions",
+    "budget": "50000-plus",
+    "message": "testing",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-27T19:07:21.374Z",
+    "updated_at": "2026-08-27T19:07:21.374Z"
+  }
+},
+{
+  "model": "inquiries.inquiry",
+  "pk": 9,
+  "fields": {
+    "name": "daniel ngongo dimandja",
+    "email": "ngongodaniel1607@gmail.com",
+    "phone": "+260975937012",
+    "company": "DND TRUST",
+    "service": "mobile-development",
+    "budget": "25000-50000",
+    "message": "testing 1, 2",
+    "status": "new",
+    "admin_notes": "",
+    "created_at": "2026-08-28T10:59:20.602Z",
+    "updated_at": "2026-08-28T10:59:20.602Z"
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 1,
+  "fields": {
+    "client_name": "Example Client",
+    "company": "Example Business",
+    "position": "Managing Director",
+    "photo": "testimonials/Das_Kino.jpg",
+    "testimonial": "NetCore TECH Solutions understood our requirements and delivered a practical technology solution that improved the way we work.",
+    "rating": 5,
+    "service": "Web Development",
+    "featured": true,
+    "is_published": true,
+    "display_order": 1,
+    "created_at": "2026-08-27T17:21:44.340Z",
+    "updated_at": "2026-08-27T17:21:44.340Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Project",
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "codename": "add_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Project",
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "codename": "change_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Project",
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "codename": "delete_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Project",
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "codename": "view_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Blog Post",
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Blog Post",
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Blog Post",
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Blog Post",
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Inquiry",
+    "content_type": [
+      "inquiries",
+      "inquiry"
+    ],
+    "codename": "add_inquiry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Inquiry",
+    "content_type": [
+      "inquiries",
+      "inquiry"
+    ],
+    "codename": "change_inquiry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Inquiry",
+    "content_type": [
+      "inquiries",
+      "inquiry"
+    ],
+    "codename": "delete_inquiry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Inquiry",
+    "content_type": [
+      "inquiries",
+      "inquiry"
+    ],
+    "codename": "view_inquiry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Site Settings",
+    "content_type": [
+      "core",
+      "sitesettings"
+    ],
+    "codename": "add_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Site Settings",
+    "content_type": [
+      "core",
+      "sitesettings"
+    ],
+    "codename": "change_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Site Settings",
+    "content_type": [
+      "core",
+      "sitesettings"
+    ],
+    "codename": "delete_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Site Settings",
+    "content_type": [
+      "core",
+      "sitesettings"
+    ],
+    "codename": "view_sitesettings"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Service",
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "codename": "add_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Service",
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "codename": "change_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Service",
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "codename": "delete_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Service",
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "codename": "view_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Portfolio Project",
+    "content_type": [
+      "portfolio",
+      "portfolioproject"
+    ],
+    "codename": "add_portfolioproject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Portfolio Project",
+    "content_type": [
+      "portfolio",
+      "portfolioproject"
+    ],
+    "codename": "change_portfolioproject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Portfolio Project",
+    "content_type": [
+      "portfolio",
+      "portfolioproject"
+    ],
+    "codename": "delete_portfolioproject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Portfolio Project",
+    "content_type": [
+      "portfolio",
+      "portfolioproject"
+    ],
+    "codename": "view_portfolioproject"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Project Screenshot",
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "codename": "add_projectscreenshot"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Project Screenshot",
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "codename": "change_projectscreenshot"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Project Screenshot",
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "codename": "delete_projectscreenshot"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Project Screenshot",
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "codename": "view_projectscreenshot"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Project Technology",
+    "content_type": [
+      "portfolio",
+      "projecttechnology"
+    ],
+    "codename": "add_projecttechnology"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Project Technology",
+    "content_type": [
+      "portfolio",
+      "projecttechnology"
+    ],
+    "codename": "change_projecttechnology"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Project Technology",
+    "content_type": [
+      "portfolio",
+      "projecttechnology"
+    ],
+    "codename": "delete_projecttechnology"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Project Technology",
+    "content_type": [
+      "portfolio",
+      "projecttechnology"
+    ],
+    "codename": "view_projecttechnology"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add About Profile",
+    "content_type": [
+      "core",
+      "aboutprofile"
+    ],
+    "codename": "add_aboutprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change About Profile",
+    "content_type": [
+      "core",
+      "aboutprofile"
+    ],
+    "codename": "change_aboutprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete About Profile",
+    "content_type": [
+      "core",
+      "aboutprofile"
+    ],
+    "codename": "delete_aboutprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view About Profile",
+    "content_type": [
+      "core",
+      "aboutprofile"
+    ],
+    "codename": "view_aboutprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Company Value",
+    "content_type": [
+      "core",
+      "companyvalue"
+    ],
+    "codename": "add_companyvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Company Value",
+    "content_type": [
+      "core",
+      "companyvalue"
+    ],
+    "codename": "change_companyvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Company Value",
+    "content_type": [
+      "core",
+      "companyvalue"
+    ],
+    "codename": "delete_companyvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Company Value",
+    "content_type": [
+      "core",
+      "companyvalue"
+    ],
+    "codename": "view_companyvalue"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Leadership Profile",
+    "content_type": [
+      "core",
+      "leadershipprofile"
+    ],
+    "codename": "add_leadershipprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Leadership Profile",
+    "content_type": [
+      "core",
+      "leadershipprofile"
+    ],
+    "codename": "change_leadershipprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Leadership Profile",
+    "content_type": [
+      "core",
+      "leadershipprofile"
+    ],
+    "codename": "delete_leadershipprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Leadership Profile",
+    "content_type": [
+      "core",
+      "leadershipprofile"
+    ],
+    "codename": "view_leadershipprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Testimonial",
+    "content_type": [
+      "testimonials",
+      "testimonial"
+    ],
+    "codename": "add_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Testimonial",
+    "content_type": [
+      "testimonials",
+      "testimonial"
+    ],
+    "codename": "change_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Testimonial",
+    "content_type": [
+      "testimonials",
+      "testimonial"
+    ],
+    "codename": "delete_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Testimonial",
+    "content_type": [
+      "testimonials",
+      "testimonial"
+    ],
+    "codename": "view_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Testimonial",
+    "content_type": [
+      "core",
+      "testimonial"
+    ],
+    "codename": "add_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Testimonial",
+    "content_type": [
+      "core",
+      "testimonial"
+    ],
+    "codename": "change_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Testimonial",
+    "content_type": [
+      "core",
+      "testimonial"
+    ],
+    "codename": "delete_testimonial"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Testimonial",
+    "content_type": [
+      "core",
+      "testimonial"
+    ],
+    "codename": "view_testimonial"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$aomczXr9mVfB8KUIFbcErT$IzDMrYMY9+Qw73yYcy+h+oj8XxX3dza9PfKRe1hU5FA=",
+    "last_login": "2026-08-26T15:45:13.157Z",
+    "is_superuser": true,
+    "username": "mrnobody",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-23T23:48:01.164Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-08-23T23:58:31.331Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "Why Every Business Needs a Strong Digital Presence in 2026",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-08-24T00:05:39.255Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "2",
+    "object_repr": "5 Ways Technology Can Improve Business Operations",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-08-24T00:09:57.174Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "3",
+    "object_repr": "Why Your Business Website Should Be More Than Just a Digital Brochure",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-08-24T10:33:19.447Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "core",
+      "sitesettings"
+    ],
+    "object_id": "1",
+    "object_repr": "NetCore TECH Solutions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tagline\", \"Hero description\", \"Phone\", \"Email\", \"Address\", \"Whatsapp\", \"Facebook url\", \"Linkedin url\", \"Tiktok url\", \"Instagram url\", \"Youtube url\", \"Footer description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-08-24T16:30:44.751Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "portfolio",
+      "project"
+    ],
+    "object_id": "1",
+    "object_repr": "EHCOITA RESOURCE PORTAL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-08-24T18:49:37.790Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolioproject"
+    ],
+    "object_id": "1",
+    "object_repr": "EHCOITA Resource Portal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-08-24T19:35:20.270Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "object_id": "1",
+    "object_repr": "EHCOITA Resource Portal — EHCOITA Portal Dashboard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-08-24T19:36:09.919Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "object_id": "2",
+    "object_repr": "EHCOITA Resource Portal — Learning Resources",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-08-24T19:37:53.669Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "portfolio",
+      "projectscreenshot"
+    ],
+    "object_id": "3",
+    "object_repr": "EHCOITA Resource Portal — Announcements",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-08-25T18:35:01.498Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "core",
+      "aboutprofile"
+    ],
+    "object_id": "1",
+    "object_repr": "NetCore TECH Solutions",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-08-25T18:54:57.495Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "core",
+      "leadershipprofile"
+    ],
+    "object_id": "1",
+    "object_repr": "Daniel Ngongo Dimandja — Founder & Managing Director",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-08-25T19:28:28.256Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "core",
+      "aboutprofile"
+    ],
+    "object_id": "1",
+    "object_repr": "NetCore TECH Solutions",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Initial services\", \"How we have grown\", \"What we do\", \"What makes us different\", \"Future goals\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-08-26T15:55:22.595Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "1",
+    "object_repr": "Web Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-08-26T16:04:23.651Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "2",
+    "object_repr": "Custom Software Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-08-26T16:13:31.661Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "3",
+    "object_repr": "IT Support & Technical Services",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-08-26T16:20:22.905Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "4",
+    "object_repr": "Computer Repair & Maintenance",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-08-26T16:25:24.724Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "5",
+    "object_repr": "Network Installation & Support",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-08-26T16:31:37.621Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Business Management Systems",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-08-26T16:41:02.614Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "6",
+    "object_repr": "Business Management Systems",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-08-26T16:48:00.252Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "7",
+    "object_repr": "Technology Consulting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-08-26T16:53:03.917Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "services",
+      "service"
+    ],
+    "object_id": "8",
+    "object_repr": "Digital Transformation Solutions",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-08-27T17:21:44.616Z",
+    "user": [
+      "mrnobody"
+    ],
+    "content_type": [
+      "testimonials",
+      "testimonial"
+    ],
+    "object_id": "1",
+    "object_repr": "Example Client",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

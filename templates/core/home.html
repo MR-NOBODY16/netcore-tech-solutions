@@ -414,17 +414,88 @@
 
                     <article class="solution-card">
 
-                        <span class="solution-number">
-                            {{ forloop.counter|stringformat:"02d" }}
-                        </span>
-
-                        <div class="solution-icon">
-                            {% if service.icon %}
-                                {{ service.icon }}
+                        <div class="solution-image">
+                            {% if service.image %}
+                                <img
+                                    src="{{ service.image.url }}"
+                                    alt="{{ service.title }}"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 1 %}
+                                <img
+                                    src="/media/services/81b82e80-d5f4-11eb-9df8-1720cd025c75.png"
+                                    alt="Web Development"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 2 %}
+                                <img
+                                    src="/media/services/1649140977382.png"
+                                    alt="Custom Software Development"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 3 %}
+                                <img
+                                    src="/media/services/images_1.jpg"
+                                    alt="IT Support and Technical Services"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 4 %}
+                                <img
+                                    src="/media/services/06-scaled-560x440.jpeg"
+                                    alt="Computer Repair and Maintenance"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 5 %}
+                                <img
+                                    src="/media/services/images_2.jpg"
+                                    alt="Network Installation and Support"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 6 %}
+                                <img
+                                    src="/media/services/6643e72c4395dabf78723345_Management_Operating_System_for_Small_Businesses.webp"
+                                    alt="Business Management Systems"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            {% elif forloop.counter == 7 %}
+                                <img
+                                    src="/media/services/1686175855946.png"
+                                    alt="Digital Technology Services"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
                             {% else %}
-                                ◇
+                                <img
+                                    src="/media/services/dallas-it-consulting.jpg"
+                                    alt="Technology Consulting"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
                             {% endif %}
+
+                            <div class="solution-image-overlay"></div>
+
+                            <span class="solution-number">
+                                {{ forloop.counter|stringformat:"02d" }}
+                            </span>
                         </div>
+
+                        <div class="solution-card-content">
+
+                            <div class="solution-icon">
+                                {% if service.icon %}
+                                    {{ service.icon }}
+                                {% else %}
+                                    ◇
+                                {% endif %}
+                            </div>
 
                         <h3>
                             {{ service.title }}
@@ -446,13 +517,24 @@
 
                 <article class="solution-card">
 
-                    <span class="solution-number">
-                        01
-                    </span>
-
-                    <div class="solution-icon">
-                        ◇
+                    <div class="solution-image">
+                        <img
+                            src="/media/services/81b82e80-d5f4-11eb-9df8-1720cd025c75.png"
+                            alt="NetCore technology solutions"
+                            loading="lazy"
+                                    decoding="async"
+                        >
+                        <div class="solution-image-overlay"></div>
+                        <span class="solution-number">
+                            01
+                        </span>
                     </div>
+
+                    <div class="solution-card-content">
+
+                        <div class="solution-icon">
+                            ◇
+                        </div>
 
                     <h3>
                         Technology Solutions
@@ -557,6 +639,7 @@
                         alt="{{ project.title }}"
 
                         loading="lazy"
+                                    decoding="async"
 
                     >
 
@@ -793,6 +876,34 @@
 
                 </a>
 
+
+                <div class="why-brand-card">
+
+                    <div class="why-brand-logo">
+
+                        <img
+
+                            src="{% static 'images/netcore_nav_logo.png' %}"
+
+                            alt="NetCore TECH Solutions"
+
+                            loading="lazy"
+                                    decoding="async"
+
+                        >
+
+                    </div>
+
+                    <div>
+
+                        <span>NETCORE / TECHNOLOGY</span>
+
+                        <strong>Practical technology. Real results.</strong>
+
+                    </div>
+
+                </div>
+
             </div>
 
 
@@ -974,6 +1085,21 @@
 
             <div class="process-item">
 
+                <div class="process-item-image">
+
+                    <img
+
+                        src="/media/services/dallas-it-consulting.jpg"
+
+                        alt="NetCore discovery and technology consultation"
+
+                        loading="lazy"
+                                    decoding="async"
+
+                    >
+
+                </div>
+
                 <span class="process-number">
 
                     01
@@ -999,6 +1125,21 @@
 
 
             <div class="process-item">
+
+                <div class="process-item-image">
+
+                    <img
+
+                        src="/media/services/1686175855946.png"
+
+                        alt="NetCore solution design and planning"
+
+                        loading="lazy"
+                                    decoding="async"
+
+                    >
+
+                </div>
 
                 <span class="process-number">
 
@@ -1026,6 +1167,21 @@
 
             <div class="process-item">
 
+                <div class="process-item-image">
+
+                    <img
+
+                        src="/media/portfolio/screenshots/commissioner_dashboard.png"
+
+                        alt="NetCore software development and testing"
+
+                        loading="lazy"
+                                    decoding="async"
+
+                    >
+
+                </div>
+
                 <span class="process-number">
 
                     03
@@ -1051,6 +1207,21 @@
 
 
             <div class="process-item">
+
+                <div class="process-item-image">
+
+                    <img
+
+                        src="/media/portfolio/projects/ChatGPT_Image_Aug_24_2026_09_24_04_AM.png"
+
+                        alt="NetCore delivered digital solution"
+
+                        loading="lazy"
+                                    decoding="async"
+
+                    >
+
+                </div>
 
                 <span class="process-number">
 
@@ -2930,7 +3101,7 @@
 
 
 
-.solution-card {
+ .solution-card {
 
     position:
 
@@ -2938,11 +3109,11 @@
 
     min-height:
 
-        300px;
+        430px;
 
     padding:
 
-        28px;
+        0;
 
     border:
 
@@ -2988,11 +3159,11 @@
 
     top:
 
-        20px;
+        16px;
 
     right:
 
-        20px;
+        16px;
 
     color:
 
@@ -3009,6 +3180,98 @@
 }
 
 
+
+.solution-image {
+
+    position:
+
+        relative;
+
+    width:
+
+        100%;
+
+    height:
+
+        160px;
+
+    overflow:
+
+        hidden;
+
+    border-radius:
+
+        15px 15px 0 0;
+
+    background:
+
+        #071522;
+
+}
+
+.solution-image img {
+
+    width:
+
+        100%;
+
+    height:
+
+        100%;
+
+    display:
+
+        block;
+
+    object-fit:
+
+        cover;
+
+    transition:
+
+        transform .5s ease;
+
+}
+
+.solution-card:hover .solution-image img {
+
+    transform:
+
+        scale(1.04);
+
+}
+
+.solution-image-overlay {
+
+    position:
+
+        absolute;
+
+    inset:
+
+        0;
+
+    background:
+
+        linear-gradient(180deg, rgba(5,7,13,.04), rgba(5,7,13,.62));
+
+    pointer-events:
+
+        none;
+
+}
+
+.solution-card-content {
+
+    position:
+
+        relative;
+
+    padding:
+
+        22px 28px 28px;
+
+}
 
 .solution-icon {
 
@@ -4396,6 +4659,242 @@
 
 /* ==========================================================
 
+   PROCESS VISUALS
+
+========================================================== */
+
+.process-item-image {
+
+    width:
+
+        100%;
+
+    height:
+
+        145px;
+
+    margin-bottom:
+
+        20px;
+
+    overflow:
+
+        hidden;
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    border-radius:
+
+        12px;
+
+    background:
+
+        #0A0E15;
+
+}
+
+
+.process-item-image img {
+
+    width:
+
+        100%;
+
+    height:
+
+        100%;
+
+    display:
+
+        block;
+
+    object-fit:
+
+        cover;
+
+    transition:
+
+        transform .5s ease;
+
+}
+
+
+.process-item:hover .process-item-image img {
+
+    transform:
+
+        scale(1.04);
+
+}
+
+
+/* ==========================================================
+
+   WHY NETCORE BRAND CARD
+
+========================================================== */
+
+.why-brand-card {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        10px;
+
+    width:
+
+        min(100%, 360px);
+
+    margin-top:
+
+        14px;
+
+    padding:
+
+        8px 11px;
+
+    border:
+
+        1px solid rgba(255,255,255,.07);
+
+    border-radius:
+
+        12px;
+
+    background:
+
+        #0A0E15;
+
+}
+
+
+.why-brand-logo {
+
+    flex:
+
+        0 0 44px;
+
+    width:
+
+        44px;
+
+    height:
+
+        44px;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    overflow:
+
+        hidden;
+
+    border:
+
+        1px solid rgba(8,123,255,.18);
+
+    border-radius:
+
+        9px;
+
+    background:
+
+        #071522;
+
+}
+
+
+.why-brand-logo img {
+
+    width:
+
+        100%;
+
+    height:
+
+        100%;
+
+    object-fit:
+
+        contain;
+
+    padding:
+
+        6px;
+
+}
+
+
+.why-brand-card span {
+
+    display:
+
+        block;
+
+    color:
+
+        #087BFF;
+
+    font-size:
+
+        7px;
+
+    font-weight:
+
+        800;
+
+    letter-spacing:
+
+        .16em;
+
+}
+
+
+.why-brand-card strong {
+
+    display:
+
+        block;
+
+    margin-top:
+
+        3px;
+
+    color:
+
+        #CBD5E1;
+
+    font-size:
+
+        10px;
+
+    font-weight:
+
+        750;
+
+}
+
+
+/* ==========================================================
+
    PROCESS
 
 ========================================================== */
@@ -5097,6 +5596,15 @@
     }
 
 
+    .process-item-image {
+
+        height:
+
+            190px;
+
+    }
+
+
 
     .featured-projects-heading,
 
@@ -5162,6 +5670,23 @@ document.addEventListener(
     "DOMContentLoaded",
 
     function () {
+
+
+        /* ======================================================
+
+           IMAGE LOAD SAFETY
+
+        ====================================================== */
+
+        document.querySelectorAll("img").forEach(function (image) {
+
+            image.addEventListener("error", function () {
+
+                image.classList.add("image-load-failed");
+
+            }, { once: true });
+
+        });
 
 
 
@@ -5301,7 +5826,7 @@ document.addEventListener(
 
             visual &&
 
-            window\.innerWidth > 900
+            window.innerWidth > 900
 
         ) {
 
