@@ -1,22 +1,21 @@
 {
     "name": "NetCore TECH Solutions",
-    "short_name": "NetCore TECH",
-    "description": "Professional technology solutions, software development, IT support, networking and digital services by NetCore TECH Solutions.",
+    "short_name": "NetCore",
+    "description": "NetCore TECH Solutions provides professional web development, software development, IT support, networking and digital technology solutions.",
     "start_url": "/",
-    "scope": "/",
     "display": "standalone",
-    "background_color": "#05070D",
-    "theme_color": "#05070D",
+    "background_color": "#061630",
+    "theme_color": "#061630",
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "/static/images/pwa/icon-192.png",
+            "src": "/static/images/netcore-pwa-192.png",
             "sizes": "192x192",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "any"
         },
         {
-            "src": "/static/images/pwa/icon-512.png",
+            "src": "/static/images/netcore-pwa-512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"

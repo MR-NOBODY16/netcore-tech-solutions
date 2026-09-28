@@ -7,7 +7,9 @@
 <head>
 
     <!-- ==========================================================
+
          PWA
+
     =========================================================== -->
 
     <link
@@ -42,12 +44,14 @@
 
     <link
         rel="apple-touch-icon"
-        href="{% static 'images/pwa/icon-192.png' %}"
+        href="{% static 'images/netcore-pwa-192.png' %}"
     >
 
 
     <!-- ==========================================================
+
          BASIC META
+
     =========================================================== -->
 
     <meta charset="UTF-8">
@@ -64,7 +68,9 @@
 
 
     <!-- ==========================================================
+
          TITLE
+
     =========================================================== -->
 
     <title>
@@ -79,7 +85,9 @@
 
 
     <!-- ==========================================================
+
          DESCRIPTION
+
     =========================================================== -->
 
     <meta
@@ -89,18 +97,22 @@
 
 
     <!-- ==========================================================
+
          FAVICON
+
     =========================================================== -->
 
     <link
         rel="icon"
         type="image/png"
-        href="{% static 'images/netcore_nav_logo.png' %}"
+        href="{% static 'images/netcore-favicon.png' %}"
     >
 
 
     <!-- ==========================================================
+
          MAIN STYLESHEET
+
     =========================================================== -->
 
     <link
@@ -121,7 +133,9 @@
 
 
 <!-- ==========================================================
+
      NAVIGATION
+
 =========================================================== -->
 
 <header
@@ -140,7 +154,9 @@
 
 
             <!-- ==================================================
+
                  LOGO
+
             =================================================== -->
 
             <a
@@ -160,7 +176,9 @@
 
 
             <!-- ==================================================
+
                  DESKTOP NAVIGATION
+
             =================================================== -->
 
             <div
@@ -171,7 +189,9 @@
                     href="{% url 'core:home' %}"
                     class="nav-item {% if request.resolver_match.namespace == 'core' and request.resolver_match.url_name == 'home' %}nav-item-active{% endif %}"
                 >
+
                     Home
+
                 </a>
 
 
@@ -179,7 +199,9 @@
                     href="{% url 'core:about' %}"
                     class="nav-item {% if request.resolver_match.url_name == 'about' %}nav-item-active{% endif %}"
                 >
+
                     About
+
                 </a>
 
 
@@ -187,7 +209,9 @@
                     href="{% url 'services:home' %}"
                     class="nav-item {% if request.resolver_match.namespace == 'services' %}nav-item-active{% endif %}"
                 >
+
                     Services
+
                 </a>
 
 
@@ -195,7 +219,9 @@
                     href="{% url 'portfolio:home' %}"
                     class="nav-item {% if request.resolver_match.namespace == 'portfolio' %}nav-item-active{% endif %}"
                 >
+
                     Portfolio
+
                 </a>
 
 
@@ -203,7 +229,9 @@
                     href="{% url 'testimonials:home' %}"
                     class="nav-item {% if request.resolver_match.namespace == 'testimonials' %}nav-item-active{% endif %}"
                 >
+
                     Testimonials
+
                 </a>
 
 
@@ -211,7 +239,9 @@
                     href="{% url 'blog:home' %}"
                     class="nav-item {% if request.resolver_match.namespace == 'blog' %}nav-item-active{% endif %}"
                 >
+
                     Blog
+
                 </a>
 
             </div>
@@ -219,7 +249,9 @@
 
 
             <!-- ==================================================
+
                  DESKTOP ACTIONS
+
             =================================================== -->
 
             <div
@@ -262,7 +294,9 @@
 
 
                     <span>
+
                         Install App
+
                     </span>
 
                 </button>
@@ -277,7 +311,9 @@
                 >
 
                     <span>
+
                         Let's Talk
+
                     </span>
 
 
@@ -305,7 +341,9 @@
 
 
             <!-- ==================================================
+
                  MOBILE MENU BUTTON
+
             =================================================== -->
 
             <button
@@ -364,7 +402,9 @@
 
 
         <!-- ======================================================
+
              MOBILE NAVIGATION
+
         ======================================================= -->
 
         <div
@@ -380,7 +420,9 @@
                     href="{% url 'core:home' %}"
                     class="mobile-nav-item"
                 >
+
                     Home
+
                 </a>
 
 
@@ -388,7 +430,9 @@
                     href="{% url 'core:about' %}"
                     class="mobile-nav-item"
                 >
+
                     About
+
                 </a>
 
 
@@ -396,7 +440,9 @@
                     href="{% url 'services:home' %}"
                     class="mobile-nav-item"
                 >
+
                     Services
+
                 </a>
 
 
@@ -404,7 +450,9 @@
                     href="{% url 'portfolio:home' %}"
                     class="mobile-nav-item"
                 >
+
                     Portfolio
+
                 </a>
 
 
@@ -412,7 +460,9 @@
                     href="{% url 'testimonials:home' %}"
                     class="mobile-nav-item"
                 >
+
                     Testimonials
+
                 </a>
 
 
@@ -420,13 +470,17 @@
                     href="{% url 'blog:home' %}"
                     class="mobile-nav-item"
                 >
+
                     Blog
+
                 </a>
 
 
 
                 <!-- ==================================================
+
                      MOBILE INSTALL BUTTON
+
                 =================================================== -->
 
                 <button
@@ -461,7 +515,9 @@
 
 
                     <span>
+
                         Install NetCore App
+
                     </span>
 
                 </button>
@@ -469,7 +525,9 @@
 
 
                 <!-- ==================================================
+
                      MOBILE CONTACT
+
                 =================================================== -->
 
                 <div
@@ -480,7 +538,9 @@
                         href="{% url 'inquiries:contact' %}"
                         class="flex items-center justify-center rounded-xl bg-[#087BFF] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#006BE6]"
                     >
+
                         Let's Talk
+
                     </a>
 
                 </div>
@@ -496,7 +556,9 @@
 
 
 <!-- ==========================================================
+
      MAIN CONTENT
+
 =========================================================== -->
 
 <main>
@@ -509,7 +571,9 @@
 
 
 <!-- ==========================================================
+
      WHATSAPP BUTTON
+
 =========================================================== -->
 
 {% if site_settings.whatsapp %}
@@ -542,44 +606,63 @@
 
 
 <!-- ==========================================================
+
      FOOTER
+
 =========================================================== -->
 
 <footer
+
     class="border-t border-white/10 bg-[#080B12]"
+
 >
 
     <div
+
         class="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8"
+
     >
 
         <div
+
             class="grid gap-12 md:grid-cols-2 lg:grid-cols-4"
+
         >
 
 
             <!-- COMPANY -->
 
             <div
+
                 class="lg:col-span-2"
+
             >
 
                 <a
+
                     href="{% url 'core:home' %}"
+
                     class="inline-flex items-center"
+
                 >
 
                     <img
+
                         src="{% static 'images/netcore_nav_logo.png' %}"
+
                         alt="{{ site_settings.company_name|default:'NetCore TECH Solutions' }}"
+
                         class="h-12 w-auto object-contain"
+
                     >
 
                 </a>
 
 
                 <p
+
                     class="mt-5 max-w-md text-sm leading-7 text-slate-500"
+
                 >
 
                     {{ site_settings.footer_description|default:"Connecting technology, empowering businesses. We build practical digital solutions for modern organizations." }}
@@ -588,19 +671,29 @@
 
 
                 <div
+
                     class="mt-7 flex flex-wrap gap-3"
+
                 >
 
                     {% if site_settings.facebook_url %}
 
                     <a
+
                         href="{{ site_settings.facebook_url }}"
+
                         target="_blank"
+
                         rel="noopener noreferrer"
+
                         class="social-link"
+
                         aria-label="Facebook"
+
                     >
+
                         f
+
                     </a>
 
                     {% endif %}
@@ -609,13 +702,21 @@
                     {% if site_settings.linkedin_url %}
 
                     <a
+
                         href="{{ site_settings.linkedin_url }}"
+
                         target="_blank"
+
                         rel="noopener noreferrer"
+
                         class="social-link"
+
                         aria-label="LinkedIn"
+
                     >
+
                         in
+
                     </a>
 
                     {% endif %}
@@ -624,28 +725,45 @@
                     {% if site_settings.tiktok_url %}
 
                     <a
+
                         href="{{ site_settings.tiktok_url }}"
+
                         target="_blank"
+
                         rel="noopener noreferrer"
+
                         class="social-link"
+
                         aria-label="TikTok"
+
                     >
+
                         ♪
+
                     </a>
 
                     {% endif %}
 
 
+
                     {% if site_settings.instagram_url %}
 
                     <a
+
                         href="{{ site_settings.instagram_url }}"
+
                         target="_blank"
+
                         rel="noopener noreferrer"
+
                         class="social-link"
+
                         aria-label="Instagram"
+
                     >
+
                         ◎
+
                     </a>
 
                     {% endif %}
@@ -654,13 +772,21 @@
                     {% if site_settings.youtube_url %}
 
                     <a
+
                         href="{{ site_settings.youtube_url }}"
+
                         target="_blank"
+
                         rel="noopener noreferrer"
+
                         class="social-link"
+
                         aria-label="YouTube"
+
                     >
+
                         ▶
+
                     </a>
 
                     {% endif %}
@@ -676,23 +802,34 @@
             <div>
 
                 <h3
+
                     class="text-sm font-bold uppercase tracking-wider text-white"
+
                 >
+
                     Company
+
                 </h3>
 
 
                 <ul
+
                     class="mt-5 space-y-3"
+
                 >
 
                     <li>
 
                         <a
+
                             href="{% url 'core:about' %}"
+
                             class="footer-link"
+
                         >
+
                             About Us
+
                         </a>
 
                     </li>
@@ -701,10 +838,15 @@
                     <li>
 
                         <a
+
                             href="{% url 'services:home' %}"
+
                             class="footer-link"
+
                         >
+
                             Services
+
                         </a>
 
                     </li>
@@ -713,10 +855,15 @@
                     <li>
 
                         <a
+
                             href="{% url 'portfolio:home' %}"
+
                             class="footer-link"
+
                         >
+
                             Portfolio
+
                         </a>
 
                     </li>
@@ -725,10 +872,15 @@
                     <li>
 
                         <a
+
                             href="{% url 'testimonials:home' %}"
+
                             class="footer-link"
+
                         >
+
                             Testimonials
+
                         </a>
 
                     </li>
@@ -737,10 +889,15 @@
                     <li>
 
                         <a
+
                             href="{% url 'blog:home' %}"
+
                             class="footer-link"
+
                         >
+
                             Blog
+
                         </a>
 
                     </li>
@@ -756,14 +913,20 @@
             <div>
 
                 <h3
+
                     class="text-sm font-bold uppercase tracking-wider text-white"
+
                 >
+
                     Contact
+
                 </h3>
 
 
                 <ul
+
                     class="mt-5 space-y-4"
+
                 >
 
                     {% if site_settings.email %}
@@ -771,10 +934,15 @@
                     <li>
 
                         <a
+
                             href="mailto:{{ site_settings.email }}"
+
                             class="footer-link break-all"
+
                         >
+
                             {{ site_settings.email }}
+
                         </a>
 
                     </li>
@@ -787,10 +955,15 @@
                     <li>
 
                         <a
+
                             href="tel:{{ site_settings.phone }}"
+
                             class="footer-link"
+
                         >
+
                             {{ site_settings.phone }}
+
                         </a>
 
                     </li>
@@ -803,9 +976,13 @@
                     <li>
 
                         <p
+
                             class="text-sm leading-6 text-slate-500"
+
                         >
+
                             {{ site_settings.address }}
+
                         </p>
 
                     </li>
@@ -816,14 +993,19 @@
 
 
                 <a
+
                     href="{% url 'inquiries:contact' %}"
+
                     class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#087BFF] transition hover:text-white"
+
                 >
 
                     Start a Project
 
                     <span>
+
                         →
+
                     </span>
 
                 </a>
@@ -837,7 +1019,9 @@
         <!-- COPYRIGHT -->
 
         <div
+
             class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-7 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between"
+
         >
 
             <p>
@@ -854,7 +1038,9 @@
 
 
             <p>
+
                 Built with technology. Driven by innovation.
+
             </p>
 
         </div>
@@ -866,14 +1052,21 @@
 
 
 <!-- ==========================================================
+
      BACK TO TOP
+
 =========================================================== -->
 
 <button
+
     id="back-to-top"
+
     type="button"
+
     aria-label="Back to top"
+
     class="pointer-events-none fixed bottom-6 left-6 z-40 flex h-11 w-11 translate-y-5 items-center justify-center rounded-xl border border-white/10 bg-[#0D1119]/95 text-slate-400 opacity-0 shadow-xl transition-all duration-300 hover:border-[#087BFF]/40 hover:text-[#087BFF]"
+
 >
 
     ↑
@@ -883,13 +1076,17 @@
 
 
 <!-- ==========================================================
+
      COMPONENT STYLES
+
 =========================================================== -->
 
 <style>
 
     /* ========================================================
+
        DESKTOP NAVIGATION
+
     ======================================================== */
 
     .nav-item {
@@ -911,9 +1108,11 @@
         font-weight: 600;
 
         transition:
+
             color 0.25s ease;
 
     }
+
 
 
     .nav-item:hover {
@@ -921,6 +1120,7 @@
         color: white;
 
     }
+
 
 
     .nav-item::after {
@@ -944,9 +1144,11 @@
         transform: translateX(-50%);
 
         transition:
+
             width 0.25s ease;
 
     }
+
 
 
     .nav-item:hover::after {
@@ -956,11 +1158,13 @@
     }
 
 
+
     .nav-item-active {
 
         color: white;
 
     }
+
 
 
     .nav-item-active::after {
@@ -971,8 +1175,12 @@
 
 
 
+
+
     /* ========================================================
+
        MOBILE NAVIGATION
+
     ======================================================== */
 
     .mobile-nav-item {
@@ -994,10 +1202,13 @@
         font-weight: 600;
 
         transition:
+
             color 0.2s ease,
+
             background-color 0.2s ease;
 
     }
+
 
 
     .mobile-nav-item:hover {
@@ -1005,19 +1216,29 @@
         color: white;
 
         background:
+
             rgba(
+
                 8,
+
                 123,
+
                 255,
+
                 0.07
+
             );
 
     }
 
 
 
+
+
     /* ========================================================
+
        FOOTER
+
     ======================================================== */
 
     .footer-link {
@@ -1027,9 +1248,11 @@
         font-size: 0.875rem;
 
         transition:
+
             color 0.2s ease;
 
     }
+
 
 
     .footer-link:hover {
@@ -1040,8 +1263,12 @@
 
 
 
+
+
     /* ========================================================
+
        SOCIAL
+
     ======================================================== */
 
     .social-link {
@@ -1057,11 +1284,17 @@
         justify-content: center;
 
         border: 1px solid
+
             rgba(
+
                 255,
+
                 255,
+
                 255,
+
                 0.1
+
             );
 
         border-radius: 0.75rem;
@@ -1073,33 +1306,51 @@
         font-weight: 700;
 
         transition:
+
             transform 0.2s ease,
+
             color 0.2s ease,
+
             border-color 0.2s ease,
+
             background-color 0.2s ease;
 
     }
 
 
+
     .social-link:hover {
 
         transform:
+
             translateY(-2px);
 
         border-color:
+
             rgba(
+
                 8,
+
                 123,
+
                 255,
+
                 0.4
+
             );
 
         background:
+
             rgba(
+
                 8,
+
                 123,
+
                 255,
+
                 0.08
+
             );
 
         color: #087BFF;
@@ -1108,11 +1359,16 @@
 
 
 
+
+
     /* ========================================================
+
        INSTALL BUTTON
+
     ======================================================== */
 
     #install-app-button,
+
     #mobile-install-app-button {
 
         cursor: pointer;
@@ -1120,7 +1376,9 @@
     }
 
 
+
     #install-app-button:not(.hidden),
+
     #mobile-install-app-button:not(.hidden) {
 
         display: inline-flex;
@@ -1132,121 +1390,175 @@
 
 
 <!-- ==========================================================
+
      JAVASCRIPT
+
 =========================================================== -->
 
 <script>
 
 document.addEventListener(
+
     "DOMContentLoaded",
+
     function () {
 
 
+
         /* =====================================================
+
            MOBILE MENU
+
         ====================================================== */
 
         const mobileButton =
+
             document.getElementById(
+
                 "mobile-menu-button"
+
             );
+
 
 
         const mobileMenu =
+
             document.getElementById(
+
                 "mobile-menu"
+
             );
+
 
 
         const menuIcon =
+
             document.getElementById(
+
                 "menu-icon"
+
             );
+
 
 
         const closeIcon =
+
             document.getElementById(
+
                 "close-icon"
+
             );
+
 
 
         function closeMobileMenu() {
 
             if (!mobileMenu) {
+
                 return;
+
             }
 
 
+
             mobileMenu.classList.add(
+
                 "hidden"
+
             );
+
 
 
             if (menuIcon) {
 
                 menuIcon.classList.remove(
+
                     "hidden"
+
                 );
 
             }
+
 
 
             if (closeIcon) {
 
                 closeIcon.classList.add(
+
                     "hidden"
+
                 );
 
             }
+
 
 
             if (mobileButton) {
 
                 mobileButton.setAttribute(
+
                     "aria-expanded",
+
                     "false"
+
                 );
 
             }
 
         }
+
 
 
         function openMobileMenu() {
 
             if (!mobileMenu) {
+
                 return;
+
             }
 
 
+
             mobileMenu.classList.remove(
+
                 "hidden"
+
             );
+
 
 
             if (menuIcon) {
 
                 menuIcon.classList.add(
+
                     "hidden"
+
                 );
 
             }
+
 
 
             if (closeIcon) {
 
                 closeIcon.classList.remove(
+
                     "hidden"
+
                 );
 
             }
 
 
+
             if (mobileButton) {
 
                 mobileButton.setAttribute(
+
                     "aria-expanded",
+
                     "true"
+
                 );
 
             }
@@ -1254,22 +1566,33 @@ document.addEventListener(
         }
 
 
+
         if (
+
             mobileButton &&
+
             mobileMenu
+
         ) {
 
             mobileButton.addEventListener(
+
                 "click",
+
                 function (event) {
 
                     event.stopPropagation();
 
 
+
                     const isOpen =
+
                         !mobileMenu.classList.contains(
+
                             "hidden"
+
                         );
+
 
 
                     if (isOpen) {
@@ -1283,43 +1606,67 @@ document.addEventListener(
                     }
 
                 }
+
             );
 
 
+
             mobileMenu
+
                 .querySelectorAll("a")
+
                 .forEach(
+
                     function (link) {
 
                         link.addEventListener(
+
                             "click",
+
                             closeMobileMenu
+
                         );
 
                     }
+
                 );
 
         }
 
 
 
+
+
         /* =====================================================
+
            CLOSE MOBILE MENU OUTSIDE
+
         ====================================================== */
 
         document.addEventListener(
+
             "click",
+
             function (event) {
 
                 if (
+
                     mobileMenu &&
+
                     mobileButton &&
+
                     !mobileMenu.contains(
+
                         event.target
+
                     ) &&
+
                     !mobileButton.contains(
+
                         event.target
+
                     )
+
                 ) {
 
                     closeMobileMenu();
@@ -1327,59 +1674,89 @@ document.addEventListener(
                 }
 
             }
+
         );
 
 
 
+
+
         /* =====================================================
+
            NAVBAR SCROLL EFFECT
+
         ====================================================== */
 
         const navbar =
+
             document.getElementById(
+
                 "navbar"
+
             );
+
 
 
         function updateNavbar() {
 
             if (!navbar) {
+
                 return;
+
             }
 
 
+
             if (
+
                 window.scrollY > 30
+
             ) {
 
                 navbar.classList.add(
+
                     "border-white/[0.12]"
+
                 );
 
 
+
                 navbar.classList.add(
+
                     "bg-[#080B12]/95"
+
                 );
 
 
+
                 navbar.classList.add(
+
                     "shadow-[0_16px_50px_rgba(0,0,0,0.30)]"
+
                 );
 
             } else {
 
                 navbar.classList.remove(
+
                     "border-white/[0.12]"
+
                 );
 
 
+
                 navbar.classList.remove(
+
                     "bg-[#080B12]/95"
+
                 );
 
 
+
                 navbar.classList.remove(
+
                     "shadow-[0_16px_50px_rgba(0,0,0,0.30)]"
+
                 );
 
             }
@@ -1387,51 +1764,79 @@ document.addEventListener(
         }
 
 
+
         window.addEventListener(
+
             "scroll",
+
             updateNavbar,
+
             {
+
                 passive: true
+
             }
+
         );
+
 
 
         updateNavbar();
 
 
 
+
+
         /* =====================================================
+
            BACK TO TOP
+
         ====================================================== */
 
         const backToTop =
+
             document.getElementById(
+
                 "back-to-top"
+
             );
 
 
+
         if (
+
             backToTop
+
         ) {
 
             function updateBackToTop() {
 
                 if (
+
                     window.scrollY > 500
+
                 ) {
 
                     backToTop.classList.remove(
+
                         "opacity-0",
+
                         "translate-y-5",
+
                         "pointer-events-none"
+
                     );
 
                 } else {
 
                     backToTop.classList.add(
+
                         "opacity-0",
+
                         "translate-y-5",
+
                         "pointer-events-none"
+
                     );
 
                 }
@@ -1439,28 +1844,45 @@ document.addEventListener(
             }
 
 
+
             window.addEventListener(
+
                 "scroll",
+
                 updateBackToTop,
+
                 {
+
                     passive: true
+
                 }
+
             );
+
 
 
             backToTop.addEventListener(
+
                 "click",
+
                 function () {
 
                     window.scrollTo(
+
                         {
+
                             top: 0,
+
                             behavior: "smooth"
+
                         }
+
                     );
 
                 }
+
             );
+
 
 
             updateBackToTop();
@@ -1469,31 +1891,50 @@ document.addEventListener(
 
 
 
+
+
         /* =====================================================
+
            PWA INSTALLATION
+
         ====================================================== */
 
         let deferredInstallPrompt = null;
 
 
+
         const installButton =
+
             document.getElementById(
+
                 "install-app-button"
+
             );
+
 
 
         const mobileInstallButton =
+
             document.getElementById(
+
                 "mobile-install-app-button"
+
             );
+
+
 
 
 
         /*
+
          * Hide install buttons by default.
+
          *
+
          * They will only appear when the browser
+
          * tells us that NetCore can be installed.
+
          */
 
         function hideInstallButtons() {
@@ -1501,16 +1942,21 @@ document.addEventListener(
             if (installButton) {
 
                 installButton.classList.add(
+
                     "hidden"
+
                 );
 
             }
 
 
+
             if (mobileInstallButton) {
 
                 mobileInstallButton.classList.add(
+
                     "hidden"
+
                 );
 
             }
@@ -1519,8 +1965,12 @@ document.addEventListener(
 
 
 
+
+
         /*
+
          * Show install buttons.
+
          */
 
         function showInstallButtons() {
@@ -1528,16 +1978,21 @@ document.addEventListener(
             if (installButton) {
 
                 installButton.classList.remove(
+
                     "hidden"
+
                 );
 
             }
 
 
+
             if (mobileInstallButton) {
 
                 mobileInstallButton.classList.remove(
+
                     "hidden"
+
                 );
 
             }
@@ -1546,64 +2001,96 @@ document.addEventListener(
 
 
 
+
+
         /*
+
          * Start with buttons hidden.
+
          */
 
         hideInstallButtons();
 
 
 
+
+
         /*
+
          * Browser has determined that the website
+
          * is installable.
+
          */
 
         window.addEventListener(
+
             "beforeinstallprompt",
+
             function (event) {
 
                 /*
+
                  * Prevent Chrome from showing
+
                  * the default installation prompt.
+
                  */
 
                 event.preventDefault();
 
 
+
                 /*
+
                  * Save the event so our own
+
                  * navbar button can trigger it.
+
                  */
 
                 deferredInstallPrompt = event;
 
 
+
                 /*
+
                  * Show our custom Install App buttons.
+
                  */
 
                 showInstallButtons();
 
             }
+
         );
 
 
 
+
+
         /*
+
          * Function responsible for installing
+
          * the NetCore PWA.
+
          */
 
         async function installNetCoreApp() {
 
             if (
+
                 !deferredInstallPrompt
+
             ) {
 
                 /*
+
                  * Browser does not currently
+
                  * provide an installation prompt.
+
                  */
 
                 return;
@@ -1611,38 +2098,57 @@ document.addEventListener(
             }
 
 
+
             /*
+
              * Show the native browser installation
+
              * dialog.
+
              */
 
             deferredInstallPrompt.prompt();
 
 
+
             /*
+
              * Wait for the user's response.
+
              */
 
             const choiceResult =
+
                 await deferredInstallPrompt.userChoice;
 
 
+
             console.log(
+
                 "NetCore PWA installation result:",
+
                 choiceResult.outcome
+
             );
 
 
+
             /*
+
              * The saved prompt can only be used once.
+
              */
 
             deferredInstallPrompt = null;
 
 
+
             /*
+
              * Hide buttons after the prompt
+
              * has been used.
+
              */
 
             hideInstallButtons();
@@ -1651,33 +2157,50 @@ document.addEventListener(
 
 
 
+
+
         /*
+
          * Desktop install button.
+
          */
 
         if (
+
             installButton
+
         ) {
 
             installButton.addEventListener(
+
                 "click",
+
                 installNetCoreApp
+
             );
 
         }
 
 
 
+
+
         /*
+
          * Mobile install button.
+
          */
 
         if (
+
             mobileInstallButton
+
         ) {
 
             mobileInstallButton.addEventListener(
+
                 "click",
+
                 function () {
 
                     installNetCoreApp();
@@ -1685,46 +2208,69 @@ document.addEventListener(
                     closeMobileMenu();
 
                 }
+
             );
 
         }
 
 
 
+
+
         /*
+
          * Detect when the PWA has actually
+
          * been installed.
+
          */
 
         window.addEventListener(
+
             "appinstalled",
+
             function () {
 
                 console.log(
+
                     "NetCore TECH has been installed."
+
                 );
+
 
 
                 deferredInstallPrompt = null;
 
 
+
                 hideInstallButtons();
 
             }
+
         );
 
 
 
+
+
         /*
+
          * If the website is already running
+
          * as an installed application,
+
          * there is no reason to show the button.
+
          */
 
         if (
+
             window.matchMedia(
+
                 "(display-mode: standalone)"
+
             ).matches
+
         ) {
 
             hideInstallButtons();
@@ -1733,41 +2279,68 @@ document.addEventListener(
 
 
 
+
+
         /*
+
          * iOS Safari does not support the
+
          * beforeinstallprompt event.
+
          *
+
          * Therefore, the automatic native
+
          * installation button will not appear
+
          * there.
+
          */
 
         const isIOS =
+
             /iphone|ipad|ipod/i.test(
+
                 window.navigator.userAgent
+
             );
 
 
+
         const isStandaloneIOS =
+
             window.navigator.standalone === true;
 
 
+
         if (
+
             isIOS &&
+
             !isStandaloneIOS
+
         ) {
 
             /*
+
              * We intentionally do not display
+
              * the automatic install button here.
+
              *
+
              * iOS users install through:
+
              *
+
              * Share → Add to Home Screen
+
              */
 
             console.log(
+
                 "iOS detected. Use Share → Add to Home Screen to install NetCore."
+
             );
 
         }
@@ -1778,49 +2351,72 @@ document.addEventListener(
 
 
 
+
+
 /* ==========================================================
+
    SERVICE WORKER
+
 =========================================================== */
 
 if (
+
     "serviceWorker" in navigator
+
 ) {
 
     window.addEventListener(
+
         "load",
+
         function () {
 
             navigator.serviceWorker
+
                 .register(
+
                     "{% static 'js/service-worker.js' %}"
+
                 )
 
                 .then(
+
                     function (registration) {
 
                         console.log(
+
                             "NetCore PWA service worker registered:",
+
                             registration.scope
+
                         );
 
                     }
+
                 )
 
                 .catch(
+
                     function (error) {
 
                         console.error(
+
                             "NetCore PWA service worker registration failed:",
+
                             error
+
                         );
 
                     }
+
                 );
 
         }
+
     );
 
 }
+
 
 
 </script>
@@ -1829,6 +2425,7 @@ if (
 
 {% block extra_scripts %}
 {% endblock %}
+
 
 
 </body>
